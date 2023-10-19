@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; {new Date().getFullYear()} Your Company</p>
+      <p>&copy; {new Date().getFullYear()} by Signtruck</p>
     </footer>
   );
 }

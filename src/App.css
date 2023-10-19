@@ -1,3 +1,5 @@
+@import url(grid.css);
+
 nav{
   display: flex;
   justify-content: center;

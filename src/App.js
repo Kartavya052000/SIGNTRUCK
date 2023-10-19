@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
     <Header />
-<main>
-  Create component for each section </main>
+<main>Create component for each section</main>
     <Footer />
     </div>
   );
