@@ -1,14 +1,116 @@
-@import url(grid.css);
+@import url(assets/css/basic.css);
 
-nav{
+
+/** Header CSS **/
+
+.innerHeader {
+  background: linear-gradient(180deg, #15843C 0%, #36BD65 100%);
+  padding: 10px 0;
+}
+
+.innerHeaderWrap {
   display: flex;
-  justify-content: center;
-  background-color: #000;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerHeaderWrap ul {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.innerHeaderWrap ul img {
+  vertical-align: middle;
+}
+
+.innerHeaderWrap ul a {
+  text-decoration: none;
   color: #fff;
 }
-footer{
+
+.innerHeaderWrap ul.right_info a {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #fff;
+  border-radius: 50%;
   display: flex;
+  display: -ms-flexbox;
   justify-content: center;
-  background-color: #000;
+  align-items: center;
+}
+
+.innerHeaderWrap ul.right_info a:hover {
+  box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.7);
+}
+
+.mainHeader .header_wrap {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.mainHeader .logo img {
+  max-width: 200px;
+}
+
+.navigationWrapper ul {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigationWrapper ul li {
+  margin: 0 10px;
+}
+
+.navigationWrapper ul li:last-child {
+  margin-right: 0;
+}
+
+.navigationWrapper ul li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navigationWrapper ul li:not(:last-child) a:hover {
+  color: #27a252;
+}
+
+.navigationWrapper ul li:last-child a {
+  background: linear-gradient(180deg, #15843C 0%, #36BD65 100%);
+  border: 1px solid transparent;
+  color:#fff;
+  padding: 10px 12px;
+}
+
+.navigationWrapper ul li:last-child a:hover {
+  color: #27a252;
+  background: #fff;
+  border-color: #27a252;
+}
+
+
+
+/** Header CSS Ends here **/
+
+footer .copyright {
+  text-align: center;
+  background: linear-gradient(180deg, #15843C 0%, #36BD65 100%);
   color: #fff;
+  padding: 12px 0;
+  font-size: 12px;
+}
+
+.footer-sec {
+  padding: 8rem 0;
+  background:linear-gradient(180deg, #15843C 0%, #36BD65 100%);
 }
