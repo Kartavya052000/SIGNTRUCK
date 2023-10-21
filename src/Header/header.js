@@ -51,20 +51,20 @@ const Header = () => {
           <div className='navigationWrapper'>
             <nav>
               <ul className='nav_menu header_menu'>
-                <li className='menu_item'>
-                  <a href='#' title='Home'>Home</a>
+                <li className='menu_item linkEffect'>
+                  <a href='#' title='Home' data-hover="Home"><span>Home</span></a>
+                </li>
+                <li className='menu_item linkEffect'>
+                  <a href='#' title='Faq' data-hover="Faq"><span>Faq</span></a>
+                </li>
+                <li className='menu_item linkEffect'>
+                  <a href='#' title='Clients' data-hover="Clients"><span>Clients</span></a>
+                </li>
+                <li className='menu_item linkEffect'>
+                  <a href='#' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item'>
-                  <a href='#' title='Home'>Faq</a>
-                </li>
-                <li className='menu_item'>
-                  <a href='#' title='Home'>Clients</a>
-                </li>
-                <li className='menu_item'>
-                  <a href='#' title='Home'>Contact Us</a>
-                </li>
-                <li className='menu_item'>
-                  <a href='#' title='Home' className='menuBtn'>Contact Us</a>
+                  <a href='#' title='Contact Us' className='butn butn_success'><span>Contact Us</span></a>
                 </li>
               </ul>
             </nav>

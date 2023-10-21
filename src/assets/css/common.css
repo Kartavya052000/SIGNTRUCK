@@ -1,0 +1,24 @@
+.ttlWrap {
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+  
+.ttlWrap span {
+    color: #15843C;
+    font-family: Mulish;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+  
+.ttlWrap h2 {
+    color: #000;
+    font-family: Russo One;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
