@@ -6,6 +6,7 @@ import mail from '../assets/images/mail.svg';
 import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -52,19 +53,19 @@ const Header = () => {
             <nav>
               <ul className='nav_menu header_menu'>
                 <li className='menu_item linkEffect'>
-                  <a href='#' title='Home' data-hover="Home"><span>Home</span></a>
+                  <Link to="/" data-hover="Home" title='Home'><span>Home</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='#' title='Faq' data-hover="Faq"><span>Faq</span></a>
+                  <Link to="/faq" data-hover="Faq" title='Faq'><span>Faq</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='#' title='Clients' data-hover="Clients"><span>Clients</span></a>
+                <Link to="/clients" data-hover="Clients" title='Clients'><span>Clients</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='#' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
+                  <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item'>
-                  <a href='#' title='Contact Us' className='butn butn_success'><span>Contact Us</span></a>
+                  <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
                 </li>
               </ul>
             </nav>

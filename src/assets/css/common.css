@@ -22,3 +22,20 @@
     text-transform: uppercase;
     margin: 5px 0;
 }
+
+.innerSec {
+    padding: 6rem 1rem;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.innerSec h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Russo One';
+    font-weight: 400;
+    
+    color: #fff;
+}

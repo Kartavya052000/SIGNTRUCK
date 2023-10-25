@@ -1,6 +1,10 @@
 @import url(assets/css/basic.css);
 @import url(assets/css/widgets.css);
 @import url(assets/css/common.css);
+@import url(assets/css/faq.css);
+@import url(ui/css/style.css);
+@import url(assets/css/clients.css);
+@import url(assets/css/contact.css);
 
 
 /** Header CSS **/
@@ -129,8 +133,8 @@
   left: 10%;
   z-index: -1;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 0px rgba(0,0,0, 0.5);
-  color: transparent;
+  color: rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero_info p {
@@ -274,6 +278,59 @@
 }
 
 /** Connect CSS ends here **/
+
+/** Subscribe CSS **/
+
+.subscribe_sec {
+  padding: 6rem 0 3rem;
+}
+
+.subs_inner {
+  background: linear-gradient(180deg, #0877A4 0%, #000 100%);
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.subs_inner:after {
+  content: '';
+  position: absolute;
+  left: 62%;
+  top: 0;
+  background-color: rgba(255,255,255,0.1);
+  height: 100%;
+  width: 55px;
+  transform: skewX(40deg);
+}
+
+.subscribe_sec .custom_row {
+  align-items: center;
+}
+
+.subscribe_sec .imgCol, .subscribe_sec .subsForm {
+  padding: 0 15px;
+}
+
+.subscribe_sec .imgCol {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.subscribe_sec .imgCol img {
+  width: 75%;
+  margin: -50px 20px 0 auto;
+  display: block;
+}
+
+.subscribe_sec .subsForm {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.subscribe_sec .subsForm .ttlWrap h2 {
+  color: #fff;
+}
+
+/** Subscribe CSS ends here **/
 
 
 /** Footer CSS starts here **/

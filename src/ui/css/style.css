@@ -1,0 +1,98 @@
+.accordion_main {
+    padding: 1rem 0;
+}
+
+.accordion_header {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: space-between;
+    transition: 0.3s;
+    position: relative;
+}
+
+.accordion_header span.ic img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+}
+
+.accordion_header .toggle_ic {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    right: 15px;
+}
+
+.accordion_header .toggle_ic:after, .accordion_header .toggle_ic:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    margin-top: -2px;
+    background-color: #000;
+}
+
+.accordion_header.active .toggle_ic:before {
+    transform: rotate(0deg);
+}
+
+.accordion_header .toggle_ic:before {
+    transform: rotate(-90deg);
+    transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.accordionItem .accordion_wrap {
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.accordionItem:last-child .accordion_wrap {
+    margin-bottom: 0;
+}
+
+.accordion_header h3 {
+    font-weight: 400;
+    font-size: 13px;
+    font-family: 'Russo One';
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.accordion_ttl {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.accordion_body {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion_body.show {
+    height: auto;
+    border-top: 1px solid #999;
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.accordion_body p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}

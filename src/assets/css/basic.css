@@ -201,9 +201,22 @@ form textarea {
 
 form input:not([type="submit"]):focus, form textarea:focus {
     border-color: #ccc;
-    border-radius: 4px;
 }
 
+.inlineForm .formGrp {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inlineForm .formGrp input {
+  margin: 0;
+  border-radius: 0;
+  height: 45px;
+  line-height: normal;
+}
 
 
 

@@ -1,14 +1,14 @@
-// components/Header.js
 import React from 'react';
 import jiffylube from './assets/images/jiffylube.png';
 import duda from './assets/images/duda.png';
 import autoworld from './assets/images/autoworld.png';
 import news1130 from './assets/images/news1130.png';
 import dawsonsawyer from './assets/images/dawsonsawyer.png';
-import mikemafori from './assets/images/mikemafori.png';
+import mikemarfori from './assets/images/mikemarfori.png';
 import trucks from './assets/images/storyTruck.png';
 import truck from './assets/images/truck.png';
 import heroBanner from './assets/images/banner.png';
+import subsTruck from './assets/images/subsTruck.png';
 
 const Home = () => {
   return (
@@ -38,7 +38,7 @@ const Home = () => {
                     <h2>Working With the Best</h2>
                 </div>
                 <div className='clientsLogo'>
-                    <img src={mikemafori} alt='MikeMafori' title='MikeMafori' />
+                    <img src={mikemarfori} alt='MikeMarfori' title='MikeMarfori' />
                     <img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' />
                     <img src={news1130} alt='News1130' title='News1130' />
                     <img src={autoworld} alt='AutoWorld' title='AutoWorld' />
@@ -101,6 +101,29 @@ const Home = () => {
                             </div>
                             <div className='formSubmit'>
                                 <input type='submit' value='Submit' className='fullButn butn butn_success' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section className='subscribe_sec'>
+        <div className='custom-container'>
+            <div className='subs_inner'>
+                <div className='custom_row'>
+                    <div className='imgCol'>
+                        <img src={subsTruck} alt='SignTruck' title='SignTruck' />
+                    </div>
+                    <div className='subsForm'>
+                        <div className='ttlWrap'>
+                            <h2>Subscribe Form</h2>
+                        </div>
+                        <form action='' className='inlineForm'>
+                            <div className='formGrp'>
+                                <input type='email' id='email' placeholder='Enter Your Email' />
+                                <input type='submit' value='Submit' className='butn butn_success' />
                             </div>
                         </form>
                     </div>

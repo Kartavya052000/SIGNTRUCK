@@ -1,0 +1,87 @@
+.clientsTab_sec {
+    padding: 3rem 0;
+}
+
+.clientsTab_sec .tabCont_inner {
+    padding: 4rem 0 1rem;
+}
+
+ul.react-tabs__tab-list {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    gap: 10px;
+}
+
+ul.react-tabs__tab-list li.react-tabs__tab {
+    outline: none;
+}
+  
+ul.react-tabs__tab-list li.react-tabs__tab img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+ul.react-tabs__tab-list li.react-tabs__tab--selected img {
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1)
+}
+
+.tabCont_inner .custom_row {
+    gap: 30px;
+}
+
+.tabCont_inner .imgColmn, .tabCont_inner .contColmn {
+    flex: 1 1 48%;
+    max-width: 48%;
+    padding: 0 15px;
+}
+
+.tabCont_inner .imgColmn .react-tabs__tab-panel img {
+    width: 100%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.tabCont_inner .contColmn {
+    background: #F3F7FF;
+    padding: 2rem;
+}
+
+.tabCont_inner .contColmn .logo img {
+    width: 80px;
+}
+
+.tabCont_inner .contColmn h4 {
+    margin: 10px 0;
+    font-family: 'Russo One';
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.clientsTab_sec > .react-tabs__tab-panel {
+    padding: 3rem 0;
+}
+
+.tabCont_inner .contColmn .tag {
+    font-size: 13px;
+    font-family: 'Russo One';
+    font-weight: 400;
+    margin: 15px 0;
+    text-transform: uppercase;
+    color: #15843C;
+}
+
+.tabCont_inner .contColmn .tag span {
+    color: #000;
+}
+
+.tabCont_inner .contColmn p {
+    font-size: 14px;
+    line-height: normal;
+}
+
+.tabCont_inner .imgColmn ul.react-tabs__tab-list li img {
+    width: 90%;
+}

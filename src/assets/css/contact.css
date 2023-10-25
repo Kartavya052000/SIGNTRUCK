@@ -1,0 +1,26 @@
+.contact_sec .contact_inner {
+    padding: 4rem 1rem;
+    background-color: #F4F4F4;
+}
+
+.contact_sec .contForm {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+    .contact_sec .contForm {
+        width: 80%;
+    }
+}
