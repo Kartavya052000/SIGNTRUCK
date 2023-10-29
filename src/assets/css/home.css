@@ -1,0 +1,374 @@
+/** Hero Section CSS **/
+
+.hero_sec {
+    position: relative;
+    padding: 4rem 0 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+  }
+  
+  .hero_overlay {
+    background: linear-gradient(90deg, #001407 0%, rgba(0, 16, 6, 0.72) 34.17%, rgba(0, 0, 0, 0.00) 76.65%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .hero_info {
+    max-width: 60%;
+  }
+  
+  .hero_info > span {
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 10px;
+    display: inline-block;
+  }
+  
+  .hero_info h2 {
+    font-size: 50px;
+    font-family: 'Russo One';
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0;
+    position: relative;
+    color: #fff;
+  }
+  
+  .hero_info p {
+    color: #fff;
+    font-size: 14px;
+    max-width: 75%;
+    margin: 20px 0 30px;
+  }
+  
+  .scrollDown {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  
+  .scrollDown a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .scrollDown a span {
+    padding: 7px 10px 8px;
+    margin: 0 0 20px;
+    background-color: #fff;
+    color: #000;
+    vertical-align: middle;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .scrollDown > a:hover {
+    color: #15843C;
+  }
+  
+  .scrollDown > a:hover span {
+    color: #fff;
+    background-color: #15843C;
+  }
+  
+  /** Hero Section CSS ends here **/
+  
+  /** Clients Section CSS **/
+  
+  .clients_sec {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .clients_inner {
+    background-color: #fff;
+    padding: 2rem 0;
+    margin-top: -60px;
+  }
+  
+  .clients_inner .ttlWrap {
+    text-align: center;
+  }
+  
+  .clientsLogo {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+  }
+  
+  .clientsLogo img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    width: 130px;
+  }
+  
+  /** Clients CSS ends here **/
+  
+  
+  /** Story CSS **/
+  
+  .story_sec {
+    padding: 2rem 0 4rem;
+  }
+  
+  .story_sec .leftCol {
+    flex: 0 0 auto;
+  }
+  
+  .story_sec .rightCol {
+    flex: 1 1 60%;
+    max-width: 60%;
+    margin-left: auto;
+  }
+  
+  .story_sec .cont {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  
+  .fullImg_wrap {
+    padding: 30px 0;
+  }
+  
+  .fullImg_wrap img {
+    filter: drop-shadow(0px 30px 10px rgba(0,0,0,0.5));
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /** Story CSS ends here **/
+  
+  /** Connect CSS **/
+  
+  .connect_us_sec .custom_row {
+    margin: 0;
+  }
+  
+  .connect_us_sec .formCol {
+    background-color: #F4F4F4;
+    padding: 30px;
+  }
+  
+  .connect_us_sec .imgCol, .connect_us_sec .formCol {
+    flex: 0 0 50%;
+  }
+  
+  .connect_us_sec .imgCol img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .connectForm {
+    margin: 1.5rem 0 0;
+  }
+  
+  /** Connect CSS ends here **/
+  
+  /** Subscribe CSS **/
+  
+  .subscribe_sec {
+    padding: 6rem 0 3rem;
+  }
+  
+  .subs_inner {
+    background: linear-gradient(180deg, #0877A4 0%, #000 100%);
+    position: relative;
+    padding: 0.5rem 2rem;
+  }
+  
+  .subs_inner:after {
+    content: '';
+    position: absolute;
+    left: 62%;
+    top: 0;
+    background-color: rgba(255,255,255,0.1);
+    height: 100%;
+    width: 55px;
+    transform: skewX(40deg);
+  }
+  
+  .subscribe_sec .custom_row {
+    align-items: center;
+  }
+  
+  .subscribe_sec .imgCol, .subscribe_sec .subsForm {
+    padding: 0 15px;
+  }
+  
+  .subscribe_sec .imgCol {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  
+  .subscribe_sec .imgCol img {
+    width: 75%;
+    margin: -50px 20px 0 auto;
+    display: block;
+  }
+  
+  .subscribe_sec .subsForm {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  
+  .subscribe_sec .subsForm .ttlWrap h2 {
+    color: #fff;
+  }
+  
+  /** Subscribe CSS ends here **/
+
+
+
+
+
+
+
+
+
+  /** Responsive CSS starts here **/
+
+  @media (max-width: 1399.98px) {
+    .hero_info h2 {
+        font-size: 40px;
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    .hero_info h2 {
+        font-size: 35px;
+    }
+
+    .scrollDown a {
+        font-size: 10px;
+    }
+
+    .scrollDown a span {
+        margin: 0 0 15px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .clients_inner {
+        margin-top: -40px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .hero_sec {
+        padding: 3rem 0 7rem;
+    }
+  
+    .hero_info h2 {
+        font-size: 30px;
+    }
+  
+    .hero_info p {
+        max-width: 80%;
+    }
+  
+    .clientsLogo img {
+        width: 90px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .hero_info h2 {
+        font-size: 26px;
+    }
+  
+    .hero_info > span {
+        font-size: 12px;
+    }
+  
+    .hero_info p {
+        max-width: 100%;
+        margin: 15px 0 20px;
+    }
+  
+    .clients_inner {
+        padding: 1rem 0;
+    }
+
+    .story_sec {
+        padding: 2rem 0;
+    }
+
+    .story_sec .cont {
+        font-weight: 500;
+    }
+
+    .connect_us_sec .formCol {
+        padding: 20px;
+    }
+
+    .connect_us_sec .custom_row {
+        position: relative;
+    }
+
+    .connect_us_sec .imgCol {
+        flex: 0 0 100%;
+        position: absolute;
+        z-index: -1;
+        padding: 20px;
+    }
+
+    .connect_us_sec .formCol {
+        flex: 0 0 80%;
+        margin: 0 auto;
+    }
+
+    .subscribe_sec {
+        padding: 5rem 0 2rem;
+    }
+
+    .subscribe_sec .imgCol {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .subscribe_sec .imgCol img {
+        width: 90%;
+    }
+
+    .subscribe_sec .subsForm {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .subs_inner {
+        padding: 0.5rem 1rem;
+    }
+
+    .subs_inner:after {
+        width: 40px;
+    }
+
+    .story_sec .rightCol {
+        flex: 1 1 58%;
+        max-width: 58%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .scrollDown {
+      display: none;
+    }
+  }

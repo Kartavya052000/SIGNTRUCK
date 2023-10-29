@@ -1,16 +1,19 @@
 // components/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/images/logo.png';
 import location from '../assets/images/location.svg';
 import mail from '../assets/images/mail.svg';
 import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
+import hamburger from '../assets/images/menuBar.png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+  const [active, setActive] = useState(false);
   return (
-    <header className='mainHeader'>
+    <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
       <div className='innerHeader'>
         <div className='custom-container'>
           <div className='innerHeaderWrap'>
@@ -48,6 +51,9 @@ const Header = () => {
             <a href='/' title='SignTruck'>
               <img src={logo} alt='SignTruck' title='SignTruck' />
             </a>
+          </div>
+          <div className='hamburger' onClick={() => setActive(!active)}>
+            <img src={hamburger} alt='' title='' />
           </div>
           <div className='navigationWrapper'>
             <nav>

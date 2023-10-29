@@ -99,3 +99,27 @@
 }
 
 /** Link Effect CSS ends here **/
+
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+    .butn {
+        font-size: 13px;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .linkEffect a {
+        padding: 0 0 10px;
+    }
+}
