@@ -9,6 +9,7 @@ import newsTruck from './assets/images/newsTruck.png';
 import autoworld from './assets/images/autoworld.png';
 import duda from './assets/images/duda.png';
 import jiffylube from './assets/images/jiffylube.png';
+import RotatingBillboard from './RotatingBillboard';
 
 const Clients = () => {
   return (
@@ -32,6 +33,8 @@ const Clients = () => {
               </TabList>
               <TabPanel>
                 <div className='tabCont_inner'>
+               
+                  <RotatingBillboard />
                   <div className='custom_row'>
                     <div className='imgColmn'>
                       <Tabs>
