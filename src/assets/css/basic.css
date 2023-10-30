@@ -221,3 +221,28 @@ form input:not([type="submit"]):focus, form textarea:focus {
 
 
 /** Form CSS ends here **/
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 575.98px) {
+
+  form input:not([type="submit"]) {
+      height: 40px;
+      line-height: 40px;
+      margin: 0 0 8px;
+      padding: 8px 10px;
+      font-size: 12px;
+      border-radius: 2px;
+  }
+
+  .inlineForm .formGrp input {
+      height: 35px;
+      font-size: 12px;
+  }
+}

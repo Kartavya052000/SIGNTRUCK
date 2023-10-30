@@ -96,3 +96,79 @@
     line-height: 1.6;
     font-weight: 400;
 }
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+
+    .accordion_header span.ic img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .accordion_header h3 {
+        font-size: 13px;
+    }
+
+    .accordion_header .toggle_ic {
+        width: 25px;
+        height: 25px;
+    }
+
+    .accordion_header .toggle_ic:after, .accordion_header .toggle_ic:before {
+        width: 12px;
+        margin-top: -1px;
+    }
+
+    .accordion_body.show {
+        padding: 1rem 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .accordion_body.show {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .accordion_header {
+        padding: 12px 35px 12px 10px;
+    }
+
+    .accordion_header h3 {
+        font-size: 11px;
+        gap: 10px;
+    }
+
+    .accordion_header .toggle_ic {
+        width: 20px;
+        height: 20px;
+        right: 10px;
+    }
+
+    .accordion_header .toggle_ic:after, .accordion_header .toggle_ic:before {
+        width: 10px;
+        right: 3px;
+    }
+
+    .accordion_header span.ic img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .accordion_body p {
+        font-size: 13px;
+    }
+
+    .accordion_body.show img {
+        width: 100%;
+    }
+}

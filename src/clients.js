@@ -1,7 +1,6 @@
 import React from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import faqBanner from './assets/images/faq_banner.png';
-import mikemarfori from './assets/images/mikemarfori.png';
 import dawsonsawyer from './assets/images/dawsonsawyer.png';
 import news1130 from './assets/images/news1130.png';
 import newslogo from './assets/images/newslogo.png';
@@ -23,9 +22,8 @@ const Clients = () => {
           <div className='custom-container'>
             <Tabs>
               <TabList>
-                <Tab><img src={mikemarfori} alt='MikeMarfori' title='MikeMarfori' /></Tab>
-                <Tab><img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' /></Tab>
                 <Tab><img src={news1130} alt='News1130' title='News1130' /></Tab>
+                <Tab><img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' /></Tab>
                 <Tab><img src={autoworld} alt='AutoWorld' title='AutoWorld' /></Tab>
                 <Tab><img src={duda} alt='Duda' title='Duda' /></Tab>
                 <Tab><img src={jiffylube} alt='JiffyLube' title='JiffyLube' /></Tab>
@@ -68,9 +66,6 @@ const Clients = () => {
               </TabPanel>
               <TabPanel>
                 <h2>Dawson Sawyer</h2>
-              </TabPanel>
-              <TabPanel>
-                <h2>News 1130</h2>
               </TabPanel>
               <TabPanel>
                 <h2>Autoworld</h2>

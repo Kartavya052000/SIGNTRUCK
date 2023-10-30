@@ -328,6 +328,8 @@
         position: absolute;
         z-index: -1;
         padding: 20px;
+        width: 100%;
+        height: 100%;
     }
 
     .connect_us_sec .formCol {
@@ -370,5 +372,74 @@
   @media (max-width: 650px) {
     .scrollDown {
       display: none;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .subs_inner:after {
+        content: none;
+    }
+
+    .subscribe_sec .custom_row {
+        flex-direction: column;
+    }
+
+    .subscribe_sec .imgCol {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .subscribe_sec .subsForm {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .story_sec {
+        padding: 1rem 0;
+    }
+
+    .story_sec .custom_row {
+        flex-direction: column;
+    }
+
+    .story_sec .leftCol, .story_sec .rightCol {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .clientsLogo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clientsLogo img {
+        margin: 0;
+    }
+
+    .connect_us_sec .imgCol {
+        padding: 0;
+    }
+
+    .connect_us_sec .formCol {
+        flex: 0 0 90%;
+    }
+  }
+
+  @media (max-width: 475.98px) {
+    .hero_info {
+        max-width: 98%;
+    }
+
+    .hero_info h2 {
+        font-size: 22px;
+    }
+
+    .hero_info p {
+        margin: 10px 0 15px;
+    }
+
+    .subscribe_sec .imgCol {
+        flex: 0 0 90%;
+        max-width: 90%;
     }
   }

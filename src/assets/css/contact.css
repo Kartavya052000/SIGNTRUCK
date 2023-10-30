@@ -24,3 +24,15 @@
         width: 80%;
     }
 }
+
+@media (max-width: 575.98px) {
+    .contact_sec .contact_inner {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 475.98px) {
+    .contact_sec .contForm {
+        width: 95%;
+    }
+}

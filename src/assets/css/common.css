@@ -65,4 +65,25 @@
     .ttlWrap h2 {
         font-size: 18px;
     }
+
+    .innerSec h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .innerSec {
+        padding: 4rem 1rem;
+    }
+
+    .innerSec h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 475.98px) {
+    .innerSec h1 {
+        font-size: 20px;
+    }
 }

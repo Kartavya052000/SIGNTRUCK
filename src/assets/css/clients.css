@@ -85,3 +85,68 @@ ul.react-tabs__tab-list li.react-tabs__tab--selected img {
 .tabCont_inner .imgColmn ul.react-tabs__tab-list li img {
     width: 90%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+
+    .clientsTab_sec .tabCont_inner {
+        padding: 3rem 0 1rem;
+    }
+
+    .tabCont_inner .custom_row {
+        gap: 10px;
+    }
+
+    .tabCont_inner .contColmn {
+        padding: 1.5rem;
+    }
+
+    .tabCont_inner .contColmn .logo img {
+        width: 60px;
+    }
+
+    .tabCont_inner .contColmn .tag {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .clientsTab_sec .tabCont_inner {
+        padding: 2rem 0 1rem;
+    }
+
+    .tabCont_inner .custom_row {
+        flex-direction: column;
+    }
+
+    .tabCont_inner .imgColmn, .tabCont_inner .contColmn {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 475.98px) {
+
+    .clientsTab_sec {
+        padding: 2rem 0 1rem;
+    }
+}

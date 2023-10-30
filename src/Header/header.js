@@ -6,7 +6,6 @@ import mail from '../assets/images/mail.svg';
 import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
-import hamburger from '../assets/images/menuBar.png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -53,7 +52,7 @@ const Header = () => {
             </a>
           </div>
           <div className='hamburger' onClick={() => setActive(!active)}>
-            <img src={hamburger} alt='' title='' />
+            <span className='bar'></span>
           </div>
           <div className='navigationWrapper'>
             <nav>

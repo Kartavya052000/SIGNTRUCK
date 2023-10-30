@@ -52,7 +52,7 @@
 }
 
 .fullButn {
-    width: 100%;
+    width: 100% !important;
 }
 
 /** Button Hover CSS ends here **/
@@ -121,5 +121,18 @@
 @media (max-width: 767.98px) {
     .linkEffect a {
         padding: 0 0 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .butn {
+        font-size: 12px;
+        padding: 0.3rem;
+        height: 2rem;
+        width: 7rem;
+    }
+
+    .linkEffect a {
+        font-size: 13px;
     }
 }

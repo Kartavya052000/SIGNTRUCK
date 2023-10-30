@@ -38,6 +38,11 @@
 .innerHeaderWrap ul a {
   text-decoration: none;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.innerHeaderWrap ul a:hover {
+  letter-spacing: 1px;
 }
 
 .innerHeaderWrap ul.right_info a {
@@ -53,6 +58,7 @@
 
 .innerHeaderWrap ul.right_info a:hover {
   box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.7);
+  border-color: transparent;
 }
 
 .mainHeader .header_wrap {
@@ -278,10 +284,44 @@ footer .copyright {
       display: block;
   }
 
-  .hamburger img {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
+  .hamburger span.bar {
+      width: 25px;
+      height: 3px;
+      position: relative;
+      display: block;
+      background: linear-gradient(180deg, #15843c 0%, #36BD65 100%);
+      transition: all 0.2s ease;
+  }
+
+  .hamburger span.bar:before, .hamburger span.bar:after {
+      content: '';
+      width: 25px;
+      height: 3px;
+      position: absolute;
+      background: linear-gradient(180deg, #15843c 0%, #36BD65 100%);
+      transition: all 0.2s ease;
+  }
+
+  .hamburger span.bar:before {
+      top: -8px;
+  }
+
+  .hamburger span.bar:after {
+      top: 8px;
+  }
+
+  .showMenu .hamburger span.bar {
+      height: 0;
+  }
+
+  .showMenu .hamburger span.bar:before {
+      transform: rotate(135deg);
+      top: -5px;
+  }
+
+  .showMenu .hamburger span.bar:after {
+      transform: rotate(-135deg);
+      top: -5px;
   }
 
   .navigationWrapper ul li {
@@ -331,20 +371,54 @@ footer .copyright {
   }
 
   .innerHeaderWrap {
-      flex-direction: column;
       gap: 10px;
   }
 
   .innerHeaderWrap ul {
       font-size: 12px;
-      gap: 10px;
+      gap: 5px;
   }
 
   .innerHeaderWrap ul.left_info {
-    flex-direction: column;
+      flex-direction: column;
+      align-items: flex-start;
   }
 
   .footer-sec .custom_row {
     gap: 20px 0;
+  }
+
+  .mainHeader .header_wrap {
+      padding: 10px 0;
+  }
+
+  .mainHeader.showMenu .navigationWrapper {
+      height: 200px;
+      top: 55px;
+  }
+}
+
+@media (max-width: 475.98px) {
+
+  .footer-sec {
+      padding: 2rem 0;
+  }
+
+  .footerCol-3 {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+
+  .footerCol_inner p {
+      font-size: 12px;
+  }
+
+  .footerCol_inner ul.social_info {
+      margin: 15px 0;
+  }
+
+  footer .copyright {
+      padding: 8px 0;
+      font-size: 10px;
   }
 }

@@ -4,7 +4,6 @@ import duda from './assets/images/duda.png';
 import autoworld from './assets/images/autoworld.png';
 import news1130 from './assets/images/news1130.png';
 import dawsonsawyer from './assets/images/dawsonsawyer.png';
-import mikemarfori from './assets/images/mikemarfori.png';
 import trucks from './assets/images/storyTruck.png';
 import truck from './assets/images/truck.png';
 import heroBanner from './assets/images/banner.png';
@@ -26,11 +25,11 @@ const Home = () => {
             </div>
         </div>
         <div className='scrollDown'>
-            <a href='javacript:void(0)' title='Scroll Down'><span>&#8592;</span>Scroll Down</a>
+            <a href='#clients_sec' title='Scroll Down'><span>&#8592;</span>Scroll Down</a>
         </div>
     </section>
 
-    <section className='clients_sec'>
+    <section className='clients_sec' id='clients_sec'>
         <div className='custom-container'>
             <div className='clients_inner'>
                 <div className='ttlWrap'>
@@ -38,7 +37,6 @@ const Home = () => {
                     <h2>Working With the Best</h2>
                 </div>
                 <div className='clientsLogo'>
-                    <img src={mikemarfori} alt='MikeMarfori' title='MikeMarfori' />
                     <img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' />
                     <img src={news1130} alt='News1130' title='News1130' />
                     <img src={autoworld} alt='AutoWorld' title='AutoWorld' />
