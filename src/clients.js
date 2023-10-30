@@ -8,6 +8,8 @@ import newsTruck from './assets/images/newsTruck.png';
 import autoworld from './assets/images/autoworld.png';
 import duda from './assets/images/duda.png';
 import jiffylube from './assets/images/jiffylube.png';
+import jifflubetruck from './assets/images/jiffylubetruck.png';
+import dawsontruck from './assets/images/dawsontruck.png';
 
 const Clients = () => {
   return (
@@ -65,16 +67,85 @@ const Clients = () => {
                 </div>
               </TabPanel>
               <TabPanel>
-                <h2>Dawson Sawyer</h2>
+              <div className='tabCont_inner'>
+                  <div className='custom_row'>
+                    <div className='imgColmn'>
+                      <Tabs>
+                        <TabPanel>
+                          <img src={dawsontruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={dawsontruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={dawsontruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={jifflubetruck} alt='' title='' />
+                        </TabPanel>
+                        <TabList>
+                          <Tab><img src={dawsontruck} alt='' title='' /></Tab>
+                          <Tab><img src={dawsontruck} alt='' title='' /></Tab>
+                          <Tab><img src={dawsontruck} alt='' title='' /></Tab>
+                          <Tab><img src={dawsontruck} alt='' title='' /></Tab>
+                        </TabList>
+                      </Tabs>
+                    </div>
+                    <div className='contColmn'>
+                      <div className='logo'>
+                        <img src={jiffylube} alt='News1130' title='News1130' />
+                      </div>
+                      <h4>Dawson + Sawyer</h4>
+                      <div className='tag'>Industry: <span>Building Developer</span></div>
+                      <p>When in the Fraser Valley it's hard to miss the presence of Dawson + Sawyer with all of their new developments. We like to think we were part of that!</p>
+                    </div>
+                  </div>
+                </div>
               </TabPanel>
               <TabPanel>
                 <h2>Autoworld</h2>
+                <p>No Data Right now</p>
               </TabPanel>
               <TabPanel>
                 <h2>Duda</h2>
+                <p>No Data Right now</p>
+
               </TabPanel>
               <TabPanel>
-                <h2>Jiffylube</h2>
+              <div className='tabCont_inner'>
+                  <div className='custom_row'>
+                    <div className='imgColmn'>
+                      <Tabs>
+                        <TabPanel>
+                          <img src={jifflubetruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={jifflubetruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={jifflubetruck} alt='' title='' />
+                        </TabPanel>
+                        <TabPanel>
+                          <img src={jifflubetruck} alt='' title='' />
+                        </TabPanel>
+                        <TabList>
+                          <Tab><img src={jifflubetruck} alt='' title='' /></Tab>
+                          <Tab><img src={jifflubetruck} alt='' title='' /></Tab>
+                          <Tab><img src={jifflubetruck} alt='' title='' /></Tab>
+                          <Tab><img src={jifflubetruck} alt='' title='' /></Tab>
+                        </TabList>
+                      </Tabs>
+                    </div>
+                    <div className='contColmn'>
+                      <div className='logo'>
+                        <img src={jiffylube} alt='News1130' title='News1130' />
+                      </div>
+                      <h4>jiffy lube</h4>
+                      <div className='tag'>Industry: <span>Automotive</span></div>
+                      <p>In a competitive market segment like Quick Lubes we have helped Jiffylube stand out from the crowd by spreading their brand & messages to local Surrey / Fraser Valley neighborhoods.</p>
+                    </div>
+                  </div>
+                </div>
               </TabPanel>
             </Tabs>
           </div>
