@@ -1,0 +1,277 @@
+.login_sec {
+    padding: 4rem 0;
+}
+
+.login_sec .form {
+    max-width: 860px;
+    margin: 4rem auto;
+    display: flex;
+    display: -ms-flexbox;
+    padding: 4rem;
+    background: rgb(21 132 60 / 10%);
+    border-radius: 0.2rem;
+    position: relative;
+}
+  
+.login_sec .form-group_title {
+    color: #15843C;
+    text-transform: uppercase;
+}
+  
+.login_sec .form_background {
+    border-radius: 0.2rem;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    width: 50%;
+    height: 120%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transition: all 0.3s cubic-bezier(0.04, 0.57, 0.15, 1.46);
+}
+  
+.login_sec .fieldset {
+    flex: 1;
+    margin: 0;
+    border: 0;
+    padding: 0 5rem 0 0;
+}
+
+.login_sec .fieldset:first-child {
+    padding-left: 0;
+}
+
+.login_sec .fieldset:last-child {
+    padding-left: 5rem;
+    padding-right: 0;
+}
+  
+.login_sec input[type="radio"].radio--invisible {
+    opacity: 0;
+    height: 0 !important;
+    width: 0 !important;
+}
+  
+.login_sec .button {
+    text-transform: uppercase;
+    padding: 0.6rem 2rem;
+    border: 1px solid #fff;
+    color: rgb(21 132 60);
+    background-color: rgb(21 132 60 / 20%);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    display: inline-block;
+    margin-top: 1rem;
+}
+  
+.login_sec .button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+  
+.login_sec .button--form {
+    float: right;
+    margin-top: 0;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 13px;
+    padding: 0.5rem;
+}
+
+.login_sec .forgot {
+    text-align: right;
+    width: 100%;
+    margin: 10px 0 15px;
+    font-size: 14px;
+    color: rgb(21 132 60);
+}
+
+.login_sec .forgot span {
+    cursor: pointer;
+}
+  
+.login_sec #noaccount:checked ~ .form_background {
+    transform: translate(3rem, -50%);
+}
+
+.login_sec #noaccount:checked ~ .form_background .form-group--account {
+    display: none;
+}
+
+.login_sec #noaccount:checked ~ .form_background .form-group--noaccount {
+    display: block;
+    opacity: 0;
+    animation-delay: 0.2s;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+}
+  
+.login_sec #account:checked ~ .form_background {
+    transform: translate(calc(100% - 3rem), -50%);
+}
+
+.login_sec #account:checked ~ .form_background .form-group--noaccount {
+    display: none;
+}
+
+.login_sec #account:checked ~ .form_background .form-group--account {
+    display: block;
+    animation-delay: 0.2s;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+    .login_sec .form {
+        max-width: 800px;
+        padding: 3rem;
+    }
+
+    .login_sec .fieldset h2 {
+        font-size: 18px;
+    }
+
+    .login_sec .fieldset p {
+        font-size: 14px;
+    }
+
+    .login_sec .form-group_title {
+        margin: 0 0 15px;
+    }
+
+    .login_sec form input:not([type="submit"]) {
+        height: 40px;
+        line-height: 40px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .login_sec .button--form {
+        height: 2rem;
+        width: 7rem;
+        font-size: 12px;
+        padding: 0.3rem;
+    }
+
+    .login_sec .button {
+        padding: 0.5rem 1rem;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .login_sec {
+        padding: 2rem 0;
+    }
+
+    .login_sec .form {
+        padding: 2rem;
+    }
+
+    .login_sec #noaccount:checked ~ .form_background {
+        transform: translate(2rem, -50%);
+    }
+    
+    .login_sec #account:checked ~ .form_background {
+        transform: translate(calc(100% - 2rem), -50%);
+    }
+
+    .login_sec .button--form {
+        width: 5rem;
+    }
+
+    .login_sec .form-group_title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .login_sec .form {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .login_sec .form_background {
+        transform: none !important;
+        position: static !important;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .login_sec .fieldset {
+        padding: 0 1rem !important;
+        width: 80%;
+        margin: 1rem auto 0;
+    }
+
+    .login_sec #noaccount:checked ~ .form_background ~ .fieldset.noaccount {
+        display: none;
+    }
+
+    .login_sec #account:checked ~ .form_background ~ .fieldset.account {
+        display: none;
+    }
+
+    .login_sec .form {
+        margin: 1rem auto;
+    }
+
+    .login_sec .forgot {
+        margin: 8px 0 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 475.98px) {
+
+    .login_sec form .formGrp {
+        margin: 0 0 10px;
+    }
+
+   .login_sec .form_background {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .login_sec .fieldset {
+        padding: 0 0.5rem !important;
+        width: 100%;
+        margin: 0.5rem auto 0;
+    }
+
+    .login_sec .fieldset h2 {
+        font-size: 16px;
+    }
+
+    .login_sec .fieldset p {
+        font-size: 12px;
+    }
+}

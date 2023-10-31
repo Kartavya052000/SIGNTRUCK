@@ -13,11 +13,11 @@ ul.react-tabs__tab-list {
     gap: 10px;
 }
 
-ul.react-tabs__tab-list li.react-tabs__tab {
+ul.react-tabs__tab-list li {
     outline: none;
 }
   
-ul.react-tabs__tab-list li.react-tabs__tab img {
+ul.react-tabs__tab-list li > img {
     width: 70%;
     margin: 0 auto;
     display: block;
