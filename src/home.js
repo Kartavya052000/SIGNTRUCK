@@ -19,7 +19,7 @@ const Home = () => {
                 <div className='hero_info'>
                     <span>A No-Limits Creative Agency</span>
                     <h2>Propel Your Brand With SignTruck</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt libero et odio convallis, vitae fermentum odio rhoncus.</p>
+                    <p>Drive Your Brand Forward with Dynamic Sign Truck Advertising!</p>
                     <a href='#' title='Contact Us' className='butn butn_success'><span>Contact Us</span></a>
                 </div>
             </div>
