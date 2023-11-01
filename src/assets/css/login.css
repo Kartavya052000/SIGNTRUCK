@@ -97,7 +97,7 @@
     transform: translate(3rem, -50%);
 }
 
-.login_sec #noaccount:checked ~ .form_background .form-group--account {
+/* .login_sec #noaccount:checked ~ .form_background .form-group--account {
     display: none;
 }
 
@@ -108,7 +108,7 @@
     animation-duration: 0.3s;
     animation-name: slidein;
     animation-fill-mode: forwards;
-}
+} */
   
 .login_sec #account:checked ~ .form_background {
     transform: translate(calc(100% - 3rem), -50%);
@@ -134,6 +134,7 @@
       opacity: 1;
     }
 }
+
 
 
 
