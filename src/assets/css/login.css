@@ -1,3 +1,11 @@
+.innerSecBgHeader {
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #28a554;
+    color: #fff;
+}
+
 .login_sec {
     padding: 4rem 0;
 }
@@ -97,37 +105,32 @@
     cursor: pointer;
 }
   
-.login_sec #noaccount:checked ~ .form_background {
+.login_sec .form_background {
     transform: translate(3rem, -50%);
 }
-
-/* .login_sec #noaccount:checked ~ .form_background .form-group--account {
-    display: none;
-}
-
-.login_sec #noaccount:checked ~ .form_background .form-group--noaccount {
-    display: block;
-    opacity: 0;
-    animation-delay: 0.2s;
-    animation-duration: 0.3s;
-    animation-name: slidein;
-    animation-fill-mode: forwards;
-} */
   
-.login_sec #account:checked ~ .form_background {
+.login_sec .form_background.signup {
     transform: translate(calc(100% - 3rem), -50%);
 }
 
-.login_sec #account:checked ~ .form_background .form-group--noaccount {
+.login_sec .form_background.signup .form-group--noaccount {
     display: none;
 }
 
-.login_sec #account:checked ~ .form_background .form-group--account {
+.login_sec .form_background .form-group--account {
     display: block;
     animation-delay: 0.2s;
     animation-duration: 0.3s;
     animation-name: slidein;
     animation-fill-mode: forwards;
+}
+
+.login_sec .form_background .form-group--account {
+    display: none;
+}
+
+.login_sec .form_background.signup .form-group--account {
+    display: block;
 }
 
 @keyframes slidein {
@@ -198,11 +201,11 @@
         padding: 2rem;
     }
 
-    .login_sec #noaccount:checked ~ .form_background {
+    .login_sec .form_background {
         transform: translate(2rem, -50%);
     }
     
-    .login_sec #account:checked ~ .form_background {
+    .login_sec .form_background.signup {
         transform: translate(calc(100% - 2rem), -50%);
     }
 
@@ -235,12 +238,12 @@
         margin: 1rem auto 0;
     }
 
-    .login_sec #noaccount:checked ~ .form_background ~ .fieldset.noaccount {
+    .login_sec .form_background:not(.signup) ~ .fieldset.noaccount {
         display: none;
     }
 
-    .login_sec #account:checked ~ .form_background ~ .fieldset.account {
-        display: none;
+    .login_sec .form_background.signup ~ .fieldset.account {
+        display: none !important;
     }
 
     .login_sec .form {
