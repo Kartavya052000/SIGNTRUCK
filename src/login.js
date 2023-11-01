@@ -13,8 +13,8 @@ const Login = () => {
     email: "",
     password: "",
   });
-  // const { email, password, username } = inputValue;
-  const { email, password } = inputValue;
+  const { email, password, username } = inputValue;
+  // const { email, password } = inputValue;
   const { loginemail, loginpassword } = inputLoginValue;
   const handleOnChange = (e) => {
     console.log(e.target);
@@ -77,7 +77,7 @@ const handleLogIn = async (e) => {
     const { data } = await axios.post(
       "http://localhost:4000/login",
       {
-        ...inputValue,
+        ...inputLoginValue,
       },
       { withCredentials: true }
     );
@@ -123,6 +123,16 @@ const logSignupClick = event => {
                     <h3 className="form-group_title">Sign up</h3>
                     <div className='formGrp'>
                       <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        value={username}
+                        placeholder="Username"
+                        onChange={handleOnChange}
+                      />
+                    </div>
+                    <div className='formGrp'>
+                      <input
                         type="email"
                         name="email"
                         id="email"
@@ -151,8 +161,8 @@ const logSignupClick = event => {
                     <div className='formGrp'>
                       <input
                           type="email"
-                          name="loginemail"
-                          id="email2"
+                          name="email"
+                          id="loginemail"
                           value={loginemail}
                           placeholder="Email Address"
                           onChange={handleLoginOnChange}
@@ -161,11 +171,11 @@ const logSignupClick = event => {
                     <div className='formGrp'>
                       <input
                         type="password"
-                        name="loginpassword"
+                        name="password"
                         value={loginpassword}
                         placeholder="Password"
                         onChange={handleLoginOnChange}
-                        id='password2'
+                        id='loginpassword'
                       />
                     </div>
                     <div className='forgot'>

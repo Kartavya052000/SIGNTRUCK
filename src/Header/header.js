@@ -7,10 +7,15 @@ import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+
 
 const Header = () => {
-
   const [active, setActive] = useState(false);
+const [cookies, setCookie, removeCookie] = useCookies(['token']);
+const token = cookies['token'];
+
+console.log(cookies['token']);
   return (
     <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
       <div className='innerHeader'>
@@ -70,7 +75,14 @@ const Header = () => {
                   <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item'>
-                  <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
+                {token ? (
+                // If token is defined, show the user's name or other user-related content
+                <span className='butn butn_success'>Welcome User</span>
+              ) : (
+                // If token is undefined, show the "Login" button
+                <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
+              )}
+                  {/* <Link className='butn butn_success' to="/login" title='Login'>Login</Link> */}
                 </li>
               </ul>
             </nav>
