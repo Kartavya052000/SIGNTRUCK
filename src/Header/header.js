@@ -6,6 +6,7 @@ import mail from '../assets/images/mail.svg';
 import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
+import usericon from '../assets/images/usericon.png';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 
@@ -75,9 +76,9 @@ console.log(cookies['token']);
                   <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item'>
-                {token ? (
+                {!token ? (
                 // If token is defined, show the user's name or other user-related content
-                <span className='butn butn_success'>Welcome User</span>
+                <span className='butn butn_success'><img src={usericon} />User</span>
               ) : (
                 // If token is undefined, show the "Login" button
                 <Link className='butn butn_success' to="/login" title='Login'>Login</Link>

@@ -89,6 +89,19 @@
   margin-right: 0;
 }
 
+.navigationWrapper ul li.menu_item span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.navigationWrapper ul li.menu_item img {
+  width: 25px;
+  height: 25px;
+  margin-right: 2px;
+}
+
 .hamburger {
   display: none;
 }
