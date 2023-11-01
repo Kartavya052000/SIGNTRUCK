@@ -54,6 +54,10 @@
     height: 0 !important;
     width: 0 !important;
 }
+
+.login_sec form input:not([type="submit"]) {
+    border-bottom: 1px solid #ccc;
+}
   
 .login_sec .button {
     text-transform: uppercase;
