@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import faqBanner from './assets/images/faq_banner.png';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 const Login = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({

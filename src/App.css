@@ -89,13 +89,6 @@
   margin-right: 0;
 }
 
-.navigationWrapper ul li.menu_item span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-}
-
 .navigationWrapper ul li.menu_item img {
   width: 25px;
   height: 25px;
@@ -104,6 +97,67 @@
 
 .hamburger {
   display: none;
+}
+
+.navigationWrapper ul li.menu_item .dropdown {
+  margin: 0;
+  position: relative;
+}
+
+.navigationWrapper ul li.menu_item span.dropdown_text {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  color: #fff;
+  background-color: #15843C;
+  text-align: center;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+}
+
+.navigationWrapper .dropdown_menu {
+  top: 55px;
+  right: 0;
+  position: absolute;
+  width: 150px;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.navigationWrapper .dropdown.active .dropdown_menu {
+  visibility: visible;
+  opacity: 1;
+  height: 110px;
+  box-shadow: 0px 8px 8px 5px rgba(0,0,0,0.2);
+}
+
+.navigationWrapper .dropdown_menu ul {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+.navigationWrapper .dropdown_menu ul li a {
+  text-transform: uppercase;
+  margin: 0 0 5px;
+}
+
+.navigationWrapper ul li.menu_item:not(.dropdown) .butn {
+  width: 7rem;
+  height: 2.5rem;
 }
 
 /** Header CSS Ends here **/
@@ -225,6 +279,14 @@ footer .copyright {
 
 /** Responsive CSS starts here **/
 
+@media (min-width: 768px) {
+  .navigationWrapper ul li.menu_item span.dropdown_text:hover {
+    background-color: #2cb75c;
+  }
+}
+
+
+
 @media (max-width: 1199.98px) {
   .mainHeader .header_wrap {
       padding: 15px 0;
@@ -236,12 +298,40 @@ footer .copyright {
 }
 
 @media (max-width: 991.98px) {
+
+  .navigationWrapper ul li.menu_item:not(.dropdown) .butn {
+      width: 5rem;
+  }
   .innerHeaderWrap ul {
     gap: 15px;
   }
   
   .mainHeader .logo img {
       max-width: 200px;
+  }
+
+  .navigationWrapper ul li.menu_item span.dropdown_text {
+    font-size: 12px;
+    padding: 6px 8px;
+    border: 1px solid #15843C;
+  }
+
+  .navigationWrapper ul li.menu_item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navigationWrapper .dropdown_menu {
+    top: 40px;
+    width: 100%;
+  }
+
+  .navigationWrapper .dropdown.active .dropdown_menu {
+    height: 130px;
+  }
+
+  .navigationWrapper .dropdown_menu ul li a {
+    margin: 0;
   }
 
   .footerCol-3 {

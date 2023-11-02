@@ -17,6 +17,9 @@ const [cookies, setCookie, removeCookie] = useCookies(['token']);
 const token = cookies['token'];
 
 console.log(cookies['token']);
+
+const [isDropdown, setDropdown] = useState(false);
+
   return (
     <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
       <div className='innerHeader'>
@@ -75,16 +78,28 @@ console.log(cookies['token']);
                 <li className='menu_item linkEffect'>
                   <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
-                <li className='menu_item'>
-                {!token ? (
-                // If token is defined, show the user's name or other user-related content
-                <span className='butn butn_success'><img src={usericon} />User</span>
-              ) : (
-                // If token is undefined, show the "Login" button
-                <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
-              )}
-                  {/* <Link className='butn butn_success' to="/login" title='Login'>Login</Link> */}
+                <li className='menu_item linkEffect'>
+                  <a href='/booking' title='Booking' data-hover="Booking"><span>Booking</span></a>
                 </li>
+                
+                {token ? (
+                  <li className='menu_item'>
+                    <div className={`dropdown ${isDropdown ? 'active' : ''}`}>
+                      <span className='dropdown_text' onClick={()=> setDropdown(!isDropdown)}><img src={usericon} />User</span>
+                      <div className='dropdown_menu'>
+                        <ul>
+                          <li className='linkEffect'><a href='#' data-hover="My Profile"><span>My Profile</span></a></li>
+                          <li className='linkEffect'><a href='#' data-hover="My Booking"><span>My Booking</span></a></li>
+                          <li className='linkEffect'><a href='#' data-hover="Logout"><span>Logout</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                ) : (
+                  <li className='menu_item'>
+                    <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
+                  </li>
+                )}
               </ul>
             </nav>
           </div>

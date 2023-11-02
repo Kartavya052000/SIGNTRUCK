@@ -7,6 +7,7 @@ import Clients from './clients';
 import Contact from './contact';
 import Login from './login';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";   
+import Booking from './booking';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='faq' element={<Faq />} />
           <Route exact path='clients' element={<Clients />} />
           <Route exact path='contact' element={<Contact />} />
+          <Route exact path='booking' element={<Booking />} />
           <Route exact path='login' element={<Login />} />
         </Routes>
         <Footer />
