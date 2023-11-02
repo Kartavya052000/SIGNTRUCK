@@ -72,16 +72,19 @@ console.log(cookies['token']);
                 <Link to="/clients" data-hover="Clients" title='Clients'><span>Clients</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
+                <a href="https://canadianvisionmedia.ca/"><span>Prospectus</span></a>
+                </li>
+                <li className='menu_item linkEffect'>
                   <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item'>
-                {token ? (
+                {/* {token ? (
                 // If token is defined, show the user's name or other user-related content
                 <span className='butn butn_success'>Welcome User</span>
               ) : (
                 // If token is undefined, show the "Login" button
                 <Link className='butn butn_success' to="/login" title='Login'>Login</Link>
-              )}
+              )} */}
                   {/* <Link className='butn butn_success' to="/login" title='Login'>Login</Link> */}
                 </li>
               </ul>
