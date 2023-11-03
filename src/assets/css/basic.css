@@ -132,9 +132,9 @@
     list-style: none;
   }
   
-  a {
-    text-decoration: none;
-    color: inherit;
+  a, a:active, a:visited {
+    text-decoration: none !important;
+    color: #000;
   }
 
   p {
@@ -157,66 +157,66 @@
   /** Form CSS **/
 
   form .formGrp {
-    margin: 0 0 15px;
-}
+      margin: 0 0 15px;
+  }
 
-form label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Mulish';
-    margin-bottom: 10px;
-}
+  form:not(.rs-form) label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Mulish';
+      margin-bottom: 10px;
+  }
 
-form input:not([type="submit"]) {
-    display: inline-block;
-    width: 100%;
+  form:not(.rs-form) input:not([type="submit"]) {
+      display: inline-block;
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      margin: 0 0 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-family: 'Mulish';
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      transition: all 0.3s ease-in;
+  }
+
+  form:not(.rs-form) textarea {
+      width: 100%;
+      height: 120px;
+      resize: none;
+      margin: 0 0 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-family: 'Mulish';
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      transition: all 0.3s ease-in;
+  }
+
+  form:not(.rs-form) input:not([type="submit"]):focus, form:not(.rs-form) textarea:focus {
+      border-color: #ccc;
+  }
+
+  .inlineForm .formGrp {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .inlineForm .formGrp input {
+    margin: 0;
+    border-radius: 0;
     height: 45px;
-    line-height: 45px;
-    margin: 0 0 10px;
-    padding: 10px 12px;
-    font-size: 13px;
-    font-family: 'Mulish';
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    transition: all 0.3s ease-in;
-}
-
-form textarea {
-    width: 100%;
-    height: 120px;
-    resize: none;
-    margin: 0 0 10px;
-    padding: 10px 12px;
-    font-size: 14px;
-    font-family: 'Mulish';
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none;
-    transition: all 0.3s ease-in;
-}
-
-form input:not([type="submit"]):focus, form textarea:focus {
-    border-color: #ccc;
-}
-
-.inlineForm .formGrp {
-  display: flex;
-  display: -ms-flexbox;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.inlineForm .formGrp input {
-  margin: 0;
-  border-radius: 0;
-  height: 45px;
-  line-height: normal;
-}
+    line-height: normal;
+  }
 
 
 

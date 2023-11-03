@@ -224,6 +224,10 @@ ul.foot_menu li a:hover {
   font-weight: 500;
 }
 
+.footerCol_inner ul.address li a {
+  color: #fff;
+}
+
 .footerCol_inner ul.address li span img {
   vertical-align: middle;
   margin-right: 10px;
