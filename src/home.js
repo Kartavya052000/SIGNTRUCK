@@ -68,7 +68,7 @@ const Home = () => {
         </div>
     </section>
 
-    <section className='connect_us_sec'>
+    {/* <section className='connect_us_sec'>
         <div className='custom-container'>
             <div className='custom_row'>
                 <div className='imgCol'>
@@ -105,7 +105,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
 
     <section className='map_sec'>
         <div className='map_inner'>

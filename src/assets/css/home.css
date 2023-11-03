@@ -185,7 +185,7 @@
   /** Map CSS starts here **/
 
   .map_sec {
-    padding: 4rem 0 0;
+    padding: 1rem 0 0;
   }
 
   .map_inner {
@@ -201,8 +201,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
   }
 
   /** Map CSS ends here **/

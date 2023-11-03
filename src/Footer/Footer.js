@@ -71,7 +71,40 @@ const Footer = () => {
       </section>
       <div className='copyright'>
         <div className='custom-container'>
-          <span>&copy; {new Date().getFullYear()} by Signtruck</span>
+          {/* <span>&copy; {new Date().getFullYear()} by Signtruck</span> */}
+          <p>
+            <a property="dct:title" rel="cc:attributionURL" href="https://www.signtruck.ca/">SignTruck</a>{" "}by{" "}
+            <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.signtruck.ca/">
+              Signtruck
+            </a>{" "}
+            is marked with{" "}
+            <a
+              href="http://creativecommons.org/publicdomain/zero/1.0?ref=chooser-v1"
+              target="_blank"
+              rel="license noopener noreferrer"
+              style={{ display: "inline-block" }}
+            >
+              CC0 1.0
+              <img
+                style={{
+                  height: "22px!important",
+                  marginLeft: "3px",
+                  verticalAlign: "text-bottom",
+                }}
+                src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+                alt="CC"
+              />
+              <img
+                style={{
+                  height: "22px!important",
+                  marginLeft: "3px",
+                  verticalAlign: "text-bottom",
+                }}
+                src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"
+                alt="CC0"
+              />
+            </a>
+          </p>
         </div>
       </div>
     </footer>
