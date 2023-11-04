@@ -55,6 +55,13 @@
 
 /** Responsive CSS starts here **/
 
+@media (max-width: 1199.98px) {
+
+    .innerSecBgHeader h2 {
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 991.98px) {
     .ttlWrap span {
         font-size: 12px;
@@ -62,6 +69,10 @@
 
     .ttlWrap h2 {
         font-size: 20px;
+    }
+
+    .innerSecBgHeader h2 {
+        font-size: 25px;
     }
 }
 
@@ -77,6 +88,10 @@
     .innerSec h1 {
         font-size: 26px;
     }
+
+    .innerSecBgHeader h2 {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -88,10 +103,18 @@
     .innerSec h1 {
         font-size: 23px;
     }
+
+    .innerSecBgHeader h2 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 475.98px) {
     .innerSec h1 {
         font-size: 20px;
+    }
+
+    .innerSecBgHeader h2 {
+        font-size: 18px;
     }
 }

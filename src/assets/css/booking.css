@@ -1,0 +1,75 @@
+.book_form_sec {
+    padding: 3rem 0;
+    background-color: #F4F4F4;
+}
+
+.book_form_sec form.rs-form {
+    padding: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.book_form_sec .rs-form .rs-form-control-wrapper,
+.book_form_sec .rs-form .rs-form-control-wrapper input {
+    display: block;
+    width: 100%;
+}
+
+.book_form_sec .rs-form .rs-form-control-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Mulish';
+    margin-bottom: 10px;
+}
+
+.book_form_sec .rs-form .rs-picker-toggle-wrapper {
+    display: block;
+}
+
+.book_form_sec .rs-form  .rs-input {
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 767.98px) {
+    .book_form_sec form.rs-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .book_form_sec {
+        padding: 2rem 0;
+    }
+
+    .book_form_sec .rs-form  .rs-input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .book_form_sec form.rs-form {
+        width: 100%;
+    }
+
+    .book_form_sec .rs-form .rs-form-control-label {
+        font-size: 12px;
+    }
+
+    .book_form_sec .rs-picker-input .rs-picker-toggle,
+    .book_form_sec .rs-picker-daterange .rs-picker-toggle,
+    .book_form_sec .rs-radio-checker label {
+        font-size: 12px !important;
+    }
+}

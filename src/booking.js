@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Form, Schema, SelectPicker, DateRangePicker, Button, TagPicker, MaskedInput, Uploader, Radio, Input, RadioGroup } from 'rsuite';
+import { Form, Schema, DateRangePicker, Button, TagPicker, Uploader, Radio, Input, RadioGroup } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
 
@@ -107,6 +107,7 @@ const Booking = () => {
                         <TextField
                             name="name"
                             label="Name"
+                            placeholder="Name"
                             accepter={Input}
                             value={value.name}
                             onChange={newValue => setValue({ ...value, name: newValue })}
@@ -114,6 +115,7 @@ const Booking = () => {
                         <TextField
                             name="email"
                             label="Email"
+                            placeholder="Email"
                             accepter={Input}
                             value={value.email}
                             onChange={newValue => setValue({ ...value, email: newValue })}
@@ -121,21 +123,22 @@ const Booking = () => {
                         <TextField
                             name="phone"
                             label="Phone"
+                            placeholder="Phone"
                             accepter={Input}
                             value={value.phone}
                             onChange={newValue => setValue({ ...value, phone: newValue })}
                         />
-                        <MaskedInput
+                        {/* <MaskedInput
                             value={value.phone}
                             mask={['1', /[3456789]/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]}
                             placeholder='(555) 495-3947'
                             placeholderChar='_'
-                            style={{ width: 300 }}
                             onChange={newValue => setValue({ ...value, phone: newValue })}
-                        />
+                        /> */}
                         <TextField
                             name="website"
                             label="Website"
+                            placeholder="Website"
                             accepter={Input}
                             value={value.website}
                             onChange={newValue => setValue({ ...value, website: newValue })}
@@ -144,27 +147,36 @@ const Booking = () => {
                         data={monthData} 
                         onChange={newValue => setValue({ ...value, monthData: newValue })}
                         /> */}
-                        <TagPicker 
-                        data={DayData}
-                        name="day"
-                            label="day"
-                            accepter={Input}
-                            value={value.day}
-                        onChange={newValue => setValue({ ...value, day: newValue })}
-                         />
-                        <DateRangePicker 
-                        name="dateRange"
-                        label="dateRange"
-                        accepter={Input}
-                        value={value.dateRange}
-                        onChange={newValue => setValue({ ...value, dateRange: newValue })}
-                        
-                        />
-                        <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
-                            <p>Do you Have Design for your ad ?</p>
-                            <Radio value="A">Yes</Radio>
-                            <Radio value="B">No</Radio>
-                        </RadioGroup>
+                        <Form.Group controlId="day">
+                            <Form.ControlLabel>How long it'll be on sign truck?</Form.ControlLabel>
+                            <TagPicker 
+                                data={DayData}
+                                name="day"
+                                placeholder="5 Days in a week"
+                                accepter={Input}
+                                value={value.day}
+                                onChange={newValue => setValue({ ...value, day: newValue })}
+                            />
+                        </Form.Group>
+
+                        <Form.Group controlId="dateRange">
+                            <Form.ControlLabel>Start Month and End Month</Form.ControlLabel>
+                            <DateRangePicker 
+                                name="dateRange"
+                                placeholder="Minimum 1 month"
+                                accepter={Input}
+                                value={value.dateRange}
+                                onChange={newValue => setValue({ ...value, dateRange: newValue })}
+                            />
+                        </Form.Group>
+
+                        <Form.Group controlId="radioList">
+                            <Form.ControlLabel>Do you have design for your ad?</Form.ControlLabel>
+                            <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
+                                <Radio value="A">Yes</Radio>
+                                <Radio value="B">No</Radio>
+                            </RadioGroup>
+                        </Form.Group>
                         {radioValue === 'A' && (
                             <Uploader action="" draggable>
                                 <div style={{ height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -172,24 +184,29 @@ const Booking = () => {
                                 </div>
                             </Uploader>
                         )}
-                        <TagPicker 
-                        data={data}
-                        name="preferredLocation"
-                        label="preferredLocation"
-                        accepter={Input}
-                        value={value.preferredLocation}
-                         placeholder="Preferred Location"
-                        onChange={newValue => setValue({ ...value, preferredLocation: newValue })}
-                         
-                         />
+
+                        <Form.Group controlId="preferredLocation">
+                            <Form.ControlLabel>Preferred Location</Form.ControlLabel>
+                            <TagPicker 
+                                data={data}
+                                name="preferredLocation"
+                                placeholder="Preferred Location"
+                                accepter={Input}
+                                value={value.preferredLocation}
+                                onChange={newValue => setValue({ ...value, preferredLocation: newValue })}
+                            />
+                        </Form.Group>
+
                         <TextField 
-                        name="location" 
-                        label="Your Location"
-                        accepter={Input}
+                            name="location" 
+                            label="Your Location"
+                            placeholder="Your Location"
+                            accepter={Input}
                             value={value.location}
                             onChange={newValue => setValue({ ...value, location: newValue })}
                         />
-                        <Button appearance="ghost" type="submit">Submit</Button>
+
+                        <Button appearance="ghost" type="submit">Book Now</Button>
                     </Form>
                 </div>
             </section>

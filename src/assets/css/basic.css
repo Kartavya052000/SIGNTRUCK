@@ -232,7 +232,7 @@
 
 @media (max-width: 575.98px) {
 
-  form input:not([type="submit"]) {
+  form:not(.rs-form) input:not([type="submit"]) {
       height: 40px;
       line-height: 40px;
       margin: 0 0 8px;

@@ -6,6 +6,7 @@
 @import url(assets/css/clients.css);
 @import url(assets/css/contact.css);
 @import url(assets/css/login.css);
+@import url(assets/css/booking.css);
 @import url(ui/css/style.css);
 
 
@@ -436,6 +437,13 @@ footer .copyright {
       width: 100%;
   }
 
+  .navigationWrapper ul li.menu_item:not(.dropdown) .butn {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+
   .innerHeaderWrap ul {
       font-size: 13px;
   }
@@ -469,7 +477,56 @@ footer .copyright {
   }
 }
 
+@media (max-width: 600px) {
+  
+  /** RS Form CSS **/
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar .rs-calendar-table-cell-content {
+    font-size: 12px;
+  }
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar {
+    height: auto;
+    min-width: auto;
+  }
+}
+
 @media (max-width: 575.98px) {
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    height: auto;
+    min-width: auto;
+  }
+
+  .rs-picker-daterange-panel .rs-picker-toolbar {
+    flex-direction: column;
+  }
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar .rs-calendar-table-cell-content {
+    border-radius: 4px;
+    font-size: 10px;
+    padding: 3px;
+    line-height: 25px;
+  }
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar {
+    height: auto;
+  }
+
+  .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar:first-child {
+    border: none;
+    border-bottom: 1px solid var(--rs-border-primary);
+  }
+
+  .rs-picker-daterange-panel .rs-picker-toolbar .rs-btn-sm {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 5px;
+  }
+
   .mainHeader .logo img {
       max-width: 170px;
   }
