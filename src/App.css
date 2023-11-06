@@ -10,6 +10,50 @@
 @import url(ui/css/style.css);
 
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Mulish';
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000 !important;
+  transition: all 0.2s ease-in;
+}
+
+ul, ol  {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:active, a:visited {
+  text-decoration: none !important;
+  color: #000;
+}
+
+p {
+  margin: 0;
+}
+
+
 /** Header CSS **/
 
 .innerHeader {
@@ -273,6 +317,16 @@ footer .copyright {
   color: #fff;
   padding: 12px 0;
   font-size: 12px;
+  font-weight: 500;
+}
+
+footer .copyright a {
+  color: #fff;
+}
+
+footer .copyright img {
+  width: 15px;
+  vertical-align: middle;
 }
 
 /** Footer CSS ends here **/

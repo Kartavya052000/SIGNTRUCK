@@ -44,6 +44,66 @@
     box-shadow: 0 0 0 3px rgba(52,152,255,.25);
 }
 
+.dropzone {
+    background: #fff;
+    border: 1.5px dashed #999;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    height: 180px;
+    border-radius: 4px;
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    transition: all .15s linear;
+}
+
+.dropzone label {
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.dropzone input[type="file"] {
+    display: none;
+}
+
+.dropzone + button.upload {
+    display: block;
+    margin: 10px;
+    width: calc(100% - 20px);
+    max-width: 90px;
+    margin-left: auto;
+    background-color: #1675e0;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dropzone + button.upload:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dropzone + button.upload:not(:disabled):hover {
+    opacity: 0.7;
+}
 
 
 
