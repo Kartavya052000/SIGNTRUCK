@@ -9,7 +9,7 @@ import instagram from '../assets/images/instagram.svg';
 import usericon from '../assets/images/usericon.png';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
-
+import axios from 'axios';
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -19,7 +19,25 @@ const token = cookies['token'];
 console.log(cookies['token']);
 
 const [isDropdown, setDropdown] = useState(false);
+ // Create a function to handle user logout
+ const handleLogout = async () => {
+  try {
+    // Send a request to the logout endpoint
+    const response = await axios.post('http://localhost:4000/logout');
 
+    if (response.status === 200) {
+      // Clear the token from cookies and any other cleanup
+      removeCookie('token');
+      // Redirect or perform any other action after successful logout
+      // For example, you can redirect the user to the home page
+      window.location.href = '/';
+    } else {
+      console.error('Logout failed', response);
+    }
+  } catch (error) {
+    console.error('Logout failed', error);
+  }
+};
   return (
     <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
       <div className='innerHeader'>
@@ -90,7 +108,7 @@ const [isDropdown, setDropdown] = useState(false);
                         <ul>
                           <li className='linkEffect'><a href='#' data-hover="My Profile"><span>My Profile</span></a></li>
                           <li className='linkEffect'><a href='#' data-hover="My Booking"><span>My Booking</span></a></li>
-                          <li className='linkEffect'><a href='#' data-hover="Logout"><span>Logout</span></a></li>
+                          <li className='linkEffect'><a onClick={handleLogout}  data-hover="Logout"><span >Logout</span></a></li>
                         </ul>
                       </div>
                     </div>
