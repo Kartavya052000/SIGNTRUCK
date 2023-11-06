@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useCookies } from 'react-cookie';
+
 const Login = () => {
+
+  // const dev_url= process.env.DEV_URL
+  const [cookies, setCookie] = useCookies(["token"]); // Initialize setCookie
+// const token = cookies['token'];
+
+
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     email: "",
@@ -45,14 +53,17 @@ const handleSignUp = async (e) => {
   e.preventDefault();
   try {
     const { data } = await axios.post(
-      "http://localhost:4000/signup",
+      // "http://localhost:4000/signup",
+      "https://busy-pink-dalmatian-ring.cyclic.app/signup",
       {
         ...inputValue,
       },
       { withCredentials: true }
     );
-    const { success, message } = data;
+    const { success, message,token } = data;
     if (success) {
+      setCookie("token", token, { path: "/" });
+
       handleSuccess(message);
       setTimeout(() => {
         navigate("/");
@@ -74,14 +85,18 @@ const handleLogIn = async (e) => {
   e.preventDefault();
   try {
     const { data } = await axios.post(
-      "http://localhost:4000/login",
+      // "http://localhost:4000/login",
+      "https://busy-pink-dalmatian-ring.cyclic.app/login",
+
       {
         ...inputLoginValue,
       },
       { withCredentials: true }
     );
-    const { success, message } = data;
+    const { success, message,token } = data;
     if (success) {
+      setCookie("token", token, { path: "/" });
+
       handleSuccess(message);
       setTimeout(() => {
         navigate("/");
