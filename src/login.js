@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useCookies } from 'react-cookie';
 
 const Login = () => {
@@ -43,11 +45,11 @@ const Login = () => {
   };
 const handleError = (err) =>
   toast.error(err, {
-    position: "bottom-left",
+    position: "top-left",
   });
 const handleSuccess = (msg) =>
   toast.success(msg, {
-    position: "bottom-right",
+    position: "top-right",
   });
 const handleSignUp = async (e) => {
   e.preventDefault();

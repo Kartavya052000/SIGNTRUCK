@@ -4,12 +4,20 @@ import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { TextField } from '@mui/material';
-
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 const Booking = () => {
+  const navigate = useNavigate();
+
     const data = ['Eugenia', 'Bryan', 'Linda', 'Nancy', 'Lloyd', 'Alice', 'Julia', 'Albert'].map(
         item => ({ label: item, value: item })
     );
+    const nearByLocation = ['Vancouver','Surrey','Richmond'].map(
+        item => ({ label: item, value: item })
+    );
+    
     const truckData = ['Full Truck', 'Driver Side', 'Passenger Side', 'Back Side'].map(
         item => ({ label: item, value: item })
     );
@@ -83,7 +91,14 @@ const Booking = () => {
 
     const formRef = useRef();
     const [selectedFiles, setSelectedFiles] = useState([]);
-
+    const handleError = (err) =>
+    toast.error(err, {
+      position: "top-left",
+    });
+  const handleSuccess = (msg) =>
+    toast.success(msg, {
+      position: "top-right",
+    });
     const handleSubmit = async () => {
         try {
             const form = formRef.current;
@@ -92,18 +107,33 @@ const Booking = () => {
             //     console.error('Form has validation errors');
             //     return;
             // }
-            const formData = new FormData();
-            formData.append('token', token);
-            formData.append('name', name);
-            formData.append('email', email);
-            formData.append('phone', phone);
-            formData.append('website', website);
-            formData.append('day', JSON.stringify(value.day)); // Convert to string since it's an array
-            formData.append('dateRange', JSON.stringify(value.dateRange)); // Convert to string since it's an array
-            formData.append('truckData', value.truckData);
-            formData.append('radioList', value.radioList);
-            formData.append('preferredLocation', JSON.stringify(value.preferredLocation)); // Convert to string since it's an array
-            formData.append('location', location);
+            // const formData = new FormData();
+
+            const formData = {
+                token,
+                name: name,
+                email: email,
+                phone: phone,
+                website: website,
+                truckData:value.truckData,
+                day:value.day,
+                dateRange: value.dateRange,
+                radioList: value.radioList,
+                preferredLocation:value.preferredLocation,
+                location:location
+
+            };
+            // formData.append('token', token);
+            // formData.append('name', name);
+            // formData.append('email', email);
+            // formData.append('phone', phone);
+            // formData.append('website', website);
+            // formData.append('day', JSON.stringify(value.day)); // Convert to string since it's an array
+            // formData.append('dateRange', JSON.stringify(value.dateRange)); // Convert to string since it's an array
+            // formData.append('truckData', value.truckData);
+            // formData.append('radioList', value.radioList);
+            // formData.append('preferredLocation', JSON.stringify(value.preferredLocation)); // Convert to string since it's an array
+            // formData.append('location', location);
 
           
 
@@ -114,20 +144,24 @@ const Booking = () => {
 
             // Make an API request to the backend
             // const response = await axios.post('https://busy-pink-dalmatian-ring.cyclic.app/create-booking', formData,{
-
             const response = await axios.post('http://localhost:4000/create-booking', formData,{
+
+
                 // headers: {
                 //     'Content-Type': 'multipart/form-data', // Set the content type for file upload
                 //   },
             });
-
-            if (response.status === 201) {
-                // Handle a successful response, e.g., show a success message or redirect to a confirmation page
-                console.log('Booking created successfully', response.data);
+            const { success, message } = response.data;
+            if (success) {
+        
+              handleSuccess(message);
+              setTimeout(() => {
+                navigate("/");
+              }, 1000);
             } else {
-                // Handle other response statuses or errors
-                console.error('Booking creation failed', response);
+              handleError(message);
             }
+         
         } catch (error) {
             console.error('API request failed', error);
         }
@@ -267,7 +301,7 @@ const Booking = () => {
                         <Form.Group controlId="preferredLocation">
                             <Form.ControlLabel>Preferred Location</Form.ControlLabel>
                             <TagPicker
-                                data={data}
+                                data={nearByLocation}
                                 name="preferredLocation"
                                 placeholder="Preferred Location"
                                 accepter={Input}
