@@ -113,10 +113,12 @@ const Booking = () => {
             }
 
             // Make an API request to the backend
+            // const response = await axios.post('https://busy-pink-dalmatian-ring.cyclic.app/create-booking', formData,{
+
             const response = await axios.post('http://localhost:4000/create-booking', formData,{
-                headers: {
-                    'Content-Type': 'multipart/form-data', // Set the content type for file upload
-                  },
+                // headers: {
+                //     'Content-Type': 'multipart/form-data', // Set the content type for file upload
+                //   },
             });
 
             if (response.status === 201) {

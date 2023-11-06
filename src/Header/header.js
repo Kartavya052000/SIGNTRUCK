@@ -23,7 +23,8 @@ const [isDropdown, setDropdown] = useState(false);
  const handleLogout = async () => {
   try {
     // Send a request to the logout endpoint
-    const response = await axios.post('http://localhost:4000/logout');
+    // const response = await axios.post('http://localhost:4000/logout');
+    const response = await axios.post('https://busy-pink-dalmatian-ring.cyclic.app/logout');
 
     if (response.status === 200) {
       // Clear the token from cookies and any other cleanup
