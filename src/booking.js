@@ -90,7 +90,7 @@ const Booking = () => {
     // );
 
     const formRef = useRef();
-    const [selectedFiles, setSelectedFiles] = useState([]);
+    const [selectedFiles, setSelectedFiles] = useState('');
     const handleError = (err) =>
     toast.error(err, {
       position: "top-left",
@@ -167,9 +167,10 @@ const Booking = () => {
         }
     };
 
-  const handleFileChange = (event) => {
-    const files = event.target.files;
-    setSelectedFiles(files);
+  const handleFileChange = (e) => {
+    const files = e.target.files;
+    setSelectedFiles(({...selectedFiles,photo:e.target.files[0]}));
+    console.log(selectedFiles,"FFF")
   };
   const handleUpload = () => {
     // You can process the selected files here, e.g., send them to the server.
@@ -285,7 +286,7 @@ const Booking = () => {
                                         <label>Upload or Drop a file here
                                         <input type="file" onChange={handleFileChange}/></label>
                                     </div>
-                                    <button type="button" className='upload' onClick={handleUpload}>Upload Files</button>
+                                    {/* <button type="button" className='upload' onClick={handleUpload}>Upload Files</button> */}
                                 </div>
                             )}
                         </Form.Group>
