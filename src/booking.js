@@ -279,24 +279,16 @@ const Booking = () => {
                                 <Radio value="A">Yes</Radio>
                                 <Radio value="B">No</Radio>
                             </RadioGroup>
+                            {radioValue === 'A' && (
+                                <div className='dropzone_container'>
+                                    <div className='dropzone'>
+                                        <label>Upload or Drop a file here
+                                        <input type="file" onChange={handleFileChange}/></label>
+                                    </div>
+                                    <button type="button" className='upload' onClick={handleUpload}>Upload Files</button>
+                                </div>
+                            )}
                         </Form.Group>
-                        {radioValue === 'A' && (
-                            // <Uploader
-                             
-                            //  draggable 
-                            //  onChange={handleUpload}                            >
-                            //     <div style={{ height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            //         <span>Click or Drag files to this area to upload</span>
-                            //     </div>
-                            // </Uploader>
-                            <div>
-                            <input
-                              type="file"
-                            //   multiple
-                              onChange={handleFileChange}
-                            />
-                            <button onClick={handleUpload}>Upload Files</button>
-                          </div>                        )}
 
                         <Form.Group controlId="preferredLocation">
                             <Form.ControlLabel>Preferred Location</Form.ControlLabel>
