@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { Form, Schema, DateRangePicker, Button, TagPicker, Uploader, Radio, Input, RadioGroup, SelectPicker } from 'rsuite';
+import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
+import { TextField } from '@mui/material';
 
 
 const Booking = () => {
@@ -148,31 +149,44 @@ const Booking = () => {
             </section>
             <section className='book_form_sec'>
                 <div className='custom-container'>
-                    <Form model={model} onSubmit={handleSubmit} >
+                    <Form model={model} onSubmit={handleSubmit}>
+                        
+                        <Form.Group controlId="name">
+                            <Form.ControlLabel>Name</Form.ControlLabel>
+                            <input
+                                name="name"
+                                label="Name"
+                                placeholder="Name"
+                                value={name}
+                                onChange={event => SetName(event.target.value)}
+                            />
+                        </Form.Group>
 
-                        <input
-                            name="name"
-                            label="Name"
-                            placeholder="Name"
-                            value={name}
-                            onChange={event => SetName(event.target.value)}
-                        />
-                        <input
-                            name="email"
-                            label="Email"
-                            placeholder="Email"
-                            accepter={Input}
-                            value={email}
-                            onChange={event => SetEmail(event.target.value)}
-                        />
-                        <input
-                            name="phone"
-                            label="Phone"
-                            placeholder="Phone"
-                            accepter={Input}
-                            value={phone}
-                            onChange={event => SetPhone(event.target.value)}
-                        />
+                        
+                        <Form.Group controlId="email">
+                            <Form.ControlLabel>Email</Form.ControlLabel>
+                            <input
+                                name="email"
+                                label="Email"
+                                placeholder="Email"
+                                accepter={Input}
+                                value={email}
+                                onChange={event => SetEmail(event.target.value)}
+                            />
+                        </Form.Group>
+
+                        
+                        <Form.Group controlId="phone">
+                            <Form.ControlLabel>Phone</Form.ControlLabel>
+                            <input
+                                name="phone"
+                                label="Phone"
+                                placeholder="Phone"
+                                accepter={Input}
+                                value={phone}
+                                onChange={event => SetPhone(event.target.value)}
+                            />
+                        </Form.Group>
                         {/* <MaskedInput
                                 value={value.phone}
                                 mask={['1', /[3456789]/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, /\d/, /\d/]}
@@ -180,18 +194,26 @@ const Booking = () => {
                                 placeholderChar='_'
                                 onChange={newValue => setValue({ ...value, phone: newValue })}
                             /> */}
-                        <input
-                            name="website"
-                            label="Website"
-                            placeholder="Website"
-                            accepter={Input}
-                            value={website}
-                            onChange={event => SetWebsite(event.target.value)}
-                        />
-                        <SelectPicker
-                            data={truckData}
-                            onChange={newValue => setValue({ ...value, truckData: newValue })}
-                        />
+                        <Form.Group controlId="website">
+                            <Form.ControlLabel>Website</Form.ControlLabel>
+                            <input
+                                name="website"
+                                label="Website"
+                                placeholder="Website"
+                                accepter={Input}
+                                value={website}
+                                onChange={event => SetWebsite(event.target.value)}
+                            />
+                        </Form.Group>
+                        <Form.Group controlId="truckDesign">
+                            <Form.ControlLabel>Design on Truck</Form.ControlLabel>
+                            <SelectPicker
+                                name="truckDesign"
+                                data={truckData}
+                                onChange={newValue => setValue({ ...value, truckData: newValue })}
+                            />
+                        </Form.Group>
+
                         <Form.Group controlId="day">
                             <Form.ControlLabel>How long it'll be on sign truck?</Form.ControlLabel>
                             <TagPicker
@@ -205,7 +227,7 @@ const Booking = () => {
                         </Form.Group>
 
                         <Form.Group controlId="dateRange">
-                            <Form.ControlLabel>Start Month and End Month</Form.ControlLabel>
+                            <Form.ControlLabel for="dateRange">Start Month and End Month</Form.ControlLabel>
                             <DateRangePicker
                                 name="dateRange"
                                 placeholder="Minimum 1 month"
@@ -251,7 +273,10 @@ const Booking = () => {
                                 onChange={newValue => setValue({ ...value, preferredLocation: newValue })}
                             />
                         </Form.Group>
+                        
 
+                        <Form.Group controlId="location">
+                            <Form.ControlLabel>Your Location</Form.ControlLabel>
                         <input
                             name="location"
                             label="Your Location"
@@ -260,6 +285,7 @@ const Booking = () => {
                             value={location}
                             onChange={event => SetLocation(event.target.value)}
                         />
+                        </Form.Group>
 
                         <Button appearance="ghost" type="submit">Book Now</Button>
                     </Form>
