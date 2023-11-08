@@ -10,7 +10,9 @@ const MyProfile = () =>{
     const token = cookies['token'];
     const [userdata,SetUserData]=useState([])
     useEffect( () => {
-        Axios.get("http://localhost:4000/my-profile", {
+        // const apiUrl = 'http://localhost:4000/my-profile';
+const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
+        Axios.get(apiUrl, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': ` ${token}`, // Correct the token format

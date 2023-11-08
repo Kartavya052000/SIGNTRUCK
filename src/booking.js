@@ -146,9 +146,10 @@ const Booking = () => {
                 // Use the correct field name for the file input
                 formData.append('image', selectedFiles);
             }
-
+const apiUrl = 'http://localhost:4000/create-booking';
+// const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
             // Then, send the formData with axios
-            const response = await axios.post('http://localhost:4000/create-booking', formData, {
+            const response = await axios.post(apiUrl, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': ` ${token}`, // Correct the token format
