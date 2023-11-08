@@ -530,6 +530,10 @@ footer .copyright img {
       max-width: 50%;
   }
 }
+.error-input {
+  border: 1px solid red !important;
+}
+
 
 @media (max-width: 600px) {
   

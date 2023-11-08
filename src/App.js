@@ -8,6 +8,7 @@ import Contact from './contact';
 import Login from './login';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";   
 import Booking from './booking';
+import MyBooking from './my-booking';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='clients' element={<Clients />} />
           <Route exact path='contact' element={<Contact />} />
           <Route exact path='booking' element={<Booking />} />
+          <Route exact path='my-booking' element={<MyBooking />} />
           <Route exact path='login' element={<Login />} />
         </Routes>
         <Footer />

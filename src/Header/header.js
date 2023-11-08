@@ -108,7 +108,7 @@ const [isDropdown, setDropdown] = useState(false);
                       <div className='dropdown_menu'>
                         <ul>
                           <li className='linkEffect'><a href='#' data-hover="My Profile"><span>My Profile</span></a></li>
-                          <li className='linkEffect'><a href='#' data-hover="My Booking"><span>My Booking</span></a></li>
+                          <li className='linkEffect'><a href='/my-booking' data-hover="My Booking"><span>My Booking</span></a></li>
                           <li className='linkEffect'><a onClick={handleLogout}  data-hover="Logout"><span >Logout</span></a></li>
                         </ul>
                       </div>
