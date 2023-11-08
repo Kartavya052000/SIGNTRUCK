@@ -1,0 +1,169 @@
+.boocard {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    width: 60%;
+    margin: 3rem auto;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.15));
+}
+
+.boocard_inner {
+    display: flex;
+    display: -ms-flexbox;
+}
+
+.boocard_dets {
+    flex: 2;
+    background-color: #fff;
+    min-height: 150px;
+    padding: 1rem;
+}
+
+.boocard_left {
+    border-radius: 5px 0 0 5px;
+}
+
+/* .boocard_dets .boocard_ttl {
+    margin-top: 0;
+} */
+
+.boocard_dets ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.boocard_dets ul li {
+    margin: 0.7rem 0;
+}
+
+.boocard_divider {
+    position: relative;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, #fff 49%, #15843C 50%);
+    margin: 10px 0;
+    width: 20px;
+}
+
+.boocard_divider::before, .boocard_divider::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+    border-radius: 50%;
+}
+
+.boocard_divider::before {
+    top: -25px;
+    border-top-color: #15843C;
+    border-right-color: #fff;
+}
+
+.boocard_divider::after {
+    border-right-color: #15843C;
+    border-top-color: #fff;
+    bottom: -25px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.boocard_date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    background-color: #15843C;
+    min-height: 150px;
+    padding: 0.5rem;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+}
+
+.boocard_date .date {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+}
+
+.boocard_date .dash {
+    font-size: 2rem;
+    line-height: 20px;
+}
+
+.boocard_dets ul li b {
+    display: block;
+    color: #000;
+}
+
+.boocard_dets ul li {
+    color: #616161;
+}
+
+.boocard_dets ul li.name {
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 991.98px) {
+    .boocard {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .boocard {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .boocard {
+        margin: 2rem auto;
+    }
+
+    .boocard_dets ul li {
+        margin: 0.5rem 0;
+        font-size: 12px;
+    }
+
+    .boocard_dets {
+        padding: 1rem 0.5rem 1rem 1rem;
+    }
+    
+    .boocard_dets, .boocard_date {
+        min-height: 185px;
+    }
+
+    .boocard_date {
+        flex: 1;
+        padding-left: 0;
+    }
+
+    .boocard_date .date {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 475.98px) {
+    .boocard_dets {
+        padding: 0;
+        min-height: unset;
+    }
+
+    .boocard_inner {
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #fff;
+    }
+}

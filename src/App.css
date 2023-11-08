@@ -7,6 +7,7 @@
 @import url(assets/css/contact.css);
 @import url(assets/css/login.css);
 @import url(assets/css/booking.css);
+@import url(assets/css/mybookings.css);
 @import url(ui/css/style.css);
 
 
@@ -44,7 +45,7 @@ ul {
   list-style: none;
 }
 
-a, a:active, a:visited {
+a, a:active, a:visited, a:focus {
   text-decoration: none !important;
   color: #000;
 }

@@ -35,36 +35,39 @@ const MyBooking = () => {
   <div key={x.id}>{x.email}</div>
 ))} */}
 
-dateRange
-: 
-["["2023-11-14T03:03:36.032Z","2023-12-19T03:03:36.032Z"]"]
-day
-: 
-["["Monday"]"]
-email
-: 
-"kartavyabhayana1@gmail.com"
-
-location
-: 
-["vancouver"]
-name
-: 
-"kartavya"
-phone
-: 
-8556951762
-preferredLocation
-: 
-"Surret"
-
-truckData
-: 
-"Full Truck"
-
-website
-: 
-"orphics.com"
+            <section className='mybookings_sec'>
+                <div className='custom-container'>
+                    <div className='booCrdContainer'>
+                        <div class="boocard">
+                            <div className='boocard_inner'>
+                                <div class="boocard_dets boocard_left">
+                                    {/* <h3 class="boocard_ttl">Booking Detail</h3> */}
+                                    <ul>
+                                        <li className='name'>Kartavya</li>
+                                        <li>kartavyabhayana1@gmail.com</li>
+                                        <li>8556951762</li>
+                                        <li><b>Location</b> Vancouver</li>
+                                        <li><b>Pref. Location</b> Surrey</li>
+                                    </ul>
+                                </div>
+                                <div class="boocard_dets boocard_right">
+                                    <ul>
+                                        <li><b>Day</b> Monday</li>
+                                        <li><b>Truck Data</b> Full Truck</li>
+                                        <li><b>Website</b> orphicstech.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="boocard_divider"></div>
+                            <div class="boocard_date">
+                                <span class="date">2023-11-14</span>
+                                <span class="dash">-</span>
+                                <span class="date">2023-12-19</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
         </>
