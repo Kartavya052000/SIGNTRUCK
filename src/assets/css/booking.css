@@ -40,7 +40,7 @@
     border-color: #3498ff;
 }
 
-.book_form_sec .rs-form  input:focus {
+.book_form_sec .rs-form div:not(.rs-picker-search-input) input:focus {
     box-shadow: 0 0 0 3px rgba(52,152,255,.25);
 }
 

@@ -62,7 +62,7 @@
   .scrollDown a {
     padding: 10px 15px;
     font-size: 14px;
-    color: #fff;
+    color: #fff !important;
   }
   
   .scrollDown a span {
@@ -76,7 +76,7 @@
   }
   
   .scrollDown > a:hover {
-    color: #15843C;
+    color: #15843C !important;
   }
   
   .scrollDown > a:hover span {

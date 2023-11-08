@@ -316,7 +316,7 @@ const Booking = () => {
                         />
                         </Form.Group>
 
-                        <Button appearance="ghost" type="submit">Book Now</Button>
+                        <Button className='butn butn_success butn_sm' type="submit">Book Now</Button>
                     </Form>
                 </div>
             </section>

@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
                 <div className='rightCol'>
                     <div className='cont'>
-                        <p>Since conception in 2016, Signtruck has been actively serving both local & international businesses to help spread their message throughout Vancouver & The Fraser Valley. Singtruck, unlike any other advertising platrform allows US to deliver YOUR message any time, any place!</p>
+                        <p>Since conception in 2016, Signtruck has been actively serving both local & international businesses to help spread their message throughout Vancouver & The Fraser Valley. Signtruck, unlike any other advertising platform allows us to deliver your message any time, any place!</p>
                     </div>
                 </div>
             </div>
