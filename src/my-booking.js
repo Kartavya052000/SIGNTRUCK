@@ -31,9 +31,42 @@ const MyBooking = () => {
                     <h2>My-Booking</h2>
                 </div>
             </section>
-            {bookingdata.map((x) => (
+            {/* {bookingdata.map((x) => (
   <div key={x.id}>{x.email}</div>
-))}
+))} */}
+
+dateRange
+: 
+["["2023-11-14T03:03:36.032Z","2023-12-19T03:03:36.032Z"]"]
+day
+: 
+["["Monday"]"]
+email
+: 
+"kartavyabhayana1@gmail.com"
+
+location
+: 
+["vancouver"]
+name
+: 
+"kartavya"
+phone
+: 
+8556951762
+preferredLocation
+: 
+"Surret"
+
+truckData
+: 
+"Full Truck"
+
+website
+: 
+"orphics.com"
+
+
         </>
     )
 }
