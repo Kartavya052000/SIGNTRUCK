@@ -11,6 +11,7 @@ import Booking from './booking';
 import MyBooking from './my-booking';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyProfile from './my-profile';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='contact' element={<Contact />} />
           <Route exact path='booking' element={<Booking />} />
           <Route exact path='my-booking' element={<MyBooking />} />
+          <Route exact path='my-profile' element={<MyProfile />} />
           <Route exact path='login' element={<Login />} />
         </Routes>
         <Footer />
