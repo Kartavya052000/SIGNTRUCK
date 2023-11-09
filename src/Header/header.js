@@ -98,7 +98,10 @@ const [isDropdown, setDropdown] = useState(false);
                   <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='/booking' title='Booking' data-hover="Booking"><span>Booking</span></a>
+                  <a href='http://www.canadianvisionmedia.ca/' title='Prospectus' data-hover="Prospectus"><span>Prospectus</span></a>
+                </li>
+                <li className='menu_item linkEffect'>
+                  <a href='/booking' title='Booking' data-hover="Booking"><span><b>Booking</b></span></a>
                 </li>
                 
                 {token ? (

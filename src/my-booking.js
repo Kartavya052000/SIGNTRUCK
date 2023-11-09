@@ -43,7 +43,7 @@ const MyBooking = () => {
                                 <div class="boocard_dets boocard_left">
                                     {/* <h3 class="boocard_ttl">Booking Detail</h3> */}
                                     <ul>
-                                        <li className='name'>Kartavya</li>
+                                        <li className='name'><b>Kartavya</b></li>
                                         <li>kartavyabhayana1@gmail.com</li>
                                         <li>8556951762</li>
                                         <li><b>Location</b> Vancouver</li>

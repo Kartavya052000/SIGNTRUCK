@@ -262,7 +262,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                             />
                         </Form.Group>
                         <Form.Group controlId="truckDesign">
-                            <Form.ControlLabel>How long it’ll be on Sign Truck</Form.ControlLabel>
+                            <Form.ControlLabel>Which Side ? </Form.ControlLabel>
                             <SelectPicker
                                 name="truckDesign"
                                 data={truckData}
@@ -273,7 +273,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="day">
-                            <Form.ControlLabel>How long it'll be on sign truck?</Form.ControlLabel>
+                            <Form.ControlLabel>Number of Days ?</Form.ControlLabel>
                             <TagPicker
                                 data={DayData}
                                 name="day"
@@ -287,7 +287,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="dateRange">
-                            <Form.ControlLabel for="dateRange">Start Month and End Month</Form.ControlLabel>
+                            <Form.ControlLabel for="dateRange">How long it'll be on sign truck?</Form.ControlLabel>
                             <DateRangePicker
                                 name="dateRange"
                                 placeholder="Minimum 1 month"
@@ -300,7 +300,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="radioList">
-                            <Form.ControlLabel>Do you have design for your ad?</Form.ControlLabel>
+                            <Form.ControlLabel>Do you have any design ?</Form.ControlLabel>
                             <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
                                 <Radio value="A">Yes</Radio>
                                 <Radio value="B">No</Radio>
@@ -323,7 +323,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="preferredLocation">
-                            <Form.ControlLabel>Preferred Location</Form.ControlLabel>
+                            <Form.ControlLabel>Available Location</Form.ControlLabel>
                             <TagPicker
                                 data={nearByLocation}
                                 name="preferredLocation"
@@ -338,7 +338,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
 
 
                         <Form.Group controlId="location">
-                            <Form.ControlLabel>Your Location</Form.ControlLabel>
+                            <Form.ControlLabel>Preferred Location</Form.ControlLabel>
                             <input
                                 name="location"
                                 label="Your Location"
