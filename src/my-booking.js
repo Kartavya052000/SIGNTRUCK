@@ -38,12 +38,14 @@ const MyBooking = () => {
                         <div class="boocard">
                             <div class="boocard_date">
                                 <ul className='left'>
-                                    <li><i class="fa fa-calendar-week"></i>    {JSON.parse(x.day).map((day, index) => (
-        <span key={day}>
-            {day}
-            {index < JSON.parse(x.day).length - 1 && ','}{' '}
-        </span>
-    ))}</li>
+                                    <li>
+                                        <i class="fa fa-calendar-week"></i> 
+                                        {JSON.parse(x.day).map((day, index) => (
+                                            <span key={day}>
+                                                {day}{index < JSON.parse(x.day).length - 1 && ','}{' '}
+                                            </span>
+                                        ))}
+                                    </li>
                                     <li><i class="fa fa-truck-moving"></i> {x.truckData}</li>
                                 </ul>
                             </div>
