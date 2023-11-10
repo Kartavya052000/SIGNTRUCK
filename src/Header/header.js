@@ -3,9 +3,9 @@ import React, { useState,useEffect } from 'react';
 import logo from '../assets/images/logo.png';
 // import location from '../assets/images/location.svg';
 // import mail from '../assets/images/mail.svg';
-// import facebook from '../assets/images/facebook.svg';
-// import twitter from '../assets/images/twitter.svg';
-// import instagram from '../assets/images/instagram.svg';
+import facebook from '../assets/images/facebook.svg';
+import twitter from '../assets/images/twitter.svg';
+import instagram from '../assets/images/instagram.svg';
 import usericon from '../assets/images/usericon.png';
 import user from '../assets/images/user.png';
 import { Link } from 'react-router-dom';
@@ -77,17 +77,17 @@ useEffect(() => {
 }, [])
   return (
     <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
-      {/* <div className='innerHeader'>
+      <div className='innerHeader'>
         <div className='custom-container'>
           <div className='innerHeaderWrap'>
-            <ul className='left_info'>
+            {/* <ul className='left_info'>
               <li>
                 <span><img src={location} /> BC-1, Surrey, BC, Canada</span>
               </li>
               <li>
                 <span><img src={mail} /> <a href='mailto:info@signtruck.ca'>info@signtruck.ca</a></span>
               </li>
-            </ul>
+            </ul> */}
             <ul className='right_info'>
               <li>
                 <a href='#' title='twitter'>
@@ -107,7 +107,7 @@ useEffect(() => {
             </ul>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className='custom-container'>
         <div className='header_wrap'>
           <div className='logo'>

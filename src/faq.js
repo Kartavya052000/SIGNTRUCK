@@ -11,7 +11,7 @@ const Faq = () => {
       id: 1,
       icon: `${quesIc}`,
       header: "What area does Signtruck service?",
-      text: "Lorem Ipsum dolor sit amet... minques de tor",
+      text: "We have multiple trucks available, each with 7-9 separate ad spaces available.",
       image_src: `${accImg}`
     },
     {
@@ -25,7 +25,7 @@ const Faq = () => {
       id: 3,
       icon: `${quesIc}`,
       header: "How many hours will the truck be on the road?",
-      text: "Lorem Ipsum dolor sit amet, amensec duor decurit semit",
+      text: " Availabiltiy will vary depending on the contracts in place, feel free to check in with us for current availabilities.",
       image_src: `${accImg}`
     }
   ]
