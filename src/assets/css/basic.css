@@ -117,7 +117,7 @@
       margin: 0 0 15px;
   }
 
-  form:not(.rs-form) label {
+  form label {
       display: block;
       font-size: 14px;
       font-weight: 600;
@@ -125,7 +125,7 @@
       margin-bottom: 10px;
   }
 
-  form:not(.rs-form) input:not([type="submit"]) {
+  form input:not([type="submit"]) {
       display: inline-block;
       width: 100%;
       height: 45px;
@@ -141,7 +141,7 @@
       transition: all 0.3s ease-in;
   }
 
-  form:not(.rs-form) textarea {
+  form textarea {
       width: 100%;
       height: 120px;
       resize: none;
@@ -156,7 +156,7 @@
       transition: all 0.3s ease-in;
   }
 
-  form:not(.rs-form) input:not([type="submit"]):focus, form:not(.rs-form) textarea:focus {
+  form input:not([type="submit"]):focus, form textarea:focus {
       border-color: #ccc;
   }
 
@@ -189,7 +189,7 @@
 
 @media (max-width: 575.98px) {
 
-  form:not(.rs-form) input:not([type="submit"]) {
+  form input:not([type="submit"]) {
       height: 40px;
       line-height: 40px;
       margin: 0 0 8px;
@@ -201,5 +201,10 @@
   .inlineForm .formGrp input {
       height: 35px;
       font-size: 12px;
+  }
+
+  form textarea {
+      height: 100px;
+      padding: 8px 10px;
   }
 }

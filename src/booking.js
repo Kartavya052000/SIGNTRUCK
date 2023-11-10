@@ -150,12 +150,12 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             }
             let apiUrl="";
             if(token){
-                 apiUrl = 'http://localhost:4000/create-booking';
-                //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
+                //  apiUrl = 'http://localhost:4000/create-booking';
+                 apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
             }else{
-                 apiUrl = 'http://localhost:4000/create-guest-booking';
+                //  apiUrl = 'http://localhost:4000/create-guest-booking';
                  formData.append("guestId","guest")
-            //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
+             apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
             }
 ;
             // Then, send the formData with axios

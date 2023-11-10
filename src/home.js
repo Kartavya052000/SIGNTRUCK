@@ -113,7 +113,7 @@ const Home = () => {
         </div>
     </section>
 
-    <section className='subscribe_sec'>
+    {/* <section className='subscribe_sec'>
         <div className='custom-container'>
             <div className='subs_inner'>
                 <div className='custom_row'>
@@ -134,7 +134,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
     </>
   );
 }

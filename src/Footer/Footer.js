@@ -1,11 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import facebook from '../assets/images/facebook.svg';
 import twitter from '../assets/images/twitter.svg';
 import instagram from '../assets/images/instagram.svg';
 import location from '../assets/images/location.svg';
 import mail from '../assets/images/mail.svg';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  const [footernavbar, SetFooterNavbar] = useState({
+    nav1: "",
+    nav2: "",
+    nav3: "",
+    nav4: "",
+    nav5: "",
+    nav6: "",
+  })
+
+  useEffect(() => {
+    // const apiUrl = 'http://localhost:4000/get-navbar';
+    const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+    axios.get(apiUrl)
+        .then((response) => {
+            const { nav1, nav2, nav3, nav4, nav5, nav6 } = response.data.nav[0];
+            SetFooterNavbar({
+                nav1: nav1 || "",
+                nav2: nav2 || "",
+                nav3: nav3 || "",
+                nav4: nav4 || "",
+                nav5: nav5 || "",
+                nav6: nav6 || "",
+            });
+            // console.log(footernavbar, "Footer nav");
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
+  }, [])
+
   return (
     <footer>
       <section className='footer-sec'>
@@ -14,21 +47,21 @@ const Footer = () => {
             <div className='footerCol-6'>
               <div className='footerCol_inner'>
                 <h4>Our Mission</h4>
-                <p>Signtruck, unlike any other advertising platform allows us to deliver your message any time, any place!</p>
+                <p>At Signtruck, we revolutionize the way businesses connect with their target audiences. Our dynamic fleet of mobile billboards transforms ordinary trucks into powerful advertising mediums, delivering your brand's message to the streets, highways, and events that matter most.</p>
                 <ul className='social_info'>
                   <li>
                     <a href='#' title='twitter'>
-                      <img src={twitter} title='Twitter' alt='Twitter' />
+                      <i className='fa fa-twitter'></i>
                     </a>
                   </li>
                   <li>
                     <a href='#' title='facebook'>
-                      <img src={facebook} title='Facebook' alt='Facebook' />
+                      <i className='fa fa-facebook'></i>
                     </a>
                   </li>
                   <li>
                     <a href='#' title='instagram'>
-                      <img src={instagram} title='Instagram' alt='Instagram' />
+                      <i className='fa fa-instagram'></i>
                     </a>
                   </li>
                 </ul>
@@ -38,17 +71,23 @@ const Footer = () => {
               <div className='footerCol_inner'>
                   <h4>Quick Links</h4>
                   <ul className='foot_menu'>
-                    <li className='linkEffect'>
-                      <a href='#' title='Home' data-hover="Home"><span>Home</span></a>
+                    <li>
+                      <Link to="/" title={footernavbar.nav1}>{footernavbar.nav1}</Link>
                     </li>
-                    <li className='linkEffect'>
-                      <a href='#' title='FAQ' data-hover="FAQ"><span>FAQ</span></a>
+                    <li>
+                    <Link to="/" title={footernavbar.nav2}>{footernavbar.nav2}</Link>
                     </li>
-                    <li className='linkEffect'>
-                      <a href='#' title='Clients' data-hover="Clients"><span>Clients</span></a>
+                    <li>
+                      <Link to="/" title={footernavbar.nav3}>{footernavbar.nav3}</Link>
                     </li>
-                    <li className='linkEffect'>
-                      <a href='#' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
+                    <li>
+                      <Link to="/" title={footernavbar.nav4}>{footernavbar.nav4}</Link>
+                    </li>
+                    <li>
+                      <Link to="/" title={footernavbar.nav5}>{footernavbar.nav5}</Link>
+                    </li>
+                    <li>
+                      <Link to="/" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
                     </li>
                   </ul>
               </div>

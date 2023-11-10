@@ -1,4 +1,4 @@
-.boocard {
+/* .boocard {
     position: relative;
     display: flex;
     display: -ms-flexbox;
@@ -28,7 +28,7 @@
     margin-top: 0;
 } */
 
-.boocard_dets ul {
+/* .boocard_dets ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -93,7 +93,7 @@
 .boocard_date .dash {
     font-size: 2rem;
     line-height: 20px;
-}
+} */
 
 .boocard_dets ul li b {
     display: block;
@@ -113,11 +113,146 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.mybookings_sec {
+  background-color: #dadde6;
+  padding: 3rem 0;
+}
+
+.boocard {
+    width: 60%;
+    background-color: #fff;
+    color: #989898;
+    margin: 2rem auto;
+    text-transform: uppercase;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+}
+
+.boocard_date {
+  width: 30%;
+  position: relative;
+  text-align: center;
+  border-right: 2px dashed #dadde6;
+}
+
+.boocard_date:before, .boocard_date:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #DADDE6;
+  position: absolute;
+  top: -15px ;
+  right: -15px;
+  z-index: 1;
+  border-radius: 50%
+}
+
+.boocard_date:after {
+  top: auto;
+  bottom: -15px;
+}
+
+/* .boocard_date .time span {
+    display: block;
+}
+
+.boocard_date .time span:first-child {
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 250%;
+}
+
+.boocard_date .time span:last-child {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px;
+} */
+
+.boocard ul.left {
+    width: 70%;
+    text-align: left;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.boocard ul.left li {
+    margin: 10px 0;
+}
+
+.boocardCont {
+    width: 70%;
+    font-size: 85%;
+    padding: 10px 10px 30px 40px;
+}
+
+.boocardCont h3 {
+  color: #3C3C3C;
+  font-size: 130%;
+}
+
+.boocard ul {
+    margin: 0;
+    padding: 0;
+}
+
+.boocard ul li {
+    margin: 15px 0;
+}
+
+.boocard ul li i {
+    margin: 0 5px;
+}
+
+.boocardCont a {
+  text-decoration: none;
+  color: #D8DDE0;
+}
+
+
+
+
+
+
 /** Responsive CSS starts here **/
 
+@media (max-width: 1199.98px) {
+    .boocard {
+        width: 70%;
+    }
+}
+
 @media (max-width: 991.98px) {
+
     .boocard {
         width: 80%;
+    }
+
+    .boocardCont {
+        width: 65%;
+        padding: 10px 10px 30px 30px;
+    }
+
+    .boocard_date {
+        width: 35%;
     }
 }
 
@@ -128,30 +263,43 @@
 }
 
 @media (max-width: 575.98px) {
+    .mybookings_sec {
+        background-color: #dadde6;
+        padding: 1rem 0;
+    }
+
     .boocard {
-        margin: 2rem auto;
+        flex-direction: column-reverse;
     }
 
-    .boocard_dets ul li {
-        margin: 0.5rem 0;
-        font-size: 12px;
-    }
-
-    .boocard_dets {
-        padding: 1rem 0.5rem 1rem 1rem;
-    }
-    
-    .boocard_dets, .boocard_date {
-        min-height: 185px;
+    .boocardCont, .boocard_date {
+        width: 100%;
+        min-height: 80px;
+        padding: 15px;
     }
 
     .boocard_date {
-        flex: 1;
-        padding-left: 0;
+        border-right: none;
+        border-top: 1.5px dashed #dadde6;
     }
 
-    .boocard_date .date {
-        font-size: 14px;
+    .boocard_date:before, .boocard_date:after {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .boocard_date:after {
+        left: -15px;
+        top: -15px;
+    }
+
+    .boocard ul.left {
+        position: static;
+        transform: none;
+    }
+
+    .boocard ul.left li {
+        margin: 15px 0;
     }
 }
 

@@ -39,30 +39,22 @@ const MyBooking = () => {
                 <div className='custom-container'>
                     <div className='booCrdContainer'>
                         <div class="boocard">
-                            <div className='boocard_inner'>
-                                <div class="boocard_dets boocard_left">
-                                    {/* <h3 class="boocard_ttl">Booking Detail</h3> */}
-                                    <ul>
-                                        <li className='name'><b>Kartavya</b></li>
-                                        <li>kartavyabhayana1@gmail.com</li>
-                                        <li>8556951762</li>
-                                        <li><b>Location</b> Vancouver</li>
-                                        <li><b>Pref. Location</b> Surrey</li>
-                                    </ul>
-                                </div>
-                                <div class="boocard_dets boocard_right">
-                                    <ul>
-                                        <li><b>Day</b> Monday</li>
-                                        <li><b>Truck Data</b> Full Truck</li>
-                                        <li><b>Website</b> orphicstech.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="boocard_divider"></div>
                             <div class="boocard_date">
-                                <span class="date">2023-11-14</span>
-                                <span class="dash">-</span>
-                                <span class="date">2023-12-19</span>
+                                <ul className='left'>
+                                    <li><i class="fa fa-calendar-week"></i> Monday</li>
+                                    <li><i class="fa fa-truck-moving"></i> Full Truck</li>
+                                </ul>
+                            </div>
+                            <div class="boocardCont">
+                                <small>My Booking</small>
+                                <h3>Kartavya</h3>
+                                <ul>
+                                    <li><i class="fa fa-phone"></i> 9876543210 / <i class="fa fa-envelope"></i> info@signtruck.ca</li>
+                                    <li><i class="fa fa-globe"></i> www.signtruck.ca</li>
+                                    <li><i class="fa fa-calendar"></i> 2023-09-20 to 2023-10-09</li>
+                                    <li><i class="fa fa-map-marker"></i> Vancouver</li>
+                                    <li><i class="fa fa-map-marker"></i> Surrey</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

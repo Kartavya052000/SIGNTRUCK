@@ -79,28 +79,20 @@ const apiUrl = 'http://localhost:4000/contact';
             <div className='contForm'>
             <Form  onSubmit={handleSubmit}>
                 <div className='formGrp'>
-                    <label for='name'>Name</label>
-                    <input type='text' placeholder='Enter Your Name' id='name' value={name}
-                                                    onChange={event => SetName(event.target.value)}
-                                                    />
+                  <label for='name'>Name</label>
+                  <input type='text' placeholder='Enter Your Name' id='name' value={name} onChange={event => SetName(event.target.value)} />
                 </div>
                 <div className='formGrp'>
                     <label for='email'>Email</label>
-                    <input type='email' placeholder='Enter Your Email' id='email' value={email}
-                                                    onChange={event => SetEmail(event.target.value)}
-                                                    />
+                    <input type='email' placeholder='Enter Your Email' id='email' value={email} onChange={event => SetEmail(event.target.value)} />
                 </div>
                 <div className='formGrp'>
                     <label for='subject'>Subject</label>
-                    <input type='text' placeholder='Type The Subject' id='subject' value={subject}
-                                                    onChange={event => SetSubject(event.target.value)}
-                                                    />
+                    <input type='text' placeholder='Type The Subject' id='subject' value={subject} onChange={event => SetSubject(event.target.value)} />
                 </div>
                 <div className='formGrp'>
                     <label for='msg'>Message</label>
-                    <textarea placeholder='Type Your Message Here...' id='msg' value={mainmessage}
-                                                    onChange={event => SetMessage(event.target.value)}
-                                                    ></textarea>
+                    <textarea placeholder='Type Your Message Here...' id='msg' value={mainmessage} onChange={event => SetMessage(event.target.value)}></textarea>
                 </div>
                 <div className='formSubmit'>
                     <input type='submit' value='Submit' className='fullButn butn butn_success' onClick={handleSubmit} />
