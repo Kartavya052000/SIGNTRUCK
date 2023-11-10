@@ -50,8 +50,8 @@ const [navbar, SetNavbar] = useState({
 };
 useEffect(() => {
   // Define the API endpoint URL
-  // const apiUrl = 'http://localhost:4000/get-navbar';
-  const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+  const apiUrl = 'http://localhost:4000/get-navbar';
+  // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
   axios.get(apiUrl)
       .then((response) => {
           // Handle the successful response and update the state with the data

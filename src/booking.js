@@ -104,6 +104,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             position: "top-right",
         });
     const handleSubmit = async () => {
+        console.log(value.radioList)
         // Check if the radio button value is 'A' (user wants to upload an image)
         if (value.radioList === 'A') {
             if (!selectedFiles) {
@@ -141,7 +142,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             formData.append('dateRange', JSON.stringify(value.dateRange));
             formData.append('truckData', value.truckData);
             formData.append('radioList', value.radioList);
-            formData.append('preferredLocation', JSON.stringify(value.preferredLocation));
+            formData.append('availablelocation', JSON.stringify(value.preferredLocation));
             formData.append('location', location);
 
             if (radioValue === 'A') {
@@ -150,12 +151,12 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             }
             let apiUrl="";
             if(token){
-                //  apiUrl = 'http://localhost:4000/create-booking';
-                 apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
+                 apiUrl = 'http://localhost:4000/create-booking';
+                //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
             }else{
-                //  apiUrl = 'http://localhost:4000/create-guest-booking';
+                 apiUrl = 'http://localhost:4000/create-guest-booking';
                  formData.append("guestId","guest")
-             apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
+            //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
             }
 ;
             // Then, send the formData with axios
@@ -351,7 +352,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
 
                         <Form.Group controlId="radioList">
                             <Form.ControlLabel>{form.haveDesign}</Form.ControlLabel>
-                            <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
+                            <RadioGroup name="radioList" value={radioValue} >
                                 <Radio value="A">Yes</Radio>
                                 <Radio value="B">No</Radio>
                             </RadioGroup>
