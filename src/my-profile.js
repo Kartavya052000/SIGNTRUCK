@@ -9,6 +9,8 @@ const MyProfile = () =>{
     const [cookies, setCookie, removeCookie] = useCookies(['token']);
     const token = cookies['token'];
     const [userdata,SetUserData]=useState([])
+    const [username,setusername]=useState("");
+    const [email,setemail]=useState("");
     useEffect( () => {
         // const apiUrl = 'http://localhost:4000/my-profile';
 const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
@@ -21,13 +23,46 @@ const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
             .then((response) => {
                 // Handle the successful response and update the state with the data
                 console.log(response.data.bookings, "DATA");
-                SetUserData(response.data.users);
+                // SetUserData(response.data.users);
+                setusername(response.data.users[0].username)
+                setemail(response.data.users[0].email)
             })
             .catch((error) => {
                 // Handle errors, e.g., show an error message
                 console.error('Error fetching data:', error);
             });
     }, []);
+    const handleSubmit = async () => {
+        try {
+        //   const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/update-profile';
+          const apiUrl = 'http://localhost:4000/update-profile';
+          
+          const updatedData = {
+            email: email,
+            username: username,
+            // Add other fields you want to update
+          };
+      
+          const response = await Axios.post(apiUrl, updatedData, {
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': ` ${token}`,
+            },
+          });
+      
+          if (response.data.success) {
+            console.log('Profile updated successfully');
+            // Optionally, you can show a success message or perform other actions upon successful update
+          } else {
+            console.error('Failed to update profile:', response.data.message);
+            // Handle the case where the update fails, show an error message, etc.
+          }
+        } catch (error) {
+          console.error('Error updating profile:', error);
+          // Handle unexpected errors
+        }
+      };
+      
     return(
         <>
             <section className="innerSecBgHeader">
@@ -37,33 +72,36 @@ const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
             </section>
             <section className='book_form_sec'>
                 <div className='custom-container'>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
+  {/* Existing form fields */}
+  <Form.Group controlId="name">
+    <Form.ControlLabel>Name</Form.ControlLabel>
+    <input
+      name="name"
+      label="Username"
+      placeholder="Username"
+      value={username}
+      onChange={event => setusername(event.target.value)}
 
-                        <Form.Group controlId="name">
-                            <Form.ControlLabel>Name</Form.ControlLabel>
-                            <input
-                                name="name"
-                                label="Username"
-                                placeholder="Username"
-                                value={userdata[0]?.username}
-                                disabled
-                                
-                            />
-                        </Form.Group>
-                        <Form.Group controlId="email">
-                            <Form.ControlLabel>Email</Form.ControlLabel>
-                            <input
-                                name="email"
-                                label="Email"
-                                placeholder="Email"
-                                value={userdata[0]?.email}
+      // disabled
+    />
+  </Form.Group>
+  <Form.Group controlId="email">
+    <Form.ControlLabel>Email</Form.ControlLabel>
+    <input
+      name="email"
+      label="Email"
+      placeholder="Email"
+      value={email}
+      onChange={event => setemail(event.target.value)}
 
-                                // value={email}
-                                disabled
+      // value={email}
+      // disabled
+    />
+  </Form.Group>
+  <Button className='butn butn_success butn_sm' type="submit">Save</Button>
+</Form>
 
-                            />
-                        </Form.Group>
-                        </Form>
                         </div>
                         </section>
                         </>

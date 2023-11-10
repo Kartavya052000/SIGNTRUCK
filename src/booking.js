@@ -1,5 +1,5 @@
 import React, { useState, useRef,useEffect } from 'react';
-import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker } from 'rsuite';
+import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker,Uploader } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
@@ -81,6 +81,8 @@ const Booking = () => {
     const hiddenFileInput = useRef(null);
     const [formSubmitted, setFormSubmitted] = useState(false);
 const [form,setForm]=useState({})
+const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
+
     // Programatically click the hidden file input element
     // when the Button component is clicked
 
@@ -185,15 +187,21 @@ const [form,setForm]=useState({})
     };
 
     const handleFileChange = (e) => {
-        // const files = e.target.files;
-        setSelectedFiles(e.target.files[0]);
-        console.log(selectedFiles, "FFF")
+        const file = e.target.files[0];
+        setSelectedFiles(file);
+        setFileLabel(file ? file.name : 'Upload Files');
+
+        // console.log(selectedFiles, "FFF")
         // handleUpload()
 
     };
     const handleUpload = () => {
         // You can process the selected files here, e.g., send them to the server.
         console.log(selectedFiles);
+    };
+    const handleDeleteFile = () => {
+        setSelectedFiles(null);
+        setFileLabel('Upload or Drop a file here');
     };
     useEffect(() => {
         // Define the API endpoint URL
@@ -352,12 +360,17 @@ const [form,setForm]=useState({})
                                     <div className='dropzone'>
                                         <label
                                             className={`custom-input ${formSubmitted && !selectedFiles ? 'error-input' : ''}`}
-                                        >Upload or Drop a file here
+                                        >{fileLabel}
+                                          {selectedFiles && (
+                                <button type="button" className="delete" onClick={handleDeleteFile}>
+                                    &#x2715; {/* Unicode character for 'multiplication x' */}
+                                </button>
+                            )}
                                             <input type="file" onChange={handleFileChange}
                                             /></label>
                                     </div>
 
-                                    <button type="button" className='upload' onClick={handleUpload}>Upload Files</button>
+                                    {/* <button type="button" className='upload' onClick={handleUpload}>Upload Files</button> */}
 
                                 </div>
 

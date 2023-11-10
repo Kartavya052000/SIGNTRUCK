@@ -54,8 +54,8 @@ const handleSignUp = async (e) => {
   e.preventDefault();
   try {
     const { data } = await axios.post(
-      // "http://localhost:4000/signup",
-      "https://busy-pink-dalmatian-ring.cyclic.app/signup",
+      "http://localhost:4000/signup",
+      // "https://busy-pink-dalmatian-ring.cyclic.app/signup",
       {
         ...inputValue,
       },
@@ -86,8 +86,8 @@ const handleLogIn = async (e) => {
   e.preventDefault();
   try {
     const { data } = await axios.post(
-      // "http://localhost:4000/login",
-      "https://busy-pink-dalmatian-ring.cyclic.app/login",
+      "http://localhost:4000/login",
+      // "https://busy-pink-dalmatian-ring.cyclic.app/login",
 
       {
         ...inputLoginValue,
