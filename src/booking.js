@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useEffect } from 'react';
 import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
@@ -80,7 +80,7 @@ const Booking = () => {
     const token = cookies['token'];
     const hiddenFileInput = useRef(null);
     const [formSubmitted, setFormSubmitted] = useState(false);
-
+const [form,setForm]=useState({})
     // Programatically click the hidden file input element
     // when the Button component is clicked
 
@@ -146,8 +146,16 @@ const Booking = () => {
                 // Use the correct field name for the file input
                 formData.append('image', selectedFiles);
             }
-const apiUrl = 'http://localhost:4000/create-booking';
-// const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
+            let apiUrl="";
+            if(token){
+                 apiUrl = 'http://localhost:4000/create-booking';
+                //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
+            }else{
+                 apiUrl = 'http://localhost:4000/create-guest-booking';
+                 formData.append("guestId","guest")
+            //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
+            }
+;
             // Then, send the formData with axios
             const response = await axios.post(apiUrl, formData, {
                 headers: {
@@ -187,7 +195,41 @@ const apiUrl = 'http://localhost:4000/create-booking';
         // You can process the selected files here, e.g., send them to the server.
         console.log(selectedFiles);
     };
-
+    useEffect(() => {
+        // Define the API endpoint URL
+        const apiUrl = 'http://localhost:4000/get-forms';
+    
+        axios.get(apiUrl)
+          .then((response) => {
+            const {
+              name,
+              email,
+              phone,
+              website,
+              dateRange,
+              day,
+              truckData,
+              haveDesign,
+              availableLocation,
+              preferredLocation,
+            } = response.data.formData[0];
+            setForm({
+              name: name || '',
+              email: email || '',
+              phone: phone || '',
+              website: website || '',
+              dateRange: dateRange || '',
+              day: day || '',
+              truckData: truckData || '',
+              haveDesign: haveDesign || '',
+              availableLocation: availableLocation || '',
+              preferredLocation: preferredLocation || '',
+            });
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      }, []);
     return (
         <>
             <section className="innerSecBgHeader">
@@ -200,7 +242,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                     <Form model={model} onSubmit={handleSubmit}>
 
                         <Form.Group controlId="name">
-                            <Form.ControlLabel>Name</Form.ControlLabel>
+                            <Form.ControlLabel>{form.name}</Form.ControlLabel>
                             <input
                                 name="name"
                                 label="Name"
@@ -214,7 +256,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
 
 
                         <Form.Group controlId="email">
-                            <Form.ControlLabel>Email</Form.ControlLabel>
+                            <Form.ControlLabel>{form.email}</Form.ControlLabel>
                             <input
                                 name="email"
                                 label="Email"
@@ -229,7 +271,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
 
 
                         <Form.Group controlId="phone">
-                            <Form.ControlLabel>Phone</Form.ControlLabel>
+                            <Form.ControlLabel>{form.phone}</Form.ControlLabel>
                             <input
                                 name="phone"
                                 label="Phone"
@@ -249,7 +291,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                                 onChange={newValue => setValue({ ...value, phone: newValue })}
                             /> */}
                         <Form.Group controlId="website">
-                            <Form.ControlLabel>Website</Form.ControlLabel>
+                            <Form.ControlLabel>{form.website}</Form.ControlLabel>
                             <input
                                 name="website"
                                 label="Website"
@@ -262,7 +304,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                             />
                         </Form.Group>
                         <Form.Group controlId="truckDesign">
-                            <Form.ControlLabel>Which Side ? </Form.ControlLabel>
+                            <Form.ControlLabel>{form.truckData} </Form.ControlLabel>
                             <SelectPicker
                                 name="truckDesign"
                                 data={truckData}
@@ -273,7 +315,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="day">
-                            <Form.ControlLabel>Number of Days ?</Form.ControlLabel>
+                            <Form.ControlLabel>{form.day}</Form.ControlLabel>
                             <TagPicker
                                 data={DayData}
                                 name="day"
@@ -287,7 +329,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="dateRange">
-                            <Form.ControlLabel for="dateRange">How long it'll be on sign truck?</Form.ControlLabel>
+                            <Form.ControlLabel for="dateRange">{form.dateRange}</Form.ControlLabel>
                             <DateRangePicker
                                 name="dateRange"
                                 placeholder="Minimum 1 month"
@@ -300,7 +342,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="radioList">
-                            <Form.ControlLabel>Do you have any design ?</Form.ControlLabel>
+                            <Form.ControlLabel>{form.haveDesign}</Form.ControlLabel>
                             <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
                                 <Radio value="A">Yes</Radio>
                                 <Radio value="B">No</Radio>
@@ -323,7 +365,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
                         </Form.Group>
 
                         <Form.Group controlId="preferredLocation">
-                            <Form.ControlLabel>Available Location</Form.ControlLabel>
+                            <Form.ControlLabel>{form.availableLocation}</Form.ControlLabel>
                             <TagPicker
                                 data={nearByLocation}
                                 name="preferredLocation"
@@ -338,7 +380,7 @@ const apiUrl = 'http://localhost:4000/create-booking';
 
 
                         <Form.Group controlId="location">
-                            <Form.ControlLabel>Preferred Location</Form.ControlLabel>
+                            <Form.ControlLabel>{form.preferredLocation}</Form.ControlLabel>
                             <input
                                 name="location"
                                 label="Your Location"

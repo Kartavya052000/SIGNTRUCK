@@ -1,5 +1,5 @@
 // components/Header.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import logo from '../assets/images/logo.png';
 import location from '../assets/images/location.svg';
 import mail from '../assets/images/mail.svg';
@@ -19,6 +19,14 @@ const token = cookies['token'];
 console.log(cookies['token']);
 
 const [isDropdown, setDropdown] = useState(false);
+const [navbar, SetNavbar] = useState({
+  nav1: "",
+  nav2: "",
+  nav3: "",
+  nav4: "",
+  nav5: "",
+  nav6: "",
+})
  // Create a function to handle user logout
  const handleLogout = async () => {
   try {
@@ -39,6 +47,33 @@ const [isDropdown, setDropdown] = useState(false);
     console.error('Logout failed', error);
   }
 };
+useEffect(() => {
+  // Define the API endpoint URL
+  const apiUrl = 'http://localhost:4000/get-navbar';
+  // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+  axios.get(apiUrl)
+      .then((response) => {
+          // Handle the successful response and update the state with the data
+          const { nav1, nav2, nav3, nav4, nav5, nav6 } = response.data.nav[0];
+          SetNavbar({
+              nav1: nav1 || "",
+              nav2: nav2 || "",
+              nav3: nav3 || "",
+              nav4: nav4 || "",
+              nav5: nav5 || "",
+              nav6: nav6 || "",
+          });
+          console.log(navbar, "NAV");
+      })
+      .catch((error) => {
+          // Handle errors, e.g., show an error message
+          console.error('Error fetching data:', error);
+      });
+
+
+  // Make a GET request to fetch data
+
+}, [])
   return (
     <header className={`mainHeader ${active ? 'showMenu' : ''}`}>
       <div className='innerHeader'>
@@ -86,22 +121,22 @@ const [isDropdown, setDropdown] = useState(false);
             <nav>
               <ul className='nav_menu header_menu'>
                 <li className='menu_item linkEffect'>
-                  <Link to="/" data-hover="Home" title='Home'><span>Home</span></Link>
+                  <Link to="/" data-hover="Home" title='Home'><span>{navbar.nav1}</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <Link to="/faq" data-hover="Faq" title='Faq'><span>Faq</span></Link>
+                  <Link to="/faq" data-hover="Faq" title='Faq'><span>{navbar.nav2}</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                <Link to="/clients" data-hover="Clients" title='Clients'><span>Clients</span></Link>
+                <Link to="/clients" data-hover="Clients" title='Clients'><span>{navbar.nav3}</span></Link>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>Contact Us</span></a>
+                  <a href='/contact' title='Contact Us' data-hover="Contact Us"><span>{navbar.nav4} Us</span></a>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='http://www.canadianvisionmedia.ca/' title='Prospectus' data-hover="Prospectus"><span>Prospectus</span></a>
+                  <a href='http://www.canadianvisionmedia.ca/' title='Prospectus' data-hover="Prospectus"><span>{navbar.nav5}</span></a>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='/booking' title='Booking' data-hover="Booking"><span><b>Booking</b></span></a>
+                  <a href='/booking' title='Booking' data-hover="Booking"><span><b>{navbar.nav6}</b></span></a>
                 </li>
                 
                 {token ? (

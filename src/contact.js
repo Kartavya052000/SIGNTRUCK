@@ -3,6 +3,7 @@ import faqBanner from './assets/images/faq_banner.png';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { toast } from "react-toastify";
+import { Form } from 'rsuite';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const Contact = () => {
   const [name, SetName] = useState('')
   const [email, SetEmail] = useState('')
   const [subject, SetSubject] = useState('')
-  const [message, SetMessage] = useState('')
+  const [mainmessage, SetMessage] = useState('')
   const handleError = (err) =>
         toast.error(err, {
             position: "top-left",
@@ -20,25 +21,21 @@ const Contact = () => {
             position: "top-right",
         });
   const handleSubmit = async () => {
-   
+  //  alert('hit')
   
 
     // setFormSubmitted(true); // Set formSubmitted to true when the button is clicked
-    if (name == '' || email == '' || message == '' || subject == '') {
-        return
-    }
+    // if (name == '' || email == '' || message == '' || subject == '') {
+    //     return
+    // }
     try {
-        // const form = formRef.current;
-        // if (!form.check()) {
-        //     // The form has validation errors, do not submit
-        //     console.error('Form has validation errors');
-        //     return;
-        // }
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('subject', subject);
-        formData.append('message', message);
+     
+     const formData={
+      name,
+      email,
+      subject,
+      message:mainmessage
+     }
       
 
        
@@ -54,7 +51,7 @@ const apiUrl = 'http://localhost:4000/contact';
 
             handleSuccess(message);
             setTimeout(() => {
-                navigate("/");
+                // navigate("/");
             }, 1000);
         } else {
             console.log(response.data, "SSSS");
@@ -80,27 +77,37 @@ const apiUrl = 'http://localhost:4000/contact';
         <div className='contact_inner'>
           <div className='custom-container'>
             <div className='contForm'>
-              <form action=''>
+            <Form  onSubmit={handleSubmit}>
                 <div className='formGrp'>
                     <label for='name'>Name</label>
-                    <input type='text' placeholder='Enter Your Name' id='name' value={name}/>
+                    <input type='text' placeholder='Enter Your Name' id='name' value={name}
+                                                    onChange={event => SetName(event.target.value)}
+                                                    />
                 </div>
                 <div className='formGrp'>
                     <label for='email'>Email</label>
-                    <input type='email' placeholder='Enter Your Email' id='email' value={email}/>
+                    <input type='email' placeholder='Enter Your Email' id='email' value={email}
+                                                    onChange={event => SetEmail(event.target.value)}
+                                                    />
                 </div>
                 <div className='formGrp'>
                     <label for='subject'>Subject</label>
-                    <input type='text' placeholder='Type The Subject' id='subject' value={subject}/>
+                    <input type='text' placeholder='Type The Subject' id='subject' value={subject}
+                                                    onChange={event => SetSubject(event.target.value)}
+                                                    />
                 </div>
                 <div className='formGrp'>
                     <label for='msg'>Message</label>
-                    <textarea placeholder='Type Your Message Here...' id='msg' value={message}></textarea>
+                    <textarea placeholder='Type Your Message Here...' id='msg' value={mainmessage}
+                                                    onChange={event => SetMessage(event.target.value)}
+                                                    ></textarea>
                 </div>
                 <div className='formSubmit'>
                     <input type='submit' value='Submit' className='fullButn butn butn_success' onClick={handleSubmit} />
+                    {/* <Button className='butn butn_success butn_sm' type="submit">Book Now</Button> */}
+
                 </div>
-              </form>
+              </Form>
             </div>
           </div>
         </div>

@@ -201,13 +201,13 @@ const logSignupClick = event => {
                 </div>
                 <fieldset className='fieldset noaccount'>
                   <h2>Have an account ?</h2>
-                  <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+                  {/* <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p> */}
                   <div className="form_content form_content--noaccount"></div>
                   <label className='button' onClick={logSignupClick}>login</label>
                 </fieldset>
                 <fieldset className='fieldset account'>
                   <h2>Don't have an account ?</h2>
-                  <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+                  {/* <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p> */}
                   <div className="form_content form_content--noaccount"></div>
                   <label className='button' onClick={logSignupClick}>Signup</label>
                 </fieldset>
