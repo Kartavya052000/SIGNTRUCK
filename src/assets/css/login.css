@@ -52,7 +52,7 @@
 }
 
 .login_sec .fieldset h2 {
-    font-size: 26px;
+    font-size: 22px;
     line-height: normal;
 }
   
@@ -285,11 +285,11 @@
     .login_sec .fieldset {
         padding: 0 0.5rem !important;
         width: 100%;
-        margin: 0.5rem auto 0;
+        margin: 1.5rem auto 0;
     }
 
     .login_sec .fieldset h2 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .login_sec .fieldset p {

@@ -200,14 +200,14 @@ const logSignupClick = event => {
                   </div>
                 </div>
                 <fieldset className='fieldset noaccount'>
-                  <h2>Have an account ?</h2>
-                  {/* <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p> */}
+                  <h2>Returning Signtruck user?</h2>
+                  <p>Log in to continue driving your brand forward.</p>
                   <div className="form_content form_content--noaccount"></div>
                   <label className='button' onClick={logSignupClick}>login</label>
                 </fieldset>
                 <fieldset className='fieldset account'>
-                  <h2>Don't have an account ?</h2>
-                  {/* <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p> */}
+                  <h2>Missed the Signtruck?</h2>
+                  <p>Sign up now and unlock the road to advertising excellence.</p>
                   <div className="form_content form_content--noaccount"></div>
                   <label className='button' onClick={logSignupClick}>Signup</label>
                 </fieldset>
