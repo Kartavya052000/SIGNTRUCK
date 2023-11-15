@@ -89,18 +89,18 @@ useEffect(() => {
               </li>
             </ul> */}
             <ul className='right_info'>
-              <li>
+              {/* <li>
                 <a href='#' title='twitter'>
                   <img src={twitter} title='Twitter' alt='Twitter' />
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href='#' title='facebook'>
+                <a href='https://www.facebook.com/profile.php?id=100066472372793&mibextid=ZbWKwL' title='facebook'>
                   <img src={facebook} title='Facebook' alt='Facebook' />
                 </a>
               </li>
               <li>
-                <a href='#' title='instagram'>
+                <a href='https://instagram.com/signtruck.ca' title='instagram'>
                   <img src={instagram} title='Instagram' alt='Instagram' />
                 </a>
               </li>

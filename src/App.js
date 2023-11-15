@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useEffect } from "react";
 import Header from './Header/header';
 import Footer from './Footer/Footer';
 import Home from './home';
@@ -12,8 +13,15 @@ import MyBooking from './my-booking';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyProfile from './my-profile';
+import { initGA, logPageView } from './analytics';
 
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics
+    initGA();
+    // Log the initial pageview
+    logPageView();
+  }, []);
   return (
     <div className="App">
       <Router>

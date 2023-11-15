@@ -352,7 +352,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
 
                         <Form.Group controlId="radioList">
                             <Form.ControlLabel>{form.haveDesign}</Form.ControlLabel>
-                            <RadioGroup name="radioList" value={radioValue} >
+                            <RadioGroup name="radioList" value={radioValue} onChange={value => setRadioValue(value)}>
                                 <Radio value="A">Yes</Radio>
                                 <Radio value="B">No</Radio>
                             </RadioGroup>
