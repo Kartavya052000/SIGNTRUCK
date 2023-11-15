@@ -44,6 +44,10 @@
     box-shadow: 0 0 0 3px rgba(52,152,255,.25);
 }
 
+.book_form_sec .rs-form div.rs-picker-search-input > input:focus {
+    box-shadow: none;
+}
+
 .dropzone {
     background: #fff;
     border: 1.5px dashed #999;

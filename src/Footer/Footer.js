@@ -75,19 +75,19 @@ const Footer = () => {
                       <Link to="/" title={footernavbar.nav1}>{footernavbar.nav1}</Link>
                     </li>
                     <li>
-                    <Link to="/" title={footernavbar.nav2}>{footernavbar.nav2}</Link>
+                    <Link to="/faq" title={footernavbar.nav2}>{footernavbar.nav2}</Link>
                     </li>
                     <li>
-                      <Link to="/" title={footernavbar.nav3}>{footernavbar.nav3}</Link>
+                      <Link to="/clients" title={footernavbar.nav3}>{footernavbar.nav3}</Link>
                     </li>
                     <li>
-                      <Link to="/" title={footernavbar.nav4}>{footernavbar.nav4}</Link>
+                      <Link to="/contact" title={footernavbar.nav4}>{footernavbar.nav4}</Link>
                     </li>
                     <li>
-                      <Link to="/" title={footernavbar.nav5}>{footernavbar.nav5}</Link>
+                      <Link to="http://www.canadianvisionmedia.ca/" title={footernavbar.nav5}>{footernavbar.nav5}</Link>
                     </li>
                     <li>
-                      <Link to="/" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
+                      <Link to="/booking" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
                     </li>
                   </ul>
               </div>
