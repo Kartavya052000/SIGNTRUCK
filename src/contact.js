@@ -39,8 +39,8 @@ const Contact = () => {
       
 
        
-const apiUrl = 'http://localhost:4000/contact';
-// const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
+// const apiUrl = 'http://localhost:4000/contact';
+const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
         // Then, send the formData with axios
         const response = await axios.post(apiUrl, formData, {
             
