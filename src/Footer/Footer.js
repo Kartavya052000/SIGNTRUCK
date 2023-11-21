@@ -56,12 +56,12 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     </a>
                   </li>
                   <li>
-                    <a href='#' title='facebook'>
+                    <a href='https://www.facebook.com/profile.php?id=100066472372793&mibextid=ZbWKwL' title='facebook'>
                       <i className='fa fa-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href='#' title='instagram'>
+                    <a href='https://instagram.com/signtruck.ca' title='instagram'>
                       <i className='fa fa-instagram'></i>
                     </a>
                   </li>

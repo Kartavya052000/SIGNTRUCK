@@ -135,7 +135,19 @@ p {
 .navigationWrapper ul li:last-child {
   margin-right: 0;
 }
+.navigationWrapper ul li.menu_item a, .navigationWrapper .dropdown.active .dropdown_menu a
+{
+  color: #000;
+}
 
+.navigationWrapper ul li.menu_item a:hover, .navigationWrapper .dropdown.active .dropdown_menu a:hover
+{
+  color: #27a252;
+}
+
+.navigationWrapper ul li.menu_item a:hover span, .navigationWrapper .dropdown.active .dropdown_menu a:hover span {
+  color: #27a252;
+}
 .navigationWrapper ul li.menu_item img {
   width: 25px;
   height: 25px;
@@ -200,6 +212,7 @@ p {
 .navigationWrapper .dropdown_menu ul li a {
   text-transform: uppercase;
   margin: 0 0 5px;
+  cursor: pointer;
 }
 
 .navigationWrapper ul li.menu_item:not(.dropdown) .butn {

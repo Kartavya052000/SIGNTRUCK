@@ -20,7 +20,7 @@ const Home = () => {
                     <span>A No-Limits Creative Agency</span>
                     <h2>Propel Your Brand With SignTruck</h2>
                     <p>Drive Your Brand Forward with Dynamic Sign Truck Advertising!</p>
-                    <a href='#' title='Contact Us' className='butn butn_success'><span>Contact Us</span></a>
+                    <a href='/contact' title='Contact Us' className='butn butn_success'><span>Contact Us</span></a>
                 </div>
             </div>
         </div>
