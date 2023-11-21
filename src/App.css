@@ -223,6 +223,19 @@ p {
 /** Header CSS Ends here **/
 
 
+/** Common CSS **/
+
+header.mainHeader {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.innerSec, footer {
+  position: relative;
+  z-index: 1;
+}
+
 /** Footer CSS starts here **/
 
 .footer-sec {

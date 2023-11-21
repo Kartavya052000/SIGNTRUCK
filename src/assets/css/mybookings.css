@@ -95,6 +95,13 @@
     line-height: 20px;
 } */
 
+
+.mybookings_sec h2.no_booking {
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
 .boocard_dets ul li b {
     display: block;
     color: #000;
@@ -128,6 +135,8 @@
   background-color: #dadde6;
   padding: 3rem 0;
 }
+
+
 
 .boocard {
     width: 60%;
