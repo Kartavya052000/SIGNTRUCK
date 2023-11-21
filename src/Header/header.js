@@ -33,7 +33,8 @@ const [navbar, SetNavbar] = useState({
   try {
     // Send a request to the logout endpoint
     // const response = await axios.post('http://localhost:4000/logout');
-    const response = await axios.post('https://busy-pink-dalmatian-ring.cyclic.app/logout');
+// const response = await axios.post('https://busy-pink-dalmatian-ring.cyclic.app/logout');
+const response = await axios.post('https://signtruckapi.signtruck.ca/logout');
 
     if (response.status === 200) {
       // Clear the token from cookies and any other cleanup
@@ -51,7 +52,9 @@ const [navbar, SetNavbar] = useState({
 useEffect(() => {
   // Define the API endpoint URL
   // const apiUrl = 'http://localhost:4000/get-navbar';
-  const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+  // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
+
   axios.get(apiUrl)
       .then((response) => {
           // Handle the successful response and update the state with the data

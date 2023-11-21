@@ -7,7 +7,8 @@ const MyBooking = () => {
     const token = cookies['token'];
     const [bookingdata,SetBookingData]=useState([])
     useEffect( () => {
-        Axios.get("http://localhost:4000/get-user-booking", {
+        const apiUrl = 'https://signtruckapi.signtruck.ca/get-user-booking';
+        Axios.get(apiUrl, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': ` ${token}`, // Correct the token format
@@ -72,7 +73,7 @@ const MyBooking = () => {
                 </div>
             </section>
 ))}
-
+{bookingdata.length ==0 ? (<h1>No Bookings Yet</h1>):("")}
             
 
 

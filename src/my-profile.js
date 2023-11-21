@@ -13,7 +13,9 @@ const MyProfile = () =>{
     const [email,setemail]=useState("");
     useEffect( () => {
         // const apiUrl = 'http://localhost:4000/my-profile';
-const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
+// const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
+const apiUrl = 'https://signtruckapi.signtruck.ca/my-profile';
+
         Axios.get(apiUrl, {
             headers: {
                 'Content-Type': 'multipart/form-data',
@@ -35,7 +37,9 @@ const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/my-profile';
     const handleSubmit = async () => {
         try {
         //   const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/update-profile';
-          const apiUrl = 'http://localhost:4000/update-profile';
+          // const apiUrl = 'http://localhost:4000/update-profile';
+const apiUrl = 'https://signtruckapi.signtruck.ca/update-profile';
+
           
           const updatedData = {
             email: email,

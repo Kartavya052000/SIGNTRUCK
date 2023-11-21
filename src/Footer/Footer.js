@@ -20,7 +20,8 @@ const Footer = () => {
 
   useEffect(() => {
     // const apiUrl = 'http://localhost:4000/get-navbar';
-    const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+    // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-navbar';
+const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
     axios.get(apiUrl)
         .then((response) => {
             const { nav1, nav2, nav3, nav4, nav5, nav6 } = response.data.nav[0];
@@ -97,7 +98,7 @@ const Footer = () => {
                   <h4>Contact Us</h4>
                   <ul className='address'>
                     <li>
-                      <span><img src={location} /> BC-1, Surrey, BC, Canada</span>
+                      <span><img src={location} /> 13231 72 Ave, Surrey, BC V3W 2N5</span>
                     </li>
                     <li>
                       <span><img src={mail} /><a href='mailto:info@signtruck.ca' title='info@signtruck.ca'>info@signtruck.ca</a></span>

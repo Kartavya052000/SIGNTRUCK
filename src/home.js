@@ -109,7 +109,7 @@ const Home = () => {
 
     <section className='map_sec'>
         <div className='map_inner'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41723.94618736955!2d-122.79645471884146!3d49.186394172977046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5481e291ec24f2bf%3A0xb3e10018a53e7fab!2sBC-1%2C%20British%20Columbia%2C%20Canada!5e0!3m2!1sen!2sin!4v1698924299929!5m2!1sen!2sin" width="1000" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.514769888872!2d-122.85608389999997!3d49.133849999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485dbd3a3688629%3A0x539003dfc67e24b3!2sWashworld%20Car%20Wash%20-%20Surrey%20Newton!5e0!3m2!1sen!2sin!4v1700588203133!5m2!1sen!2sin" width="1000" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 

@@ -55,7 +55,9 @@ const handleSignUp = async (e) => {
   try {
     const { data } = await axios.post(
       // "http://localhost:4000/signup",
-      "https://busy-pink-dalmatian-ring.cyclic.app/signup",
+      // "https://busy-pink-dalmatian-ring.cyclic.app/signup",
+'https://signtruckapi.signtruck.ca/signup',
+
       {
         ...inputValue,
       },
@@ -87,7 +89,9 @@ const handleLogIn = async (e) => {
   try {
     const { data } = await axios.post(
       // "http://localhost:4000/login",
-      "https://busy-pink-dalmatian-ring.cyclic.app/login",
+      // "https://busy-pink-dalmatian-ring.cyclic.app/login",
+'https://signtruckapi.signtruck.ca/login',
+
 
       {
         ...inputLoginValue,

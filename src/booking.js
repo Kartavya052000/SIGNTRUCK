@@ -151,12 +151,14 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             }
             let apiUrl="";
             if(token){
-                 apiUrl = 'http://localhost:4000/create-booking';
+                 apiUrl = 'https://signtruckapi.signtruck.ca/create-booking';
+                //  apiUrl = 'http://localhost:4000/create-booking';
                 //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking'
             }else{
                 //  apiUrl = 'http://localhost:4000/create-guest-booking';
                  formData.append("guestId","guest")
-             apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
+            //  apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-guest-booking'
+             apiUrl = 'https://signtruckapi.signtruck.ca/create-guest-booking'
             }
 ;
             // Then, send the formData with axios
@@ -207,7 +209,9 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
     useEffect(() => {
         // Define the API endpoint URL
         // const apiUrl = 'http://localhost:4000/get-forms';
-        const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-forms'
+        // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/get-forms'
+        const apiUrl = 'https://signtruckapi.signtruck.ca/get-forms';
+
     
         axios.get(apiUrl)
           .then((response) => {
