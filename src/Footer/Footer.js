@@ -50,11 +50,11 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                 <h4>Our Mission</h4>
                 <p>At Signtruck, we revolutionize the way businesses connect with their target audiences. Our dynamic fleet of mobile billboards transforms ordinary trucks into powerful advertising mediums, delivering your brand's message to the streets, highways, and events that matter most.</p>
                 <ul className='social_info'>
-                  <li>
+                  {/* <li>
                     <a href='#' title='twitter'>
                       <i className='fa fa-twitter'></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href='https://www.facebook.com/profile.php?id=100066472372793&mibextid=ZbWKwL' title='facebook'>
                       <i className='fa fa-facebook'></i>

@@ -32,9 +32,9 @@ const MyBooking = () => {
                     <h2>My-Booking</h2>
                 </div>
             </section>
-            {bookingdata.map((x) => (
                 <section className='mybookings_sec'>
                 <div className='custom-container'>
+                {bookingdata.map((x) => (
                     <div className='booCrdContainer'>
                         <div class="boocard">
                             <div class="boocard_date">
@@ -70,10 +70,11 @@ const MyBooking = () => {
                             </div>
                         </div>
                     </div>
+                ))}
                 </div>
+                {bookingdata.length ==0 ? (<h2 className='no_booking'>No Bookings Yet</h2>):('')}
             </section>
-))}
-{bookingdata.length ==0 ? (<h1>No Bookings Yet</h1>):("")}
+
             
 
 
