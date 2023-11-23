@@ -124,22 +124,22 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
           <div className='navigationWrapper'>
             <nav>
               <ul className='nav_menu header_menu'>
-                <li className='menu_item linkEffect'>
-                  <Link to="/" data-hover={navbar.nav1} title={navbar.nav1}><span>{navbar.nav1}</span></Link>
+                <li className='menu_item linkEffect' onClick={() => setActive(false)}>
+                  <Link to="/" data-hover={navbar.nav1} title={navbar.nav1 }><span>{navbar.nav1}</span></Link>
                 </li>
-                <li className='menu_item linkEffect'>
+                <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <Link to="/faq" data-hover={navbar.nav2} title={navbar.nav2}><span>{navbar.nav2}</span></Link>
                 </li>
-                <li className='menu_item linkEffect'>
+                <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                 <Link to="/clients" data-hover={navbar.nav3} title={navbar.nav3}><span>{navbar.nav3}</span></Link>
                 </li>
-                <li className='menu_item linkEffect'>
+                <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <a href='/contact' title={navbar.nav4} data-hover={navbar.nav4}><span>{navbar.nav4}</span></a>
                 </li>
                 <li className='menu_item linkEffect'>
                   <a href='http://www.canadianvisionmedia.ca/' title={navbar.nav5} data-hover={navbar.nav5}><span>{navbar.nav5}</span></a>
                 </li>
-                <li className='menu_item linkEffect'>
+                <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <a href='/booking' title={navbar.nav6} data-hover={navbar.nav6}><span>{navbar.nav6}</span></a>
                 </li>
                 
@@ -157,7 +157,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     </div>
                   </li>
                 ) : (
-                  <li className='menu_item'>
+                  <li className='menu_item' onClick={() => setActive(false)}>
                     <Link className='butn butn_success' to="/login" title='Login'><img src={user} />Login</Link>
                   </li>
                 )}
