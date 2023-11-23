@@ -128,10 +128,6 @@ p {
   gap: 10px;
 }
 
-.navigationWrapper ul li {
-  margin: 0 10px;
-}
-
 .navigationWrapper ul li:last-child {
   margin-right: 0;
 }
@@ -376,6 +372,10 @@ footer .copyright img {
   .navigationWrapper ul li.menu_item span.dropdown_text:hover {
     background-color: #2cb75c;
   }
+
+  .navigationWrapper ul li {
+    margin: 0 8px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -385,6 +385,10 @@ footer .copyright img {
 
   .navigationWrapper ul li.menu_item .dropdown_text img {
     display: block;
+  }
+
+  .navigationWrapper ul li {
+    margin: 0 10px;
   }
 }
 
@@ -546,6 +550,7 @@ footer .copyright img {
 
   .navigationWrapper ul li {
       width: 100%;
+      margin: 0 10px;
   }
 
   .navigationWrapper ul li.menu_item:not(.dropdown) .butn {
