@@ -401,6 +401,11 @@
   }
   
   @media (max-width: 575.98px) {
+
+    .clientsLogo img {
+      width: 85px;
+    }
+    
     .subs_inner:after {
         content: none;
     }
