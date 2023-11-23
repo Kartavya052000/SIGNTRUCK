@@ -71,7 +71,7 @@
     background-color: #fff;
     color: #000;
     vertical-align: middle;
-    font-size: 40px;
+    font-size: 48px;
     line-height: 50px;
   }
   
@@ -287,7 +287,7 @@
 
     .scrollDown a span {
         margin: 0 0 15px;
-        font-size: 20px;
+        font-size: 24px;
         line-height: 35px;
     }
 
@@ -405,7 +405,7 @@
     .clientsLogo img {
       width: 85px;
     }
-    
+
     .subs_inner:after {
         content: none;
     }
