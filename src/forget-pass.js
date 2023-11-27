@@ -21,7 +21,8 @@ const handleSuccess = (msg) =>
 
     try {
       // Make a POST request to your API endpoint
-      const response = await axios.post('http://localhost:4000/forget-password', { email });
+
+      const response = await axios.post('https://signtruckapi.signtruck.ca/forget-password', { email });
     const { success, message,token } = response.data;
     handleSuccess(message);
     setTimeout(() => {
