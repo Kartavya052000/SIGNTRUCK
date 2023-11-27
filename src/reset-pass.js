@@ -22,7 +22,7 @@ const handleSuccess = (msg) =>
 
     try {
       // Make a POST request to your reset-password endpoint with the new password and token
-      const response = await axios.post(`http://localhost:4000/reset-password/${token}`, { newPassword: password });
+      const response = await axios.post(`https://signtruckapi.signtruck.ca/reset-password/${token}`, { newPassword: password });
       console.log(response.data); // Log the response or handle success message
       handleSuccess(response.data.message)
       setTimeout(() => {
