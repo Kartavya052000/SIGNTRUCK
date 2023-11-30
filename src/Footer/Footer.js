@@ -48,7 +48,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
             <div className='footerCol-6'>
               <div className='footerCol_inner'>
                 <h4>Our Mission</h4>
-                <p>At Signtruck, we revolutionize the way businesses connect with their target audiences. Our dynamic fleet of mobile billboards transforms ordinary trucks into powerful advertising mediums, delivering your brand's message to the streets, highways, and events that matter most.</p>
+                <p>At Signtruck, we revolutionize the way businesses connect with their target audiences. Our dynamic fleet of mobile billboards transforms ordinary trucks into powerful advertising mediums, delivering your brands message to the streets, highways, events that matter most and more.</p>
                 <ul className='social_info'>
                   {/* <li>
                     <a href='#' title='twitter'>
@@ -56,7 +56,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     </a>
                   </li> */}
                   <li>
-                    <a href='https://www.facebook.com/profile.php?id=100066472372793&mibextid=ZbWKwL' title='facebook'>
+                    <a href='https://www.facebook.com/signtruck.ca' title='facebook'>
                       <i className='fa fa-facebook'></i>
                     </a>
                   </li>
@@ -102,6 +102,9 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     </li>
                     <li>
                       <span><img src={mail} /><a href='mailto:info@signtruck.ca' title='info@signtruck.ca'>info@signtruck.ca</a></span>
+                    </li>
+                    <li>
+                      <span><i className='fa fa-phone'></i><a href='tel:18002957057' title='1800-295-7057'>1800-295-7057</a></span>
                     </li>
                   </ul>
               </div>
