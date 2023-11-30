@@ -205,7 +205,7 @@ const logSignupClick = event => {
                       />
                     </div>
                     <div className='forgot'>
-                      <span>Forgot Password?</span>
+                      <a href="/forget-password" style={{color:"rgb(21 132 60)"}}>Forgot Password?</a>
                     </div>
                     <button type="button" className="butn butn_success button--form" onClick={handleLogIn}>Login</button>
                   </div>

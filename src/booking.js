@@ -185,7 +185,6 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
 
         } catch (error) {
             handleError();
-
             console.error('API request failed', error);
         }
     };
@@ -194,9 +193,6 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
         const file = e.target.files[0];
         setSelectedFiles(file);
         setFileLabel(file ? file.name : 'Upload Files');
-
-        // console.log(selectedFiles, "FFF")
-        // handleUpload()
 
     };
     const handleUpload = () => {
