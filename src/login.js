@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useCookies } from 'react-cookie';
+import faqBanner from './assets/images/faq_banner.png';
 
 const Login = () => {
 
@@ -127,11 +128,17 @@ const logSignupClick = event => {
 };
   return (
     <>
-    <section className="innerSecBgHeader">
+    {/* <section className="innerSecBgHeader">
       <div className="custom-container">
         <h2>Login / SignUp</h2>
       </div>
-    </section>
+    </section> */}
+
+      <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
+        <div className='custom-container'>
+          <h1>Login/Signup</h1>
+        </div>
+      </section>
       <section className='login_sec'>
         <div className='login_inner'>
           <div className='custom-container'>

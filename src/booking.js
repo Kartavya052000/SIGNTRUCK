@@ -7,6 +7,7 @@ import { TextField } from '@mui/material';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+import faqBanner from './assets/images/faq_banner.png';
 
 const Booking = () => {
     const navigate = useNavigate();
@@ -246,9 +247,15 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
       }, []);
     return (
         <>
-            <section className="innerSecBgHeader">
+            {/* <section className="innerSecBgHeader">
                 <div className="custom-container">
                     <h2>Booking</h2>
+                </div>
+            </section> */}
+
+            <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
+                <div className='custom-container'>
+                <h1>Booking</h1>
                 </div>
             </section>
             <section className='book_form_sec'>
