@@ -1,5 +1,5 @@
 import React, { useState, useRef,useEffect } from 'react';
-import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker,Uploader } from 'rsuite';
+import { Form, Schema, DateRangePicker, Button, TagPicker, Radio, Input, RadioGroup, SelectPicker,Uploader, Popover, Whisper } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import faqBanner from './assets/images/faq_banner.png';
+import sidePanel from './assets/images/sidePanel.jpg';
 
 const Booking = () => {
     const navigate = useNavigate();
@@ -15,13 +16,27 @@ const Booking = () => {
     const data = ['Eugenia', 'Bryan', 'Linda', 'Nancy', 'Lloyd', 'Alice', 'Julia', 'Albert'].map(
         item => ({ label: item, value: item })
     );
-    const nearByLocation = ['Vancouver', 'Surrey', 'Richmond'].map(
+    const nearByLocation = ['Vancouver', 'Surrey', 'Richmond', 'Pitt Meadows', 'Maple Ridge', 'Coquitlam', 'Port Coquitlam', 'Langley'].map(
         item => ({ label: item, value: item })
     );
 
-    const truckData = ['Full Truck', 'Driver Side', 'Passenger Side', 'Back Side'].map(
-        item => ({ label: item, value: item })
-    );
+    const truckData = [
+        { value: "fullTruck", label: "Full Truck", image: faqBanner },
+        { value: "sidePanel", label: "Side Panel", image: sidePanel },
+        { value: "driverSide", label: "Driver Side", image: faqBanner },
+        { value: "passengerSide", label: "Passenger Side", image: faqBanner },
+        { value: "backSide", label: "Back Side", image: faqBanner },
+    ];
+
+    const renderMenuItem = (text, item) => {
+        return (
+            <Whisper followCursor speaker={<Popover><img src={item.image} alt={item.label} style={{ width: '300px' }} /></Popover>}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <span>{text}</span>
+                    </div>
+            </Whisper>
+        );
+    };
     const DayData = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map(
         item => ({ label: item, value: item })
     );
@@ -241,6 +256,12 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             console.error('Error fetching data:', error);
           });
       }, []);
+
+      const [selected, setSelected] = useState(0);
+
+      const handleTruckData = (e) => {
+        setSelected(e.target.value);
+      };
     return (
         <>
             {/* <section className="innerSecBgHeader">
@@ -323,13 +344,29 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
                         <Form.Group controlId="truckDesign">
                             <Form.ControlLabel>{form.truckData} </Form.ControlLabel>
                             <SelectPicker
+                                searchable={false}
                                 name="truckDesign"
                                 data={truckData}
+                                renderMenuItem={(text, item) => renderMenuItem(text, item)}
                                 onChange={newValue => setValue({ ...value, truckData: newValue })}
                                 className={`custom-input ${formSubmitted && !value.truckData ? 'error-input' : ''}`}
-
                             />
+                            
+                            {/* <select value={selected} onChange={handleTruckData} className={`custom-input ${formSubmitted && !value.truckData ? 'error-input' : ''}`}>
+                                <option selected="selected" disabled="disabled">Choose Truck Side</option>
+                                {truckData.map((item, i) => (
+                                <option key={item.value} value={i}>
+                                    {item.text}
+                                </option>
+                                ))}
+                            </select> */}
                         </Form.Group>
+
+                        {/* <Form.Group controlId="truckDesignPreview">
+                            <div className='truckPreview'>
+                                <img src={truckData[selected].image} />
+                            </div>
+                        </Form.Group> */}
 
                         <Form.Group controlId="day">
                             <Form.ControlLabel>{form.day}</Form.ControlLabel>

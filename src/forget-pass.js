@@ -3,6 +3,7 @@ import { Form, Button } from 'rsuite';
 import axios from 'axios'; // Import Axios for making API requests
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import faqBanner from './assets/images/faq_banner.png';
 
 function ForgetPassword() {
   const [email, setEmail] = useState("");
@@ -39,10 +40,11 @@ const handleSuccess = (msg) =>
 
   return (
     <>
-      <section className="innerSecBgHeader">
-      <div className="custom-container">
-        <h2>Forget-Password</h2>
-      </div>
+    
+    <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
+        <div className='custom-container'>
+        <h1>Forget Password</h1>
+        </div>
     </section>
     <section className='book_form_sec'>
                 <div className='custom-container'>

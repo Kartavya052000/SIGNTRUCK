@@ -5,8 +5,8 @@ import axios from 'axios';
 import { toast } from "react-toastify";
 import { Form } from 'rsuite';
 import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
+// import Particles from "react-particles";
+// import { loadSlim } from "tsparticles-slim";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -71,14 +71,14 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
     }
 };
 
-  const particlesInit = useCallback(async engine => {
-    console.log(engine);
-    await loadSlim(engine);
-  }, []);
+  // const particlesInit = useCallback(async engine => {
+  //   console.log(engine);
+  //   await loadSlim(engine);
+  // }, []);
 
-  const particlesLoaded = useCallback(async container => {
-    await console.log(container);
-  }, []);
+  // const particlesLoaded = useCallback(async container => {
+  //   await console.log(container);
+  // }, []);
 
   return (
     <>
@@ -90,7 +90,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
 
       <section className='contact_sec'>
         <div className='contact_inner'>
-          <Particles
+          {/* <Particles
               id="tsparticles"
               init={particlesInit}
               loaded={particlesLoaded}
@@ -471,7 +471,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
                 zLayers: 100,
                 motion: { disable: false, reduce: { factor: 4, value: true } }
               }}
-          />
+          /> */}
           <div className='custom-container'>
             <div className='contForm'>
             <Form  onSubmit={handleSubmit}>
@@ -493,8 +493,6 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
                 </div>
                 <div className='formSubmit'>
                     <input type='submit' value='Submit' className='fullButn butn butn_success' onClick={handleSubmit} />
-                    {/* <Button className='butn butn_success butn_sm' type="submit">Book Now</Button> */}
-
                 </div>
               </Form>
             </div>

@@ -16,6 +16,7 @@ import MyProfile from './my-profile';
 import { initGA, logPageView } from './analytics';
 import ResetPassword from './reset-pass';
 import ForgetPassword from './forget-pass';
+import Prospectus from './prospectus';
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
           <Route exact path='login' element={<Login />} />
           <Route exact path='forget-password' element={<ForgetPassword />} />
           <Route exact path='/reset-password/:token' element={<ResetPassword />} />
+          <Route exact path='prospectus' element={<Prospectus />} />
 
         </Routes>
         <Footer />
