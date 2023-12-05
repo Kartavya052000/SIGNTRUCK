@@ -49,23 +49,6 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
               <div className='footerCol_inner'>
                 <h4>Our Mission</h4>
                 <p>At Signtruck, we revolutionize the way businesses connect with their target audiences. Our dynamic fleet of mobile billboards transforms ordinary trucks into powerful advertising mediums, delivering your brands message to the streets, highways, events that matter most and more.</p>
-                <ul className='social_info'>
-                  {/* <li>
-                    <a href='#' title='twitter'>
-                      <i className='fa fa-twitter'></i>
-                    </a>
-                  </li> */}
-                  <li>
-                    <a href='https://www.facebook.com/signtruck.ca' title='facebook'>
-                      <i className='fa fa-facebook'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='https://instagram.com/signtruck.ca' title='instagram'>
-                      <i className='fa fa-instagram'></i>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
             <div className='footerCol-3'>
@@ -85,7 +68,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                       <Link to="/contact" title={footernavbar.nav4}>{footernavbar.nav4}</Link>
                     </li>
                     <li>
-                      <Link to="http://www.canadianvisionmedia.ca/" title={footernavbar.nav5}>{footernavbar.nav5}</Link>
+                      <Link to="http://www.canadianvisionmedia.ca/" target='_blank' title={footernavbar.nav5}>{footernavbar.nav5}</Link>
                     </li>
                     <li>
                       <Link to="/booking" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
@@ -101,12 +84,29 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                       <span><img src={location} /> 13231 72 Ave, Surrey, BC V3W 2N5</span>
                     </li>
                     <li>
-                      <span><img src={mail} /><a href='mailto:info@signtruck.ca' title='info@signtruck.ca'>info@signtruck.ca</a></span>
+                      <span><img src={mail} /><a href='mailto:info@signtruck.ca' title='info@signtruck.ca' target='_blank'>info@signtruck.ca</a></span>
                     </li>
                     <li>
-                      <span><i className='fa fa-phone'></i><a href='tel:18002957057' title='1800-295-7057'>1800-295-7057</a></span>
+                      <span><i className='fa fa-phone'></i><a href='tel:18002957057' title='1800-295-7057' target='_blank'>1800-295-7057</a></span>
                     </li>
                   </ul>
+                  <ul className='social_info'>
+                  {/* <li>
+                    <a href='#' title='twitter'>
+                      <i className='fa fa-twitter'></i>
+                    </a>
+                  </li> */}
+                  <li>
+                    <a href='https://www.facebook.com/signtruck.ca' title='facebook' target='_blank'>
+                      <i className='fa fa-facebook'></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://instagram.com/signtruck.ca' title='instagram' target='_blank'>
+                      <i className='fa fa-instagram'></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'; // Import useParams to access URL 
 import axios from 'axios'; // Import Axios for making API requests
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import faqBanner from './assets/images/faq_banner.png';
+
 function ResetPassword() {
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
@@ -36,10 +38,10 @@ const handleSuccess = (msg) =>
   };
   return (
     <>
-     <section className="innerSecBgHeader">
-      <div className="custom-container">
-        <h2>Reset-Password</h2>
-      </div>
+     <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
+        <div className='custom-container'>
+        <h1>Reset Password</h1>
+        </div>
     </section>
     <section className='book_form_sec'>
                 <div className='custom-container'>
