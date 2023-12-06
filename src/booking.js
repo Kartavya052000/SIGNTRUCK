@@ -21,11 +21,11 @@ const Booking = () => {
     );
 
     const truckData = [
-        { value: "fullTruck", label: "Full Truck", image: faqBanner },
+        { value: "fullTruck", label: "Full Truck", image: sidePanel },
         { value: "sidePanel", label: "Side Panel", image: sidePanel },
-        { value: "driverSide", label: "Driver Side", image: faqBanner },
-        { value: "passengerSide", label: "Passenger Side", image: faqBanner },
-        { value: "backSide", label: "Back Side", image: faqBanner },
+        { value: "driverSide", label: "Driver Side", image: sidePanel },
+        { value: "passengerSide", label: "Passenger Side", image: sidePanel },
+        { value: "backSide", label: "Back Side", image: sidePanel },
     ];
 
     const renderMenuItem = (text, item) => {
