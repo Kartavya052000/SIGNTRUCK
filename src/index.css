@@ -5,15 +5,15 @@
 .iframe_inner {
     position: relative;
     width: 100vw;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
 }
 
 .iframe_inner iframe {
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: calc(100% + 30%);
+    top: -40%;
     left: 0;
     border: none;
 }
@@ -27,51 +27,59 @@
 
 /** Responsive CSS starts here **/
 
+@media (max-width: 1400px) {
+    .iframe_inner {
+        height: 500px;
+    }
+    
+    .iframe_inner iframe {
+        top: -30%;
+    }
+}
+
 @media (max-width: 1199.98px) {
     .iframe_inner {
-        height: 550px;
+        height: 450px;
+    }
+
+    .iframe_inner iframe {
+        top: -25%;
     }
 }
 
 @media (max-width: 991.98px) {
 
     .iframe_sec {
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
     
     .iframe_inner {
-        height: 450px;
+        height: 350px;
+        top: -20%;
     }
 }
-
 @media (max-width: 767.98px) {
-    .iframe_sec {
-        padding: 4rem 0 0;
+    .iframe_inner {
+        height: 300px;
     }
 }
 
 @media (max-width: 650px) {
     .iframe_inner {
-        height: 400px;
+        height: 250px;
     }
 }
 
 @media (max-width: 575.98px) {
-    .iframe_sec {
-        padding: 3rem 0 0;
-    }
     .iframe_inner {
-        height: unset;
-        min-height: 350px;
+        height: 220px;
     }
 }
 
 @media (max-width: 475.98px) {
-    .iframe_sec {
-        padding: 1rem 0 0;
-    }
+
     .iframe_inner {
-        min-height: 250px;
+        height: 180px;
     }
 }
 
@@ -80,6 +88,6 @@
         padding: 0;
     }
     .iframe_inner {
-        min-height: 200px;
+        height: 150px;
     }
 }
