@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import faqBanner from './assets/images/faq_banner.png';
 import sidePanel from './assets/images/sidePanel.jpg';
+import trucks from './assets/images/storyTruck.png';
 
 const Booking = () => {
     const navigate = useNavigate();
@@ -21,11 +22,11 @@ const Booking = () => {
     );
 
     const truckData = [
-        { value: "fullTruck", label: "Full Truck", image: sidePanel },
-        { value: "sidePanel", label: "Side Panel", image: sidePanel },
-        { value: "driverSide", label: "Driver Side", image: sidePanel },
-        { value: "passengerSide", label: "Passenger Side", image: sidePanel },
-        { value: "backSide", label: "Back Side", image: sidePanel },
+        { value: "fullTruck", label: "Full Truck", image: trucks },
+        { value: "sidePanel", label: "Side Panel", image: trucks },
+        { value: "driverSide", label: "Driver Side", image: trucks },
+        { value: "passengerSide", label: "Passenger Side", image: trucks },
+        { value: "backSide", label: "Back Side", image: trucks },
     ];
 
     const renderMenuItem = (text, item) => {

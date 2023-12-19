@@ -4,7 +4,7 @@ import duda from './assets/images/duda.png';
 import autoworld from './assets/images/autoworld.png';
 import news1130 from './assets/images/news1130.png';
 import dawsonsawyer from './assets/images/dawsonsawyer.png';
-// import trucks from './assets/images/storyTruck.png';
+import trucks from './assets/images/storyTruck.png';
 // import truck from './assets/images/truck.png';
 import heroBanner from './assets/images/banner.png';
 // import subsTruck from './assets/images/subsTruck.png';
@@ -62,17 +62,17 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className='fullImg_wrap'>
+            <div className='fullImg_wrap'>
                 <img src={trucks} alt='' title='' />
-            </div> */}
+            </div>
         </div>
     </section>
 
-    <section className='iframe_sec'>
+    {/* <section className='iframe_sec'>
         <div className='iframe_inner'>
             <iframe src='http://www.canadianvisionmedia.ca/jiffylube/' scrolling='no'></iframe>
         </div>
-    </section>
+    </section> */}
 
     {/* <section className='connect_us_sec'>
         <div className='custom-container'>
