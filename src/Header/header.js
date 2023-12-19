@@ -17,7 +17,6 @@ const Header = () => {
   const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const token = cookies['token'];
 
-console.log(cookies['token']);
 
 const [isDropdown, setDropdown] = useState(false);
 const [navbar, SetNavbar] = useState({
@@ -103,7 +102,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                 </a>
               </li>
               <li>
-                <a href='https://instagram.com/signtruck.ca' title='instagram' target='_blank'>
+                <a href='https://www.instagram.com/signtruckdotca/' title='instagram' target='_blank'>
                   <img src={instagram} title='Instagram' alt='Instagram' />
                 </a>
               </li>
