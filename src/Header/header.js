@@ -136,7 +136,8 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                   <a href='/contact' title={navbar.nav4} data-hover={navbar.nav4}><span>{navbar.nav4}</span></a>
                 </li>
                 <li className='menu_item linkEffect'>
-                  <a href='http://www.canadianvisionmedia.ca/' title={navbar.nav5} data-hover={navbar.nav5} target='_blank'><span>{navbar.nav5}</span></a>
+                  {/* <a href='http://www.canadianvisionmedia.ca/' title={navbar.nav5} data-hover={navbar.nav5} target='_blank'><span>{navbar.nav5}</span></a> */}
+                  <a href='/prospectus' title={navbar.nav5} data-hover={navbar.nav5} ><span>{navbar.nav5}</span></a>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <a href='/booking' title={navbar.nav6} data-hover={navbar.nav6}><span>{navbar.nav6}</span></a>
