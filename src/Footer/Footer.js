@@ -102,7 +102,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     </a>
                   </li>
                   <li>
-                    <a href='https://instagram.com/signtruck.ca' title='instagram' target='_blank'>
+                    <a href='https://www.instagram.com/signtruckdotca/' title='instagram' target='_blank'>
                       <i className='fa fa-instagram'></i>
                     </a>
                   </li>
