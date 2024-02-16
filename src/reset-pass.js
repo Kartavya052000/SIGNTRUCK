@@ -12,13 +12,13 @@ function ResetPassword() {
 
   const { token } = useParams(); // Get the token from the route parameters
   const handleError = (err) =>
-  toast.error(err, {
-    position: "top-left",
-  });
-const handleSuccess = (msg) =>
-  toast.success(msg, {
-    position: "top-right",
-  });
+    toast.error(err, {
+      position: "top-left",
+    });
+  const handleSuccess = (msg) =>
+    toast.success(msg, {
+      position: "top-right",
+    });
   const handleSubmit = async (e) => {
     // e.preventDefault(); // Prevent default form submission
 
@@ -38,31 +38,31 @@ const handleSuccess = (msg) =>
   };
   return (
     <>
-     <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
+      <section className='innerSec' style={{ backgroundImage: `url(${faqBanner})` }}>
         <div className='custom-container'>
-        <h1>Reset Password</h1>
+          <h1>Reset Password</h1>
         </div>
-    </section>
-    <section className='book_form_sec'>
-                <div className='custom-container'>
-                    <Form onSubmit={handleSubmit}>
-  {/* Existing form fields */}
-  
-  <Form.Group controlId="password">
-    <Form.ControlLabel>New Password</Form.ControlLabel>
-    <input
-      name="password"
-      label="New Password"
-      placeholder="New Password"
-      value={password}
-      onChange={event => setpassword(event.target.value)}
-    />
-  </Form.Group>
-  <Button className='butn butn_success butn_sm' type="submit">Submit</Button>
-</Form>
+      </section>
+      <section className='book_form_sec'>
+        <div className='custom-container'>
+          <Form onSubmit={handleSubmit}>
+            {/* Existing form fields */}
 
-                        </div>
-                        </section>
+            <Form.Group controlId="password">
+              <Form.ControlLabel>New Password</Form.ControlLabel>
+              <input
+                name="password"
+                label="New Password"
+                placeholder="New Password"
+                value={password}
+                onChange={event => setpassword(event.target.value)}
+              />
+            </Form.Group>
+            <Button className='butn butn_success butn_sm' type="submit">Submit</Button>
+          </Form>
+
+        </div>
+      </section>
     </>
   );
 }
