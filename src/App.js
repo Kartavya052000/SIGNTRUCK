@@ -17,14 +17,20 @@ import { initGA, logPageView } from './analytics';
 import ResetPassword from './reset-pass';
 import ForgetPassword from './forget-pass';
 import Prospectus from './prospectus';
+import ReactGA from 'react-ga';
 
 function App() {
-  useEffect(() => {
-    // Initialize Google Analytics
-    initGA();
-    // Log the initial pageview
-    logPageView();
-  }, []);
+  // useEffect(() => {
+  //   // Initialize Google Analytics
+  //   initGA();
+  //   // Log the initial pageview
+  //   logPageView();
+  // }, []);
+
+  // ReactGA.initialize("G-GG8E1NJPG0");
+  // ReactGA.pageview(window.location.pathname + window.location.search);
+
+  // console.log("HITTT")
   return (
     <div className="App">
       <Router>
