@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useCookies } from 'react-cookie';
 import faqBanner from './assets/images/faq_banner.png';
+import { colors } from "@mui/material";
 
 const Login = () => {
 
@@ -205,7 +206,7 @@ const logSignupClick = event => {
                       />
                     </div>
                     <div className='forgot'>
-                      <span>Forgot Password?</span>
+                      <a href="/forget-password" style={{color:"rgb(21 132 60)"}}>Forgot Password?</a>
                     </div>
                     <button type="button" className="butn butn_success button--form" onClick={handleLogIn}>Login</button>
                   </div>
