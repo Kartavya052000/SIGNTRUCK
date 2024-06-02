@@ -18,6 +18,7 @@ import ResetPassword from './reset-pass';
 import ForgetPassword from './forget-pass';
 import Prospectus from './prospectus';
 import ReactGA from 'react-ga';
+import PrivacyPolicy from './privacy-policy';
 
 function App() {
   // useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
           <Route exact path='forget-password' element={<ForgetPassword />} />
           <Route exact path='/reset-password/:token' element={<ResetPassword />} />
           <Route exact path='prospectus' element={<Prospectus />} />
+          <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
 
         </Routes>
         <Footer />

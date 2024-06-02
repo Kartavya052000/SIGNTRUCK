@@ -73,6 +73,9 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                     <li>
                       <Link to="/booking" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
                     </li>
+                    <li>
+                      <Link to="/privacy-policy" title={"Privacy Policy"}>Privacy Policy</Link>
+                    </li>
                   </ul>
               </div>
             </div>
