@@ -140,7 +140,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                   <a href='/prospectus' title={navbar.nav5} data-hover={navbar.nav5} ><span>{navbar.nav5}</span></a>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
-                  <a href='/booking' title={navbar.nav6} data-hover={navbar.nav6}><span>{navbar.nav6}</span></a>
+                  <a href='/get-quote' title={navbar.nav6} data-hover={navbar.nav6}><span>{navbar.nav6}</span></a>
                 </li>
                 
                 {token ? (

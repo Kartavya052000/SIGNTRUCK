@@ -41,7 +41,7 @@ function App() {
           <Route exact path='faq' element={<Faq />} />
           <Route exact path='clients' element={<Clients />} />
           <Route exact path='contact' element={<Contact />} />
-          <Route exact path='booking' element={<Booking />} />
+          <Route exact path='get-quote' element={<Booking />} />
           <Route exact path='my-booking' element={<MyBooking />} />
           <Route exact path='my-profile' element={<MyProfile />} />
           <Route exact path='login' element={<Login />} />

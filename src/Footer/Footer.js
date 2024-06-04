@@ -71,7 +71,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                       <Link to="http://www.canadianvisionmedia.ca/" target='_blank' title={footernavbar.nav5}>{footernavbar.nav5}</Link>
                     </li>
                     <li>
-                      <Link to="/booking" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
+                      <Link to="/get-quote" title={footernavbar.nav6}>{footernavbar.nav6}</Link>
                     </li>
                     <li>
                       <Link to="/privacy-policy" title={"Privacy Policy"}>Privacy Policy</Link>

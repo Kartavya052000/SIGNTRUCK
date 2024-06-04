@@ -273,7 +273,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
 
             <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
                 <div className='custom-container'>
-                <h1>Booking</h1>
+                <h1>Get Quote</h1>
                 </div>
             </section>
             <section className='book_form_sec'>
@@ -453,7 +453,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
                             />
                         </Form.Group>
 
-                        <Button className='butn butn_success butn_sm' type="submit">Book Now</Button>
+                        <Button className='butn butn_success butn_sm' type="submit">Get Quote</Button>
                     </Form>
                 </div>
             </section>
