@@ -1,0 +1,32 @@
+#background {
+    margin: auto auto;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#billboard {
+    margin: 0px;
+    padding: 0px;
+    left: 346px;
+    top: 298px;
+    width: 500px;
+    height: 200px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: perspective(1600px) rotateY(0deg);
+    background-color: rgba(0,0,0,0.75);
+}
+.slat {
+    background-size: cover;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition-property: all;
+    transition-duration: 1.5s;
+    border: rgba(0,0,0,0.4) solid 0.1px;
+}

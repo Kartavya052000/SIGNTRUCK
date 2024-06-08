@@ -10,8 +10,26 @@ import { useNavigate } from "react-router-dom";
 import faqBanner from './assets/images/faq_banner.png';
 import sidePanel from './assets/images/sidePanel.jpg';
 import trucks from './assets/images/storyTruck.png';
+import RotatingBillboard from './RotatingBillboard';
+import truckimg from "./images/billboard.jpeg"
+import truckimg1 from "./images/coffee.png"
+import truckimg2 from "./images/cocktail.png"
+import truckimg3 from "./images/shotglass.png"
 
+  const initialConfig = {
+    background: truckimg,
+    images: [
+      truckimg1,truckimg2,truckimg3
+    ],
+    divisions: 41,
+    lag: 4,
+    duration: 8,
+    topLeft: [0.24811844589687727, 0.384359897172236],
+    botRight: [0.605277566539924, 0.639277566539924],
+};
 const Booking = () => {
+    const [config, setConfig] = useState(initialConfig);
+
     const navigate = useNavigate();
 
     const data = ['Eugenia', 'Bryan', 'Linda', 'Nancy', 'Lloyd', 'Alice', 'Julia', 'Albert'].map(
@@ -204,11 +222,21 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
             console.error('API request failed', error);
         }
     };
+    const [uploadedImage, setUploadedImage] = useState(null);
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         setSelectedFiles(file);
         setFileLabel(file ? file.name : 'Upload Files');
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const uploadedImage = reader.result;
+            const updatedConfig = { ...config, images: [uploadedImage] };
+            setConfig(updatedConfig);
+          };
+          reader.readAsDataURL(file);
+        }
 
     };
     const handleUpload = () => {
@@ -418,6 +446,7 @@ const [fileLabel, setFileLabel] = useState('Upload or Drop a file here');
                                     </div>
 
                                     {/* <button type="button" className='upload' onClick={handleUpload}>Upload Files</button> */}
+                                   { selectedFiles &&   <RotatingBillboard config={config} uploadedImage={uploadedImage} />}
 
                                 </div>
 

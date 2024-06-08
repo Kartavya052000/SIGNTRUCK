@@ -10,7 +10,23 @@ import duda from './assets/images/duda.png';
 import jiffylube from './assets/images/jiffylube.png';
 import jifflubetruck from './assets/images/jiffylubetruck.png';
 import dawsontruck from './assets/images/dawsontruck.png';
+import RotatingBillboard from './RotatingBillboard';
+import truckimg from "./images/billboard.jpeg"
+import truckimg1 from "./images/coffee.png"
+import truckimg2 from "./images/cocktail.png"
+import truckimg3 from "./images/shotglass.png"
 
+  const config = {
+    background: truckimg,
+    images: [
+      truckimg1,truckimg2,truckimg3
+    ],
+    divisions: 41,
+    lag: 4,
+    duration: 8,
+    topLeft: [0.24811844589687727, 0.384359897172236],
+    botRight: [0.605277566539924, 0.639277566539924],
+};
 const Clients = () => {
   return (
     <>
@@ -32,6 +48,7 @@ const Clients = () => {
               </TabList>
               <TabPanel>
                 <div className='tabCont_inner'>
+                <RotatingBillboard config={config} />
                   <div className='custom_row'>
                     <div className='imgColmn'>
                       <Tabs>
