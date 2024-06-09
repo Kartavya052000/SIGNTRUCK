@@ -59,7 +59,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                       <Link to="/" title={footernavbar.nav1}>{footernavbar.nav1}</Link>
                     </li>
                     <li>
-                    <Link to="/faq" title={footernavbar.nav2}>{footernavbar.nav2}</Link>
+                    <Link to="/faqs" title={footernavbar.nav2}>{footernavbar.nav2}</Link>
                     </li>
                     <li>
                       <Link to="/clients" title={footernavbar.nav3}>{footernavbar.nav3}</Link>

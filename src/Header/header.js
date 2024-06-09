@@ -127,7 +127,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/get-navbar';
                   <Link to="/" data-hover={navbar.nav1} title={navbar.nav1 }><span>{navbar.nav1}</span></Link>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
-                  <Link to="/faq" data-hover={navbar.nav2} title={navbar.nav2}><span>{navbar.nav2}</span></Link>
+                  <Link to="/faqs" data-hover={navbar.nav2} title={navbar.nav2}><span>{navbar.nav2}</span></Link>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                 <Link to="/clients" data-hover={navbar.nav3} title={navbar.nav3}><span>{navbar.nav3}</span></Link>
