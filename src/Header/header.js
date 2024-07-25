@@ -37,7 +37,10 @@ const response = await axios.post('https://signtruckapi.signtruck.ca/logout');
 
     if (response.status === 200) {
       // Clear the token from cookies and any other cleanup
-      removeCookie('token');
+      // removeCookie('token');
+      Object.keys(cookies).forEach(cookie => {
+        removeCookie(cookie);
+      });
       // Redirect or perform any other action after successful logout
       // For example, you can redirect the user to the home page
       window.location.href = '/';
