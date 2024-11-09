@@ -63,7 +63,7 @@ const Header = () => {
         // Handle the successful response and update the state with the data
         const { nav1, nav2, nav3, nav4, nav5, nav6 } = response.data.nav[0]
         SetNavbar({
-          nav1: 'Homes' || '',
+          nav1: nav1 || '',
           nav2: nav2 || '',
           nav3: nav3 || '',
           nav4: nav4 || '',
