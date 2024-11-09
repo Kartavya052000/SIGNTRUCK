@@ -37,6 +37,7 @@ function App() {
   const location = useLocation()
   useEffect(() => {
     InitializeGoogleAnalytics()
+    console.log('🟢 InitializeGoogleAnalytics')
   }, [location])
   return (
     <div className='App'>
