@@ -1,475 +1,552 @@
 /** Hero Section CSS **/
 
 .hero_sec {
-    position: relative;
-    padding: 4rem 0 10rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0;
-  }
-  
-  .hero_overlay {
-    background: linear-gradient(90deg, #001407 0%, rgba(0, 16, 6, 0.72) 34.17%, rgba(0, 0, 0, 0.00) 76.65%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .hero_info {
-    max-width: 60%;
-  }
-  
-  .hero_info > span {
-    font-weight: 600;
-    color: #fff;
-    margin: 0 0 10px;
-    display: inline-block;
-  }
-  
+  position: relative;
+  padding: 4rem 0 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero_overlay {
+  background: linear-gradient(90deg, #001407 0%, rgba(0, 16, 6, 0.72) 34.17%, rgba(0, 0, 0, 0) 76.65%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero_info {
+  max-width: 60%;
+}
+
+.hero_info > span {
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+  display: inline-block;
+}
+
+.hero_info h2 {
+  font-size: 50px;
+  font-family: 'Russo One';
+  text-transform: uppercase;
+  line-height: normal;
+  margin: 0;
+  position: relative;
+  color: #fff;
+}
+
+.hero_info p {
+  color: #fff;
+  font-size: 14px;
+  max-width: 75%;
+  margin: 20px 0 30px;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  color: #fff;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-orientation: sideways;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.scrollDown a {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff !important;
+}
+
+.scrollDown a span {
+  padding: 7px 10px 8px;
+  margin: 0 0 20px;
+  background-color: #fff;
+  color: #000;
+  vertical-align: middle;
+  font-size: 48px;
+  line-height: 50px;
+}
+
+.scrollDown > a:hover {
+  color: #15843c !important;
+}
+
+.scrollDown > a:hover span {
+  color: #fff;
+  background-color: #15843c;
+}
+
+/** Hero Section CSS ends here **/
+
+/** Clients Section CSS **/
+
+.clients_sec {
+  z-index: 1;
+  position: relative;
+}
+
+.clients_inner {
+  background-color: #fff;
+  padding: 2rem 0;
+  margin-top: -60px;
+}
+
+.clients_inner .ttlWrap {
+  text-align: center;
+}
+
+.clientsLogo {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.clientsLogo img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  width: 130px;
+}
+
+/** Clients CSS ends here **/
+
+/** Story CSS **/
+
+.story_sec {
+  padding: 2rem 0 4rem;
+}
+
+.story_sec .leftCol {
+  flex: 0 0 auto;
+}
+
+.story_sec .rightCol {
+  flex: 1 1 60%;
+  max-width: 60%;
+  margin-left: auto;
+}
+
+.story_sec .cont {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.fullImg_wrap {
+  padding: 30px 0;
+}
+
+.fullImg_wrap img {
+  filter: drop-shadow(0px 30px 10px rgba(0, 0, 0, 0.5));
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+/** Story CSS ends here **/
+
+/** Connect CSS **/
+
+.connect_us_sec .custom_row {
+  margin: 0;
+}
+
+.connect_us_sec .formCol {
+  background-color: #f4f4f4;
+  padding: 30px;
+}
+
+.connect_us_sec .imgCol,
+.connect_us_sec .formCol {
+  flex: 0 0 50%;
+}
+
+.connect_us_sec .imgCol img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.connectForm {
+  margin: 1.5rem 0 0;
+}
+
+/** Connect CSS ends here **/
+
+/** Map CSS starts here **/
+
+.map_inner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.map_inner iframe {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/** Map CSS ends here **/
+
+/** Subscribe CSS **/
+
+.subscribe_sec {
+  padding: 6rem 0 3rem;
+}
+
+.subs_inner {
+  background: linear-gradient(180deg, #0877a4 0%, #000 100%);
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+.subs_inner:after {
+  content: '';
+  position: absolute;
+  left: 62%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 55px;
+  transform: skewX(40deg);
+}
+
+.subscribe_sec .custom_row {
+  align-items: center;
+}
+
+.subscribe_sec .imgCol,
+.subscribe_sec .subsForm {
+  padding: 0 15px;
+}
+
+.subscribe_sec .imgCol {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.subscribe_sec .imgCol img {
+  width: 75%;
+  margin: -50px 20px 0 auto;
+  display: block;
+}
+
+.subscribe_sec .subsForm {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.subscribe_sec .subsForm .ttlWrap h2 {
+  color: #fff;
+}
+
+/** Subscribe CSS ends here **/
+
+/** Responsive CSS starts here **/
+
+@media (max-width: 1399.98px) {
   .hero_info h2 {
-    font-size: 50px;
-    font-family: 'Russo One';
-    text-transform: uppercase;
-    line-height: normal;
-    margin: 0;
-    position: relative;
-    color: #fff;
+    font-size: 40px;
   }
-  
-  .hero_info p {
-    color: #fff;
-    font-size: 14px;
-    max-width: 75%;
-    margin: 20px 0 30px;
+}
+
+@media (max-width: 1199.98px) {
+  .hero_info h2 {
+    font-size: 35px;
   }
-  
-  .scrollDown {
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    color: #fff;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    text-orientation: sideways;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-  }
-  
+
   .scrollDown a {
-    padding: 10px 15px;
-    font-size: 14px;
-    color: #fff !important;
+    font-size: 10px;
   }
-  
+
   .scrollDown a span {
-    padding: 7px 10px 8px;
-    margin: 0 0 20px;
-    background-color: #fff;
-    color: #000;
-    vertical-align: middle;
-    font-size: 48px;
-    line-height: 50px;
+    margin: 0 0 15px;
+    font-size: 24px;
+    line-height: 35px;
   }
-  
-  .scrollDown > a:hover {
-    color: #15843C !important;
+
+  .clients_inner {
+    margin-top: -40px;
   }
-  
-  .scrollDown > a:hover span {
-    color: #fff;
-    background-color: #15843C;
+}
+
+@media (max-width: 991.98px) {
+  .hero_sec {
+    padding: 3rem 0 7rem;
   }
-  
-  /** Hero Section CSS ends here **/
-  
-  /** Clients Section CSS **/
-  
-  .clients_sec {
-    z-index: 1;
+
+  .hero_info h2 {
+    font-size: 30px;
+  }
+
+  .hero_info p {
+    max-width: 80%;
+  }
+
+  .clientsLogo img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero_info h2 {
+    font-size: 26px;
+  }
+
+  .hero_info > span {
+    font-size: 12px;
+  }
+
+  .hero_info p {
+    max-width: 100%;
+    margin: 15px 0 20px;
+  }
+
+  .clients_inner {
+    padding: 1rem 0;
+  }
+
+  .story_sec {
+    padding: 2rem 0;
+  }
+
+  .story_sec .cont {
+    font-weight: 500;
+  }
+
+  .connect_us_sec .formCol {
+    padding: 20px;
+  }
+
+  .connect_us_sec .custom_row {
     position: relative;
   }
-  
-  .clients_inner {
-    background-color: #fff;
-    padding: 2rem 0;
-    margin-top: -60px;
+
+  .connect_us_sec .imgCol {
+    flex: 0 0 100%;
+    position: absolute;
+    z-index: -1;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
   }
-  
-  .clients_inner .ttlWrap {
-    text-align: center;
-  }
-  
-  .clientsLogo {
-    display: flex;
-    display: -ms-flexbox;
-    align-items: center;
-  }
-  
-  .clientsLogo img {
+
+  .connect_us_sec .formCol {
+    flex: 0 0 80%;
     margin: 0 auto;
-    display: block;
-    max-width: 100%;
-    width: 130px;
   }
-  
-  /** Clients CSS ends here **/
-  
-  
-  /** Story CSS **/
-  
-  .story_sec {
-    padding: 2rem 0 4rem;
+
+  .subscribe_sec {
+    padding: 5rem 0 2rem;
   }
-  
-  .story_sec .leftCol {
-    flex: 0 0 auto;
+
+  .subscribe_sec .imgCol {
+    flex: 0 0 40%;
+    max-width: 40%;
   }
-  
-  .story_sec .rightCol {
-    flex: 1 1 60%;
+
+  .subscribe_sec .imgCol img {
+    width: 90%;
+  }
+
+  .subscribe_sec .subsForm {
+    flex: 0 0 60%;
     max-width: 60%;
-    margin-left: auto;
   }
-  
-  .story_sec .cont {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
+
+  .subs_inner {
+    padding: 0.5rem 1rem;
   }
-  
-  .fullImg_wrap {
-    padding: 30px 0;
+
+  .subs_inner:after {
+    width: 40px;
   }
-  
-  .fullImg_wrap img {
-    filter: drop-shadow(0px 30px 10px rgba(0,0,0,0.5));
-    width: 80%;
-    margin: 0 auto;
-    display: block;
+
+  .story_sec .rightCol {
+    flex: 1 1 58%;
+    max-width: 58%;
   }
-  
-  /** Story CSS ends here **/
-  
-  /** Connect CSS **/
-  
-  .connect_us_sec .custom_row {
+}
+
+@media (max-width: 650px) {
+  .scrollDown {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .clientsLogo img {
+    width: 71px;
+  }
+
+  .subs_inner:after {
+    content: none;
+  }
+
+  .subscribe_sec .custom_row {
+    flex-direction: column;
+  }
+
+  .subscribe_sec .imgCol {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .subscribe_sec .subsForm {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .story_sec {
+    padding: 1rem 0;
+  }
+
+  .story_sec .custom_row {
+    flex-direction: column;
+  }
+
+  .story_sec .leftCol,
+  .story_sec .rightCol {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .clientsLogo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .clientsLogo img {
     margin: 0;
   }
-  
+
+  .connect_us_sec .imgCol {
+    padding: 0;
+  }
+
   .connect_us_sec .formCol {
-    background-color: #F4F4F4;
-    padding: 30px;
+    flex: 0 0 90%;
   }
-  
-  .connect_us_sec .imgCol, .connect_us_sec .formCol {
-    flex: 0 0 50%;
-  }
-  
-  .connect_us_sec .imgCol img {
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .connectForm {
-    margin: 1.5rem 0 0;
-  }
-  
-  /** Connect CSS ends here **/
+}
 
-  /** Map CSS starts here **/
-
-  .map_sec {
-    padding: 1rem 0 0;
-    margin: 0 0 1rem;
+@media (max-width: 475.98px) {
+  .hero_info {
+    max-width: 98%;
   }
 
-  .map_inner {
-    position: relative;
-    width: 100%;
-    height: 300px;
+  .hero_info h2 {
+    font-size: 22px;
   }
 
-  .map_inner iframe {
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .hero_info p {
+    margin: 10px 0 15px;
   }
 
-  /** Map CSS ends here **/
-  
-  /** Subscribe CSS **/
-  
-  .subscribe_sec {
-    padding: 6rem 0 3rem;
-  }
-  
-  .subs_inner {
-    background: linear-gradient(180deg, #0877A4 0%, #000 100%);
-    position: relative;
-    padding: 0.5rem 2rem;
-  }
-  
-  .subs_inner:after {
-    content: '';
-    position: absolute;
-    left: 62%;
-    top: 0;
-    background-color: rgba(255,255,255,0.1);
-    height: 100%;
-    width: 55px;
-    transform: skewX(40deg);
-  }
-  
-  .subscribe_sec .custom_row {
-    align-items: center;
-  }
-  
-  .subscribe_sec .imgCol, .subscribe_sec .subsForm {
-    padding: 0 15px;
-  }
-  
   .subscribe_sec .imgCol {
-    flex: 1 1 50%;
-    max-width: 50%;
+    flex: 0 0 90%;
+    max-width: 90%;
   }
-  
-  .subscribe_sec .imgCol img {
-    width: 75%;
-    margin: -50px 20px 0 auto;
-    display: block;
-  }
-  
-  .subscribe_sec .subsForm {
-    flex: 1 1 50%;
-    max-width: 50%;
-  }
-  
-  .subscribe_sec .subsForm .ttlWrap h2 {
-    color: #fff;
-  }
-  
-  /** Subscribe CSS ends here **/
+}
+/* new css */
+.service_sec,
+.features_sec,
+.testimonials_sec {
+  padding: 2rem 0 4rem;
+}
+.service-icon {
+  border: 1px solid #15843c;
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  color: #15843c;
+  background-color: #15843c30;
+}
+.service_sec .border-primary {
+  border-color: #15843c !important;
+}
+.service_sec ul {
+  padding-left: 15px;
+}
+.service_sec ul li {
+  font-size: 16px;
+  margin-bottom: 13px;
+  list-style: disc;
+}
 
+.features_sec .border-primary {
+  border-color: #15843c !important;
+}
+.featureIcon {
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  color: #15843c;
+  border-radius: 50%;
+  background-color: #15843c30;
+}
+.featureCard {
+  border: 1px solid #15843c;
+}
+.featureCard p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.testimonialCard {
+  border: 1px solid #15843c;
+  width: 400px;
+  height: max-content;
+  margin-left: 40px;
+  position: relative;
+  overflow: hidden;
 
-
-
-
-
-
-
-
-  /** Responsive CSS starts here **/
-
-  @media (max-width: 1399.98px) {
-    .hero_info h2 {
-        font-size: 40px;
-    }
-  }
-
-  @media (max-width: 1199.98px) {
-    .hero_info h2 {
-        font-size: 35px;
-    }
-
-    .scrollDown a {
-        font-size: 10px;
-    }
-
-    .scrollDown a span {
-        margin: 0 0 15px;
-        font-size: 24px;
-        line-height: 35px;
-    }
-
-    .clients_inner {
-        margin-top: -40px;
-    }
-  }
-
-  @media (max-width: 991.98px) {
-    .hero_sec {
-        padding: 3rem 0 7rem;
-    }
-  
-    .hero_info h2 {
-        font-size: 30px;
-    }
-  
-    .hero_info p {
-        max-width: 80%;
-    }
-  
-    .clientsLogo img {
-        width: 90px;
-    }
-  }
-
-  @media (max-width: 767.98px) {
-    .hero_info h2 {
-        font-size: 26px;
-    }
-  
-    .hero_info > span {
-        font-size: 12px;
-    }
-  
-    .hero_info p {
-        max-width: 100%;
-        margin: 15px 0 20px;
-    }
-  
-    .clients_inner {
-        padding: 1rem 0;
-    }
-
-    .story_sec {
-        padding: 2rem 0;
-    }
-
-    .story_sec .cont {
-        font-weight: 500;
-    }
-
-    .connect_us_sec .formCol {
-        padding: 20px;
-    }
-
-    .connect_us_sec .custom_row {
-        position: relative;
-    }
-
-    .connect_us_sec .imgCol {
-        flex: 0 0 100%;
-        position: absolute;
-        z-index: -1;
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .connect_us_sec .formCol {
-        flex: 0 0 80%;
-        margin: 0 auto;
-    }
-
-    .subscribe_sec {
-        padding: 5rem 0 2rem;
-    }
-
-    .subscribe_sec .imgCol {
-        flex: 0 0 40%;
-        max-width: 40%;
-    }
-
-    .subscribe_sec .imgCol img {
-        width: 90%;
-    }
-
-    .subscribe_sec .subsForm {
-        flex: 0 0 60%;
-        max-width: 60%;
-    }
-
-    .subs_inner {
-        padding: 0.5rem 1rem;
-    }
-
-    .subs_inner:after {
-        width: 40px;
-    }
-
-    .story_sec .rightCol {
-        flex: 1 1 58%;
-        max-width: 58%;
-    }
-  }
-
-  @media (max-width: 650px) {
-    .scrollDown {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 575.98px) {
-
-    .clientsLogo img {
-      width: 71px;
-    }
-
-    .subs_inner:after {
-        content: none;
-    }
-
-    .subscribe_sec .custom_row {
-        flex-direction: column;
-    }
-
-    .subscribe_sec .imgCol {
-        flex: 0 0 60%;
-        max-width: 60%;
-    }
-
-    .subscribe_sec .subsForm {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .story_sec {
-        padding: 1rem 0;
-    }
-
-    .story_sec .custom_row {
-        flex-direction: column;
-    }
-
-    .story_sec .leftCol, .story_sec .rightCol {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .clientsLogo {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .clientsLogo img {
-        margin: 0;
-    }
-
-    .connect_us_sec .imgCol {
-        padding: 0;
-    }
-
-    .connect_us_sec .formCol {
-        flex: 0 0 90%;
-    }
-  }
-
-  @media (max-width: 475.98px) {
-    .hero_info {
-        max-width: 98%;
-    }
-
-    .hero_info h2 {
-        font-size: 22px;
-    }
-
-    .hero_info p {
-        margin: 10px 0 15px;
-    }
-
-    .subscribe_sec .imgCol {
-        flex: 0 0 90%;
-        max-width: 90%;
-    }
-  }
+  background: #15843c1a;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid #0000002e;
+}
+.testimonialCard::after {
+  content: '\F6B0';
+  position: absolute;
+  bottom: -10%;
+  right: 0%;
+  font-family: 'bootstrap-icons';
+  color: #15843c30;
+  font-size: 100px;
+  rotate: 190deg;
+}
+.rfm-initial-child-container {
+  align-items: baseline !important;
+}
+.testimonialCard .words {
+  font-size: 16px;
+  font-style: italic;
+}
+.testimonialCard .name {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.testimonialCard .role {
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}

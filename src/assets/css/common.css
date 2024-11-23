@@ -1,121 +1,113 @@
 .innerSecBgHeader {
-    padding: 1rem 0;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #28a554;
-    color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #28a554;
+  color: #fff;
 }
 
 .ttlWrap {
-    text-transform: uppercase;
-    padding: 10px 0;
+  text-transform: uppercase;
+  padding: 10px 0;
 }
-  
+
 .ttlWrap span {
-    color: #15843C;
-    font-family: Mulish;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #15843c;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-  
+
 .ttlWrap h2 {
-    color: #000;
-    font-family: Russo One;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    margin: 5px 0;
+  color: #000;
+  font-family: Russo One;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 5px 0;
 }
 
 .innerSec {
-    padding: 6rem 1rem;
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
+  padding: 6rem 1rem;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 .innerSec h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 28px;
-    font-family: 'Russo One';
-    font-weight: 400;
-    color: #fff;
-    line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: 'Russo One';
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.6;
 }
-
-
-
-
-
-
 
 /** Responsive CSS starts here **/
 
 @media (max-width: 1199.98px) {
-
-    .innerSecBgHeader h2 {
-        font-size: 30px;
-    }
+  .innerSecBgHeader h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .ttlWrap span {
-        font-size: 12px;
-    }
+  .ttlWrap span {
+    font-size: 12px;
+  }
 
-    .ttlWrap h2 {
-        font-size: 20px;
-    }
+  .ttlWrap h2 {
+    font-size: 20px;
+  }
 
-    .innerSecBgHeader h2 {
-        font-size: 25px;
-    }
+  .innerSecBgHeader h2 {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .ttlWrap span {
-        font-size: 10px;
-    }
+  .ttlWrap span {
+    font-size: 10px;
+  }
 
-    .ttlWrap h2 {
-        font-size: 18px;
-    }
+  .ttlWrap h2 {
+    font-size: 18px;
+  }
 
-    .innerSec h1 {
-        font-size: 26px;
-    }
+  .innerSec h1 {
+    font-size: 26px;
+  }
 
-    .innerSecBgHeader h2 {
-        font-size: 22px;
-    }
+  .innerSecBgHeader h2 {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .innerSec {
+    padding: 4rem 1rem;
+  }
 
-    .innerSec {
-        padding: 4rem 1rem;
-    }
+  .innerSec h1 {
+    font-size: 23px;
+  }
 
-    .innerSec h1 {
-        font-size: 23px;
-    }
-
-    .innerSecBgHeader h2 {
-        font-size: 20px;
-    }
+  .innerSecBgHeader h2 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 475.98px) {
-    .innerSec h1 {
-        font-size: 20px;
-    }
+  .innerSec h1 {
+    font-size: 20px;
+  }
 
-    .innerSecBgHeader h2 {
-        font-size: 18px;
-    }
+  .innerSecBgHeader h2 {
+    font-size: 18px;
+  }
 }

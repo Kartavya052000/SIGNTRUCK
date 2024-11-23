@@ -13,31 +13,16 @@ import MyBooking from './my-booking'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import MyProfile from './my-profile'
-import { initGA, logPageView } from './analytics'
 import ResetPassword from './reset-pass'
 import ForgetPassword from './forget-pass'
 import Prospectus from './prospectus'
-import ReactGA from 'react-ga'
 import PrivacyPolicy from './privacy-policy'
 import InitializeGoogleAnalytics from './utils/google-analytics/google-analytics'
 
 function App() {
-  // useEffect(() => {
-  //   // Initialize Google Analytics
-  //   initGA();
-  //   // Log the initial pageview
-  //   logPageView();
-  // }, []);
-
-  // ReactGA.initialize("G-GG8E1NJPG0");
-  // ReactGA.pageview(window.location.pathname + window.location.search);
-
-  // console.log("HITTT")
-
   const location = useLocation()
   useEffect(() => {
     InitializeGoogleAnalytics()
-    console.log('🟢 InitializeGoogleAnalytics')
   }, [location])
   return (
     <div className='App'>

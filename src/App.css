@@ -9,7 +9,8 @@
 @import url(assets/css/booking.css);
 @import url(assets/css/mybookings.css);
 @import url(ui/css/style.css);
-
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
 * {
   box-sizing: border-box;
@@ -19,7 +20,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   border: none;
   margin: 0;
   padding: 0;
@@ -36,7 +38,8 @@ body {
   transition: all 0.2s ease-in;
 }
 
-ul, ol  {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -45,7 +48,10 @@ ul {
   list-style: none;
 }
 
-a, a:active, a:visited, a:focus {
+a,
+a:active,
+a:visited,
+a:focus {
   text-decoration: none !important;
   color: #000;
 }
@@ -54,11 +60,10 @@ p {
   margin: 0;
 }
 
-
 /** Header CSS **/
 
 .innerHeader {
-  background: linear-gradient(180deg, #15843C 0%, #36BD65 100%);
+  background: linear-gradient(180deg, #15843c 0%, #36bd65 100%);
   padding: 10px 0;
 }
 
@@ -105,7 +110,7 @@ p {
 }
 
 .innerHeaderWrap ul.right_info a:hover {
-  box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.7);
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.7);
   border-color: transparent;
 }
 
@@ -131,17 +136,18 @@ p {
 .navigationWrapper ul li:last-child {
   margin-right: 0;
 }
-.navigationWrapper ul li.menu_item a, .navigationWrapper .dropdown.active .dropdown_menu a
-{
+.navigationWrapper ul li.menu_item a,
+.navigationWrapper .dropdown.active .dropdown_menu a {
   color: #000;
 }
 
-.navigationWrapper ul li.menu_item a:hover, .navigationWrapper .dropdown.active .dropdown_menu a:hover
-{
+.navigationWrapper ul li.menu_item a:hover,
+.navigationWrapper .dropdown.active .dropdown_menu a:hover {
   color: #27a252;
 }
 
-.navigationWrapper ul li.menu_item a:hover span, .navigationWrapper .dropdown.active .dropdown_menu a:hover span {
+.navigationWrapper ul li.menu_item a:hover span,
+.navigationWrapper .dropdown.active .dropdown_menu a:hover span {
   color: #27a252;
 }
 .navigationWrapper ul li.menu_item img {
@@ -165,7 +171,7 @@ p {
   font-weight: 500;
   padding: 8px 10px;
   color: #fff;
-  background-color: #15843C;
+  background-color: #15843c;
   text-align: center;
   display: flex;
   display: -ms-flexbox;
@@ -196,7 +202,7 @@ p {
   visibility: visible;
   opacity: 1;
   height: 110px;
-  box-shadow: 0px 8px 8px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 8px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navigationWrapper .dropdown_menu ul {
@@ -218,7 +224,6 @@ p {
 
 /** Header CSS Ends here **/
 
-
 /** Common CSS **/
 
 header.mainHeader {
@@ -236,10 +241,11 @@ footer {
 
 .footer-sec {
   padding: 3rem 0;
-  background:linear-gradient(180deg, #15843C 0%, #36BD65 100%);
+  background: linear-gradient(180deg, #15843c 0%, #36bd65 100%);
 }
 
-.footerCol-6, .footerCol-3 {
+.footerCol-6,
+.footerCol-3 {
   padding: 0 15px;
 }
 
@@ -337,13 +343,13 @@ ul.social_info li a img {
 }
 
 ul.social_info li a:hover {
-box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.7);
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.7);
   border-color: transparent;
 }
 
 footer .copyright {
   text-align: center;
-  background: linear-gradient(180deg, #15843C 0%, #36BD65 100%);
+  background: linear-gradient(180deg, #15843c 0%, #36bd65 100%);
   color: #fff;
   padding: 12px 0;
   font-size: 12px;
@@ -361,22 +367,18 @@ footer .copyright img {
 
 /** Footer CSS ends here **/
 
-
 /* Privacy Policy Css */
-.PrivacyPolicy{
+.PrivacyPolicy {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
   line-height: 1.6;
-  padding-top:3% !important;
-
+  padding-top: 3% !important;
 }
 .PrivacyPolicy ul {
   list-style: disc;
 }
-
-
 
 /** Responsive CSS starts here **/
 
@@ -402,26 +404,23 @@ footer .copyright img {
   .navigationWrapper ul li {
     margin: 0 10px;
   }
-  .PrivacyPolicy{
+  .PrivacyPolicy {
     max-width: 70%;
-     margin: 0 auto;
-     }
+    margin: 0 auto;
+  }
 }
-
-
 
 @media (max-width: 1199.98px) {
   .mainHeader .header_wrap {
-      padding: 15px 0;
+    padding: 15px 0;
   }
 
   .mainHeader .logo img {
-      max-width: 220px;
+    max-width: 220px;
   }
 }
 
 @media (max-width: 991.98px) {
- 
   .navigationWrapper ul li.menu_item:not(.dropdown) .butn {
     width: 3rem;
     height: 2rem;
@@ -431,15 +430,15 @@ footer .copyright img {
   .innerHeaderWrap ul {
     gap: 15px;
   }
-  
+
   .mainHeader .logo img {
-      max-width: 150px;
+    max-width: 150px;
   }
 
   .navigationWrapper ul li.menu_item span.dropdown_text {
     font-size: 0;
     padding: 6px 8px;
-    border: 1px solid #15843C;
+    border: 1px solid #15843c;
   }
 
   .navigationWrapper ul li.menu_item img {
@@ -461,16 +460,17 @@ footer .copyright img {
   }
 
   .footerCol-3 {
-      flex: 1 1 32%;
-      max-width: 32%;
+    flex: 1 1 32%;
+    max-width: 32%;
   }
 
   .footerCol_inner ul.address li {
-      font-size: 14px;
+    font-size: 14px;
   }
 
-  .footerCol_inner ul.address li i, .footerCol_inner ul.address li span img {
-      margin-right: 5px;
+  .footerCol_inner ul.address li i,
+  .footerCol_inner ul.address li span img {
+    margin-right: 5px;
   }
 
   .footerCol_inner p {
@@ -480,35 +480,34 @@ footer .copyright img {
 }
 
 @media (max-width: 767.98px) {
-
   .mainHeader .logo img {
-      max-width: 180px;
+    max-width: 180px;
   }
 
   .mainHeader .header_wrap {
-      position: relative;
+    position: relative;
   }
 
   .navigationWrapper {
-      margin: 0;
-      position: absolute;
-      right: 0;
-      top: 70px;
-      width: 300px;
-      height: 0;
-      background-color: rgba(255,255,255,0.7);
-      box-shadow: 0px 4px 5px rgba(0,0,0,0.2);
-      z-index: 999;
-      overflow: hidden;
-      transition: all 0.3s ease;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 300px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
   .mainHeader.showMenu .navigationWrapper {
-      padding: 20px;
-      height: 250px;
-      overflow-y: auto;
-      border-bottom: 4px solid #15843C;
-      border-radius: 0 0 15px 15px;
+    padding: 20px;
+    height: 250px;
+    overflow-y: auto;
+    border-bottom: 4px solid #15843c;
+    border-radius: 0 0 15px 15px;
   }
 
   .navigationWrapper ul li.menu_item span.dropdown_text {
@@ -520,53 +519,54 @@ footer .copyright img {
   }
 
   .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .hamburger span.bar {
-      width: 25px;
-      height: 3px;
-      position: relative;
-      display: block;
-      background: linear-gradient(180deg, #15843c 0%, #36BD65 100%);
-      transition: all 0.2s ease;
+    width: 25px;
+    height: 3px;
+    position: relative;
+    display: block;
+    background: linear-gradient(180deg, #15843c 0%, #36bd65 100%);
+    transition: all 0.2s ease;
   }
 
-  .hamburger span.bar:before, .hamburger span.bar:after {
-      content: '';
-      width: 25px;
-      height: 3px;
-      position: absolute;
-      background: linear-gradient(180deg, #15843c 0%, #36BD65 100%);
-      transition: all 0.2s ease;
+  .hamburger span.bar:before,
+  .hamburger span.bar:after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    background: linear-gradient(180deg, #15843c 0%, #36bd65 100%);
+    transition: all 0.2s ease;
   }
 
   .hamburger span.bar:before {
-      top: -8px;
+    top: -8px;
   }
 
   .hamburger span.bar:after {
-      top: 8px;
+    top: 8px;
   }
 
   .showMenu .hamburger span.bar {
-      height: 0;
+    height: 0;
   }
 
   .showMenu .hamburger span.bar:before {
-      transform: rotate(135deg);
-      top: -5px;
+    transform: rotate(135deg);
+    top: -5px;
   }
 
   .showMenu .hamburger span.bar:after {
-      transform: rotate(-135deg);
-      top: -5px;
+    transform: rotate(-135deg);
+    top: -5px;
   }
 
   .navigationWrapper ul li {
-      width: 100%;
-      margin: 0 10px;
+    width: 100%;
+    margin: 0 10px;
   }
 
   .navigationWrapper ul li.menu_item:not(.dropdown) .butn {
@@ -584,7 +584,7 @@ footer .copyright img {
   }
 
   .innerHeaderWrap ul {
-      font-size: 13px;
+    font-size: 13px;
   }
 
   .footer-sec {
@@ -592,32 +592,30 @@ footer .copyright img {
   }
 
   .footerCol_inner ul.address li {
-      margin: 0 0 10px;
-      font-size: 14px;
+    margin: 0 0 10px;
+    font-size: 14px;
   }
 
   .footerCol_inner h4 {
-      font-size: 16px;
-      margin: 0 0 15px;
+    font-size: 16px;
+    margin: 0 0 15px;
   }
 
   .footerCol-6 {
-      flex: 1 1 90%;
-      max-width: 90%;
+    flex: 1 1 90%;
+    max-width: 90%;
   }
 
   .footerCol-3 {
-      flex: 1 1 50%;
-      max-width: 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
   }
 }
 .error-input {
   border: 1px solid red !important;
 }
 
-
 @media (max-width: 600px) {
-  
   /** RS Form CSS **/
 
   .rs-picker-daterange-panel .rs-picker-daterange-calendar-group .rs-calendar .rs-calendar-table-cell-content {
@@ -631,7 +629,6 @@ footer .copyright img {
 }
 
 @media (max-width: 575.98px) {
-
   .rs-picker-daterange-panel .rs-picker-daterange-calendar-group {
     display: flex;
     display: -ms-flexbox;
@@ -667,29 +664,29 @@ footer .copyright img {
   }
 
   .mainHeader .logo img {
-      max-width: 170px;
+    max-width: 170px;
   }
 
   .navigationWrapper {
-      width: 290px;
+    width: 290px;
   }
 
   .innerHeaderWrap {
-      gap: 10px;
+    gap: 10px;
   }
 
   .innerHeaderWrap ul {
-      font-size: 12px;
-      gap: 5px;
+    font-size: 12px;
+    gap: 5px;
   }
 
   .innerHeaderWrap ul.left_info {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .footer-sec {
-    background: linear-gradient(92deg, #15843C 0%, #36BD65 100%);
+    background: linear-gradient(92deg, #15843c 0%, #36bd65 100%);
   }
 
   .footer-sec .custom_row {
@@ -697,41 +694,40 @@ footer .copyright img {
   }
 
   .mainHeader .header_wrap {
-      padding: 10px 0;
+    padding: 10px 0;
   }
 
   .mainHeader.showMenu .navigationWrapper {
-      height: 200px;
-      top: 55px;
+    height: 200px;
+    top: 55px;
   }
 
   .footerCol-6 {
-      flex: 1 1 95%;
-      max-width: 95%;
+    flex: 1 1 95%;
+    max-width: 95%;
   }
 
   .footerCol_inner p {
-      font-size: 13px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 475.98px) {
-
   .footer-sec {
-      padding: 2rem 0;
+    padding: 2rem 0;
   }
 
   .footerCol-3 {
-      flex: 1 1 100%;
-      max-width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .footerCol_inner ul.social_info {
-      margin: 15px 0;
+    margin: 15px 0;
   }
 
   footer .copyright {
-      padding: 8px 0;
-      font-size: 10px;
+    padding: 8px 0;
+    font-size: 10px;
   }
 }

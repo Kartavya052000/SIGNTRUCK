@@ -26,7 +26,6 @@ const Header = () => {
     nav5: '',
     nav6: '',
   })
-  console.log('🟢 navbar', navbar)
   // Create a function to handle user logout
   const handleLogout = async () => {
     try {
