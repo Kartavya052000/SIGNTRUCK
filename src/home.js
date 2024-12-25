@@ -4,7 +4,7 @@ import duda from './assets/images/duda.png'
 import autoworld from './assets/images/autoworld.png'
 import news1130 from './assets/images/news1130.png'
 import dawsonsawyer from './assets/images/dawsonsawyer.png'
-import trucks from './assets/images/storyTruck.png'
+// import trucks from './assets/images/storyTruck.png'
 // import truck from './assets/images/truck.png';
 import heroBanner from './assets/images/banner.png'
 import Marquee from 'react-fast-marquee'
@@ -20,7 +20,7 @@ const Home = () => {
             <div className='hero_info'>
               <span>A No-Limits Creative Agency</span>
               <h2>Propel Your Brand With SignTruck</h2>
-              <p>
+              {/* <p>
                 Signtruck is a dedicated mobile billboard advertising agency. Our specialised trucks are built solely to showcase rotating billboards,
                 displaying up to three different ads per side.
               </p>
@@ -28,9 +28,11 @@ const Home = () => {
                 We don’t move goods, we move your message, bringing it to life on the streets with our innovative advertising technology. With
                 innovative ad technology, we offer three messages in one, boosting your exposure and impact.
               </p>
-              <p>Let Signtruck drive your brand forward—anywhere, anytime!</p>
-              <a href='/contact' title='Contact Us' className='butn butn_success'>
-                <span>Contact Us</span>
+              <p>Let Signtruck drive your brand forward—anywhere, anytime!</p> */}
+              <br />
+
+              <a href='/get-quote' title='Get Quote' className='butn butn_success'>
+                <span>Get Quote</span>
               </a>
             </div>
           </div>
@@ -39,24 +41,6 @@ const Home = () => {
           <a href='#clients_sec' title='Scroll Down'>
             <span>&#8592;</span>Scroll Down
           </a>
-        </div>
-      </section>
-
-      <section className='clients_sec' id='clients_sec'>
-        <div className='custom-container'>
-          <div className='clients_inner'>
-            <div className='ttlWrap'>
-              <span>Clients</span>
-              <h2>Working With the Best</h2>
-            </div>
-            <div className='clientsLogo'>
-              <img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' />
-              <img src={news1130} alt='News1130' title='News1130' />
-              <img src={autoworld} alt='AutoWorld' title='AutoWorld' />
-              <img src={duda} alt='Duda' title='Duda' />
-              <img src={jiffylube} alt='JiffyLube' title='JiffyLube' />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -157,6 +141,24 @@ const Home = () => {
         </div>
       </section>
 
+      <section className='clients_sec' id='clients_sec'>
+        <div className='custom-container'>
+          <div className='clients_inner'>
+            <div className='ttlWrap'>
+              <span>Clients</span>
+              <h2>Working With the Best</h2>
+            </div>
+            <div className='clientsLogo'>
+              <img src={dawsonsawyer} alt='DawsonSawyer' title='DawsonSawyer' />
+              <img src={news1130} alt='News1130' title='News1130' />
+              <img src={autoworld} alt='AutoWorld' title='AutoWorld' />
+              <img src={duda} alt='Duda' title='Duda' />
+              <img src={jiffylube} alt='JiffyLube' title='JiffyLube' />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className='testimonials_sec'>
         <div className='custom-container'>
           <div className='custom_row justify-content-center'>
@@ -227,12 +229,21 @@ const Home = () => {
                   throughout the Lower Mainland. Signtruck, unlike any other advertising platform allows us to deliver your message any time, any
                   place!
                 </p>
+                <p>
+                  Signtruck is a dedicated mobile billboard advertising agency. Our specialised trucks are built solely to showcase rotating
+                  billboards, displaying up to three different ads per side.
+                </p>
+                <p>
+                  We don’t move goods, we move your message, bringing it to life on the streets with our innovative advertising technology. With
+                  innovative ad technology, we offer three messages in one, boosting your exposure and impact.
+                </p>
+                <p>Let Signtruck drive your brand forward—anywhere, anytime!</p>
               </div>
             </div>
           </div>
-          <div className='fullImg_wrap'>
+          {/* <div className='fullImg_wrap'>
             <img src={trucks} alt='' title='' />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -290,8 +301,10 @@ const Home = () => {
               </div>
               <div className='subsForm'>
                 <div className='ttlWrap mb-4'>
-                  <h2>Stay Updated</h2>
-                  <p className='text-light text-lowercase'>Just tell us your email address, and the rest is happiness</p>
+                  <h2>Subscribe Newsletter</h2>
+                  <p className='text-light text-lowercase'>
+                    Stay ahead of the game! Subscribe to our newsletter for the latest updates, advertising tips, and exclusive offers from Signtruck.
+                  </p>
                 </div>
                 <form action='' className='inlineForm'>
                   <div className='formGrp'>

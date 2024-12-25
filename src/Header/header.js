@@ -126,33 +126,41 @@ const Header = () => {
               <ul className='nav_menu header_menu'>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <Link to='/' data-hover={navbar.nav1} title={navbar.nav1}>
-                    <span>{navbar.nav1}</span>
+                    {/* <span>{navbar.nav1}</span> */}
+                    <span>Home</span>
                   </Link>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
+                  <a href='/resource' title='resource' data-hover='resource'>
+                    <span>Resource</span>
+                  </a>
+                </li>
+                {/* <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <Link to='/faqs' data-hover={navbar.nav2} title={navbar.nav2}>
-                    <span>{navbar.nav2}</span>
+                    <span>FAQ's</span>
                   </Link>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <Link to='/clients' data-hover={navbar.nav3} title={navbar.nav3}>
-                    <span>{navbar.nav3}</span>
+                    <span>Clients</span>
                   </Link>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <a href='/contact' title={navbar.nav4} data-hover={navbar.nav4}>
-                    <span>{navbar.nav4}</span>
+                    <span>Contact Us</span>
                   </a>
-                </li>
+                </li> */}
                 <li className='menu_item linkEffect'>
                   {/* <a href='http://www.canadianvisionmedia.ca/' title={navbar.nav5} data-hover={navbar.nav5} target='_blank'><span>{navbar.nav5}</span></a> */}
                   <a href='/prospectus' title={navbar.nav5} data-hover={navbar.nav5}>
-                    <span>{navbar.nav5}</span>
+                    {/* <span>{navbar.nav5}</span> */}
+                    <span>Prospect Us</span>
                   </a>
                 </li>
                 <li className='menu_item linkEffect' onClick={() => setActive(false)}>
                   <a href='/get-quote' title={navbar.nav6} data-hover={navbar.nav6}>
-                    <span>{navbar.nav6}</span>
+                    <span>Get Quote</span>
+                    {/* <span>{navbar.nav6}</span> */}
                   </a>
                 </li>
 

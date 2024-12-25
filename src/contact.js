@@ -1,75 +1,67 @@
-import React, { useState } from 'react';
-import faqBanner from './assets/images/faq_banner.png';
-import { useNavigate } from "react-router-dom";
-import axios from 'axios';
-import { toast } from "react-toastify";
-import { Form } from 'rsuite';
-import { useCallback } from "react";
+import React, { useState } from 'react'
+import faqBanner from './assets/images/faq_banner.png'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
+import { Form } from 'rsuite'
+import { useCallback } from 'react'
 // import Particles from "react-particles";
 // import { loadSlim } from "tsparticles-slim";
 
 const Contact = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const [name, SetName] = useState('')
   const [email, SetEmail] = useState('')
   const [subject, SetSubject] = useState('')
   const [mainmessage, SetMessage] = useState('')
   const handleError = (err) =>
-        toast.error(err, {
-            position: "top-left",
-        });
-    const handleSuccess = (msg) =>
-        toast.success(msg, {
-            position: "top-right",
-        });
+    toast.error(err, {
+      position: 'top-left',
+    })
+  const handleSuccess = (msg) =>
+    toast.success(msg, {
+      position: 'top-right',
+    })
   const handleSubmit = async () => {
-  //  alert('hit')
-  
+    //  alert('hit')
 
     // setFormSubmitted(true); // Set formSubmitted to true when the button is clicked
     // if (name == '' || email == '' || message == '' || subject == '') {
     //     return
     // }
     try {
-     
-     const formData={
-      name,
-      email,
-      subject,
-      message:mainmessage
-     }
-      
+      const formData = {
+        name,
+        email,
+        subject,
+        message: mainmessage,
+      }
 
-       
-// const apiUrl = 'http://localhost:4000/contact';
-const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
+      // const apiUrl = 'http://localhost:4000/contact';
+      const apiUrl = 'https://signtruckapi.signtruck.ca/contact'
 
-// const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
-        // Then, send the formData with axios
-        const response = await axios.post(apiUrl, formData, {
-            
-        });
+      // const apiUrl = 'https://busy-pink-dalmatian-ring.cyclic.app/create-booking';
+      // Then, send the formData with axios
+      const response = await axios.post(apiUrl, formData, {})
 
-        const { success, message } = response.data;
-        if (success) {
-
-            handleSuccess(message);
-            setTimeout(() => {
-                // navigate("/");
-            }, 1000);
-        } else {
-            console.log(response.data, "SSSS");
-            // alert(message);
-            handleError(message);
-        }
-
+      const { success, message } = response.data
+      if (success) {
+        handleSuccess(message)
+        setTimeout(() => {
+          // navigate("/");
+        }, 1000)
+      } else {
+        console.log(response.data, 'SSSS')
+        // alert(message);
+        handleError(message)
+      }
     } catch (error) {
-        handleError();
+      handleError()
 
-        console.error('API request failed', error);
+      console.error('API request failed', error)
     }
-};
+  }
 
   // const particlesInit = useCallback(async engine => {
   //   console.log(engine);
@@ -82,12 +74,6 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
 
   return (
     <>
-      <section className='innerSec' style={{backgroundImage: `url(${faqBanner})`}}>
-        <div className='custom-container'>
-          <h1>Connect With Us</h1>
-        </div>
-      </section>
-
       <section className='contact_sec'>
         <div className='contact_inner'>
           {/* <Particles
@@ -473,26 +459,42 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
               }}
           /> */}
           <div className='custom-container'>
+            <div className='custom_row justify-content-center'>
+              <div className='ttlWrap text-center mb-3'>
+                <h2>Contact Us</h2>
+              </div>
+            </div>
             <div className='contForm'>
-            <Form  onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                 <div className='formGrp'>
                   <label for='name'>Name</label>
-                  <input type='text' placeholder='Enter Your Name' id='name' value={name} onChange={event => SetName(event.target.value)} />
+                  <input type='text' placeholder='Enter Your Name' id='name' value={name} onChange={(event) => SetName(event.target.value)} />
                 </div>
                 <div className='formGrp'>
-                    <label for='email'>Email</label>
-                    <input type='email' placeholder='Enter Your Email' id='email' value={email} onChange={event => SetEmail(event.target.value)} />
+                  <label for='email'>Email</label>
+                  <input type='email' placeholder='Enter Your Email' id='email' value={email} onChange={(event) => SetEmail(event.target.value)} />
                 </div>
                 <div className='formGrp'>
-                    <label for='subject'>Subject</label>
-                    <input type='text' placeholder='Type The Subject' id='subject' value={subject} onChange={event => SetSubject(event.target.value)} />
+                  <label for='subject'>Subject</label>
+                  <input
+                    type='text'
+                    placeholder='Type The Subject'
+                    id='subject'
+                    value={subject}
+                    onChange={(event) => SetSubject(event.target.value)}
+                  />
                 </div>
                 <div className='formGrp'>
-                    <label for='msg'>Message</label>
-                    <textarea placeholder='Type Your Message Here...' id='msg' value={mainmessage} onChange={event => SetMessage(event.target.value)}></textarea>
+                  <label for='msg'>Message</label>
+                  <textarea
+                    placeholder='Type Your Message Here...'
+                    id='msg'
+                    value={mainmessage}
+                    onChange={(event) => SetMessage(event.target.value)}
+                  ></textarea>
                 </div>
                 <div className='formSubmit'>
-                    <input type='submit' value='Submit' className='fullButn butn butn_success' onClick={handleSubmit} />
+                  <input type='submit' value='Submit' className='fullButn butn butn_success' onClick={handleSubmit} />
                 </div>
               </Form>
             </div>
@@ -500,7 +502,7 @@ const apiUrl = 'https://signtruckapi.signtruck.ca/contact';
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default Contact;
+export default Contact
